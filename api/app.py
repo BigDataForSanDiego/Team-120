@@ -4,11 +4,11 @@ from autopopulate import generate_questions_and_autopopulate
 
 app = Flask(__name__)
 
-profile = {}
+profile_data = {}
 answers = {}
 current_question_index = 0
 
-# run API locally pyhon -m flask run, assuming you have venv setup with flask installed using pip
+# run API locally "pyhon -m flask run", assuming you have venv setup with flask installed using pip
 
 # Route to submit the health profile
 
@@ -27,7 +27,7 @@ def submit_profile():
 # Route to get missing questions
 
 
-@app.route('/get_missing_questions', methods=['GET'])
+@app.route('/missing_questions', methods=['GET'])
 def get_missing_questions():
     """Route to fetch missing questions based on the submitted profile."""
     if not profile_data:
