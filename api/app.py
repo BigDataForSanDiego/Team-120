@@ -8,8 +8,11 @@ profile = {}
 answers = {}
 current_question_index = 0
 
+# run API locally pyhon -m flask run, assuming you have venv setup with flask installed using pip
 
 # Route to submit the health profile
+
+
 @app.route('/submit_profile', methods=['POST'])
 def submit_profile():
     """Route to submit the health profile and store it."""
