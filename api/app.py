@@ -5,8 +5,9 @@ from autopopulate import generate_questions_and_autopopulate
 app = Flask(__name__)
 
 profile_data = {}
+autopopulated_questions = {}
+missing_questions = []
 answers = {}
-current_question_index = 0
 
 # run API locally "pyhon -m flask run", assuming you have venv setup with flask installed using pip
 
@@ -37,6 +38,41 @@ def get_missing_questions():
     _, missing_questions = generate_questions_and_autopopulate(profile_data)
 
     return jsonify({"missing_questions": missing_questions}), 200
+
+
+@app.route('/update_question', methods=['POST'])
+def update_question():
+    """Route to update a specific form question with the user's answer."""
+    global form_data
+
+    # Receive the question and answer from the client
+    data = request.json
+    question = data.get("question")
+    answer = data.get("answer")
+
+    if not question or not answer:
+        return jsonify({"error": "Missing 'question' or 'answer' field"}), 400
+
+    # Check if the question exists in the form
+    if question not in form_data:
+        return jsonify({"error": f"The question '{question}' does not exist in the form."}), 400
+
+    # Update the answer for the specific question
+    form_data[question] = answer
+
+    return jsonify({"message": f"Updated the form with question '{question}' and answer '{answer}'."}), 200
+
+
+@app.route('/get_form', methods=['GET'])
+def get_form():
+    """Route to fetch the entire form (populated and missing questions)."""
+    if not profile_data:
+        return jsonify({"error": "No profile data submitted"}), 400
+
+    return jsonify({
+        "autopopulated_questions": autopopulated_questions,
+        "missing_questions": missing_questions
+    }), 200
 
 
 if __name__ == '__main__':
