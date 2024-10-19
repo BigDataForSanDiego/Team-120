@@ -1,8 +1,10 @@
 import json
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 from autopopulate import generate_questions_and_autopopulate
 
 app = Flask(__name__)
+CORS(app)
 
 profile_data = {}
 autopopulated_questions = {}
@@ -25,6 +27,18 @@ def submit_profile():
 
     return jsonify({"message": "Profile submitted successfully"}), 200
 
+
+@app.route('/get_profile', methods=['GET'])
+def get_profile():
+    """Route to return the stored health profile."""
+    global profile_data
+
+    # Check if the profile exists
+    if not profile_data:
+        return jsonify({"error": "No profile data available"}), 404
+
+    # Return the stored health profile
+    return jsonify({"profile_data": profile_data}), 200
 # Route to get missing questions
 
 
