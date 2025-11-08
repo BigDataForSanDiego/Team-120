@@ -1,0 +1,37 @@
+geodjango_demo/
+├── ARCHITECTURE.md
+├── CHECKLIST.md
+├── FILE_TREE.txt
+├── PROJECT_SUMMARY.md
+├── Procfile
+├── QUICKSTART.md
+├── README.md
+├── STRUCTURE.md
+├── geodjango_demo
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── manage.py
+├── requirements.txt
+├── setup.sh
+├── templates
+│   ├── base.html
+│   └── waypoints
+│       ├── waypoint_create.html
+│       ├── waypoint_list.html
+│       └── waypoint_map.html
+└── waypoints
+    ├── __init__.py
+    ├── admin.py
+    ├── apps.py
+    ├── forms.py
+    ├── management
+    │   ├── __init__.py
+    │   └── commands
+    ├── models.py
+    ├── serializers.py
+    └── views.py
+
+7 directories, 28 files

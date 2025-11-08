@@ -1,0 +1,18 @@
+# Core Framework
+Django==5.0.9
+
+# GeoDjango Support - SpatiaLite for easy setup
+# No psycopg2 needed for SQLite
+
+# REST Framework
+djangorestframework==3.14.0
+djangorestframework-gis==1.0
+
+# Environment Configuration
+python-dotenv==1.0.0
+
+# Production Server
+gunicorn==21.2.0
+
+# Additional Utilities
+django-cors-headers==4.3.1

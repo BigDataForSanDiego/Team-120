@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+
+{% block title %}Map View - GeoDjango Demo{% endblock %}
+
+{% block content %}
+<div class="bg-white rounded-lg shadow-md p-6">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6">Interactive Waypoint Map</h2>
+    
+    <!-- Category Filter -->
+    <div class="mb-4" x-data="mapView()">
+        <label class="block text-sm font-medium text-gray-700 mb-2">Filter by Category:</label>
+        <div class="flex flex-wrap gap-2 mb-4">
+            <button @click="filterCategory('all')" 
+                    class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                All Categories
+            </button>
+            <button @click="filterCategory('restaurant')" 
+                    class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition">
+                Restaurants
+            </button>
+            <button @click="filterCategory('park')" 
+                    class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition">
+                Parks
+            </button>
+            <button @click="filterCategory('museum')" 
+                    class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition">
+                Museums
+            </button>
+            <button @click="filterCategory('landmark')" 
+                    class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition">
+                Landmarks
+            </button>
+        </div>
+        
+        <!-- Map Container -->
+        <div id="mapview" style="height: 600px;" class="rounded-lg border-2 border-gray-300"></div>
+        
+        <!-- Stats -->
+        <div class="mt-4 text-center">
+            <p class="text-sm text-gray-600">
+                Showing <span id="waypointCount" class="font-bold">0</span> waypoints
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function mapView() {
+    return {
+        map: null,
+        markers: [],
+        currentCategory: 'all',
+        
+        init() {
+            // Initialize map centered on San Diego
+            this.map = L.map('mapview').setView([32.7157, -117.1611], 11);
+            
+            // Add OpenStreetMap tiles
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors',
+                maxZoom: 19
+            }).addTo(this.map);
+            
+            // Load waypoints from API
+            this.loadWaypoints();
+        },
+        
+        async loadWaypoints(category = null) {
+            try {
+                let url = '/api/waypoints/?format=json';
+                if (category && category !== 'all') {
+                    url += `&category=${category}`;
+                }
+                
+                const response = await fetch(url);
+                const data = await response.json();
+                
+                // Clear existing markers
+                this.markers.forEach(marker => this.map.removeLayer(marker));
+                this.markers = [];
+                
+                // Add markers for each waypoint
+                if (data.features) {
+                    data.features.forEach(feature => {
+                        const coords = feature.geometry.coordinates;
+                        const props = feature.properties;
+                        
+                        const marker = L.marker([coords[1], coords[0]])
+                            .bindPopup(`
+                                <div class="p-2">
+                                    <h3 class="font-bold text-lg">${props.name}</h3>
+                                    <p class="text-sm text-blue-600">${props.category}</p>
+                                    <p class="text-sm text-gray-600 mt-2">${props.description || 'No description'}</p>
+                                    <p class="text-xs text-gray-500 mt-2">Created: ${new Date(props.created_at).toLocaleDateString()}</p>
+                                </div>
+                            `)
+                            .addTo(this.map);
+                        
+                        this.markers.push(marker);
+                    });
+                    
+                    // Update count
+                    document.getElementById('waypointCount').textContent = data.features.length;
+                    
+                    // Fit map to markers if any exist
+                    if (this.markers.length > 0) {
+                        const group = L.featureGroup(this.markers);
+                        this.map.fitBounds(group.getBounds().pad(0.1));
+                    }
+                }
+            } catch (error) {
+                console.error('Error loading waypoints:', error);
+            }
+        },
+        
+        filterCategory(category) {
+            this.currentCategory = category;
+            this.loadWaypoints(category);
+        }
+    }
+}
+</script>
+{% endblock %}

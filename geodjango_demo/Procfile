@@ -1,0 +1,1 @@
+web: gunicorn geodjango_demo.wsgi:application --log-file -

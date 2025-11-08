@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% block title %}Create Waypoint - GeoDjango Demo{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto">
+    <div class="bg-white rounded-lg shadow-md p-8">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Create New Waypoint</h2>
+        
+        <form method="post" x-data="waypointForm()">
+            {% csrf_token %}
+            
+            <div class="space-y-4">
+                <!-- Name Field -->
+                <div>
+                    <label for="id_name" class="block text-sm font-medium text-gray-700 mb-1">Name *</label>
+                    {{ form.name }}
+                    {% if form.name.errors %}
+                        <p class="text-red-600 text-sm mt-1">{{ form.name.errors }}</p>
+                    {% endif %}
+                </div>
+                
+                <!-- Category Field -->
+                <div>
+                    <label for="id_category" class="block text-sm font-medium text-gray-700 mb-1">Category *</label>
+                    {{ form.category }}
+                    {% if form.category.errors %}
+                        <p class="text-red-600 text-sm mt-1">{{ form.category.errors }}</p>
+                    {% endif %}
+                </div>
+                
+                <!-- Description Field -->
+                <div>
+                    <label for="id_description" class="block text-sm font-medium text-gray-700 mb-1">Description</label>
+                    {{ form.description }}
+                    {% if form.description.errors %}
+                        <p class="text-red-600 text-sm mt-1">{{ form.description.errors }}</p>
+                    {% endif %}
+                </div>
+                
+                <!-- Map Picker -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Location * (Click on map)</label>
+                    <div id="map" style="height: 400px;" class="rounded-lg border-2 border-gray-300"></div>
+                    <p class="text-sm text-gray-600 mt-2" x-show="!latitude || !longitude">
+                        Click on the map to select a location
+                    </p>
+                    <p class="text-sm text-green-600 mt-2" x-show="latitude && longitude">
+                        ✓ Location selected: <span x-text="`${latitude.toFixed(4)}, ${longitude.toFixed(4)}`"></span>
+                    </p>
+                </div>
+                
+                <!-- Hidden Fields -->
+                {{ form.latitude }}
+                {{ form.longitude }}
+            </div>
+            
+            <!-- Submit Button -->
+            <div class="mt-6 flex space-x-4">
+                <button type="submit" 
+                        class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition font-medium"
+                        :disabled="!latitude || !longitude">
+                    Create Waypoint
+                </button>
+                <a href="{% url 'waypoint_list' %}" 
+                   class="bg-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-400 transition font-medium">
+                    Cancel
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function waypointForm() {
+    return {
+        latitude: null,
+        longitude: null,
+        map: null,
+        marker: null,
+        
+        init() {
+            // Initialize Leaflet map centered on San Diego
+            this.map = L.map('map').setView([32.7157, -117.1611], 10);
+            
+            // Add OpenStreetMap tiles
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(this.map);
+            
+            // Handle map clicks
+            this.map.on('click', (e) => {
+                this.latitude = e.latlng.lat;
+                this.longitude = e.latlng.lng;
+                
+                // Update hidden form fields
+                document.getElementById('id_latitude').value = this.latitude;
+                document.getElementById('id_longitude').value = this.longitude;
+                
+                // Remove existing marker if any
+                if (this.marker) {
+                    this.map.removeLayer(this.marker);
+                }
+                
+                // Add new marker
+                this.marker = L.marker([this.latitude, this.longitude]).addTo(this.map);
+            });
+        }
+    }
+}
+</script>
+{% endblock %}
