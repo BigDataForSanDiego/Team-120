@@ -11,7 +11,7 @@
 #### Your team's hackathon idea in One sentence:
 Good Fellow is a real-time centralized digital platform(Map UI) that connects homeless individuals with available community resources—like food, shelter, medical care, and activities—while enabling resource centers and individual donors to update inventories, manage profiles, and support training and employment opportunities in addition to providing the resources that individuals experiencing homelessness need.
 
-<img width='50% src="proposal_drawing.png>
+<img width="50%" src="proposal_drawing.png" alt="Proposal Drawing">
 
 #### A visual
 ![bigdatahackathon4sd](https://github.com/BigDataForSanDiego/bigdataforsandiego.github.io/blob/main/images/big_data_2025_clip.png?raw=true "Big Data Hackathon for San Diego 2025")
