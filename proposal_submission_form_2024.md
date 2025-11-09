@@ -1,12 +1,12 @@
 ### 2025 BIG DATA HACKATHON PROPOSAL FORM
 
-#### Team Number: `YOUR TEAM NUMBER HERE`  
+#### Team Number: `Team 120`  
 
-#### Team Name: `YOUR TEAM NAME HERE`    
+#### Team Name: `Good Fellow`    
 
-#### Team Coordinator GitHub Username: `YOUR TEAM COORDINATOR GITHUB USERNAME HERE`
+#### Team Coordinator GitHub Username: Robert Ashe - nthPerson
 
-#### Team Members `YOUR TEAM MEMBERS NAME & GITHUB USERNAME HERE`
+#### Team Members `Robert Ashe 'nthPerson', Suyash Chaudhari 'suyashchaudhari161', Jonathan Siegel 'JSiegel0516', Uma Takbhate 'utakbhate0943-dot'
 
 #### Your teamâ€™s hackathon idea in One sentence:
 ##### `YOUR ONE SENTENCE HERE`
