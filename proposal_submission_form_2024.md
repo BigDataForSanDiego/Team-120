@@ -2,14 +2,14 @@
 
 #### Team Number: `Team 120`  
 
-#### Team Name: `Good Fellow`    
+#### Team Name: `Goodfellow`    
 
 #### Team Coordinator GitHub Username: Robert Ashe - nthPerson
 
 #### Team Members `Robert Ashe 'nthPerson', Suyash Chaudhari 'suyashchaudhari161', Jonathan Siegel 'JSiegel0516', Uma Takbhate 'utakbhate0943-dot'
 
 #### Your teamâ€™s hackathon idea in One sentence:
-##### `YOUR ONE SENTENCE HERE`
+Good Fellow is a real-time centralized digital platform(Map UI) that connects homeless individuals with available community resources—like food, shelter, medical care, and activities—while enabling resource centers and individual donors to update inventories, manage profiles, and support training and employment opportunities in addition to providing the resources that individuals experiencing homelessness need.
 
 #### A visual
 ![bigdatahackathon4sd](https://github.com/BigDataForSanDiego/bigdataforsandiego.github.io/blob/main/images/big_data_2025_clip.png?raw=true "Big Data Hackathon for San Diego 2025")
@@ -18,7 +18,7 @@
 
 
 #### Hackathon Five CORE Themes. `CHECK ONE or TWO QUESTIONS (insert X in [ ])`.
-- [ ] Access to Shelter and Resources
+- [X] Access to Shelter and Resources
 > - Solutions to improve on-demand access and availability of shelters, food banks, medical aid, and social services for homeless individuals.
 > - Question: How can we develop technological solutions that provide real-time, on-demand information updates on available shelters, food banks, hygiene stations, medical clinics, and social services for people experiencing homelessness?
 - [ ] Health and Mental Wellness Support
