@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Delete Resource{% endblock %}
+
+{% block content %}
+<div class="container" style="padding: 2rem 1rem; max-width: 600px;">
+    <h1>Delete Resource</h1>
+    
+    <div style="background: #fff3cd; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+        <h3 style="margin-bottom: 1rem;">Are you sure you want to delete this resource?</h3>
+        <p><strong>{{ resource.name }}</strong></p>
+        <p style="color: #666; margin-top: 0.5rem;">{{ resource.get_rtype_display }} - {{ resource.address }}</p>
+        <p style="color: #d63031; margin-top: 1rem;">This action cannot be undone.</p>
+    </div>
+    
+    <form method="post">
+        {% csrf_token %}
+        <div style="display: flex; gap: 1rem;">
+            <button type="submit" class="btn-primary" style="width: auto; background: #e74c3c;">
+                Yes, Delete
+            </button>
+            <a href="{% url 'provider_dashboard' %}" class="btn-secondary" style="width: auto; text-decoration: none; display: inline-block;">
+                Cancel
+            </a>
+        </div>
+    </form>
+</div>
+{% endblock %}

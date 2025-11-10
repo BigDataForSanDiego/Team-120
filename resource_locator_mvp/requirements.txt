@@ -1,0 +1,16 @@
+# Core Django & GeoDjango
+Django==5.0.9
+psycopg2-binary==2.9.9
+
+# Django REST Framework & GIS extensions
+djangorestframework==3.14.0
+djangorestframework-gis==1.0
+
+# Environment configuration
+python-dotenv==1.0.1
+
+# HTMX support (served via CDN, but could be local)
+# No package needed - will use CDN
+
+# Production server
+gunicorn==21.2.0

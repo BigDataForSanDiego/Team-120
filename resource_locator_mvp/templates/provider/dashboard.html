@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block title %}My Resources - Provider Dashboard{% endblock %}
+
+{% block content %}
+<div class="container" style="padding: 2rem 1rem;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+        <h1>My Resources</h1>
+        <a href="{% url 'provider_resource_create' %}" class="btn-primary" style="width: auto; display: inline-block;">
+            + Add New Resource
+        </a>
+    </div>
+    
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}" style="padding: 1rem; margin-bottom: 1rem; background: {% if message.tags == 'success' %}#d4edda{% elif message.tags == 'error' %}#f8d7da{% else %}#d1ecf1{% endif %}; border-radius: 4px;">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    
+    {% if resources %}
+        <div class="resources-grid">
+            {% for resource in resources %}
+                <div class="resource-card-provider" style="background: white; padding: 1.5rem; margin-bottom: 1rem; border-radius: 8px; border: 1px solid #ddd;">
+                    <div style="display: flex; justify-content: space-between; align-items: start;">
+                        <div>
+                            <h3 style="margin-bottom: 0.5rem;">{{ resource.name }}</h3>
+                            <p style="color: #7f8c8d; text-transform: capitalize; margin-bottom: 0.5rem;">
+                                {{ resource.get_rtype_display }}
+                            </p>
+                            <p style="font-size: 0.9rem; color: #555;">{{ resource.address|default:"No address" }}</p>
+                        </div>
+                        <div>
+                            {% if resource.state == 'visible' %}
+                                <span class="badge badge-open">Visible</span>
+                            {% elif resource.state == 'not_visible' %}
+                                <span class="badge" style="background: #ffeaa7; color: #d63031;">Hidden</span>
+                            {% elif resource.state == 'rejected' %}
+                                <span class="badge badge-closed">Rejected</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    {% if resource.rejection_reason %}
+                        <div style="margin-top: 1rem; padding: 0.75rem; background: #fff3cd; border-radius: 4px;">
+                            <strong>Rejection Reason:</strong> {{ resource.rejection_reason }}
+                        </div>
+                    {% endif %}
+                    
+                    <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
+                        {% if resource.state != 'rejected' %}
+                            <a href="{% url 'provider_resource_edit' resource.pk %}" 
+                               class="btn-secondary" 
+                               style="width: auto; padding: 0.5rem 1rem; text-decoration: none; display: inline-block;">
+                                Edit
+                            </a>
+                        {% endif %}
+                        <a href="{% url 'provider_resource_delete' resource.pk %}" 
+                           class="btn-secondary" 
+                           style="width: auto; padding: 0.5rem 1rem; background: #e74c3c; text-decoration: none; display: inline-block;">
+                            Delete
+                        </a>
+                    </div>
+                    
+                    <div style="margin-top: 1rem; font-size: 0.85rem; color: #999;">
+                        Created: {{ resource.created_at|date:"M d, Y" }} | 
+                        Updated: {{ resource.updated_at|date:"M d, Y" }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="empty-state" style="text-align: center; padding: 3rem; background: #f8f9fa; border-radius: 8px;">
+            <h3>No Resources Yet</h3>
+            <p>You haven't added any resources. Get started by adding your first resource!</p>
+            <a href="{% url 'provider_resource_create' %}" class="btn-primary" style="width: auto; display: inline-block; margin-top: 1rem;">
+                Add Your First Resource
+            </a>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
