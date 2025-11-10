@@ -1,0 +1,177 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ action }} Resource{% endblock %}
+
+{% block extra_head %}
+<style>
+    #map-picker {
+        height: 400px;
+        width: 100%;
+        margin-bottom: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container" style="padding: 2rem 1rem; max-width: 800px;">
+    <h1>{{ action }} Resource</h1>
+    
+    <form method="post" style="margin-top: 2rem;">
+        {% csrf_token %}
+        
+        {% if form.errors %}
+            <div class="alert alert-error" style="padding: 1rem; margin-bottom: 1rem; background: #f8d7da; border-radius: 4px; color: #721c24;">
+                <strong>Please correct the following errors:</strong>
+                <ul style="margin: 0.5rem 0 0 1.5rem;">
+                    {% for field in form %}
+                        {% for error in field.errors %}
+                            <li>{{ field.label }}: {{ error }}</li>
+                        {% endfor %}
+                    {% endfor %}
+                    {% for error in form.non_field_errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+        
+        <div class="form-section">
+            <h3>Location</h3>
+            <p style="color: #666; margin-bottom: 1rem;">Click on the map to set the resource location.</p>
+            <div id="map-picker"></div>
+            {{ form.latitude }}
+            {{ form.longitude }}
+        </div>
+        
+        <div class="form-section" style="margin-top: 2rem;">
+            <h3>Basic Information</h3>
+            
+            <div class="form-group" style="margin-bottom: 1rem;">
+                <label for="{{ form.name.id_for_label }}">{{ form.name.label }} *</label>
+                {{ form.name }}
+            </div>
+            
+            <div class="form-group" style="margin-bottom: 1rem;">
+                <label for="{{ form.rtype.id_for_label }}">{{ form.rtype.label }} *</label>
+                {{ form.rtype }}
+            </div>
+            
+            <div class="form-group" style="margin-bottom: 1rem;">
+                <label for="{{ form.description.id_for_label }}">{{ form.description.label }}</label>
+                {{ form.description }}
+            </div>
+            
+            <div class="form-group" style="margin-bottom: 1rem;">
+                <label for="{{ form.address.id_for_label }}">{{ form.address.label }}</label>
+                {{ form.address }}
+            </div>
+        </div>
+        
+        <div class="form-section" style="margin-top: 2rem;">
+            <h3>Contact Information</h3>
+            
+            <div class="form-group" style="margin-bottom: 1rem;">
+                <label for="{{ form.phone.id_for_label }}">{{ form.phone.label }}</label>
+                {{ form.phone }}
+            </div>
+            
+            <div class="form-group" style="margin-bottom: 1rem;">
+                <label for="{{ form.email.id_for_label }}">{{ form.email.label }}</label>
+                {{ form.email }}
+            </div>
+            
+            <div class="form-group" style="margin-bottom: 1rem;">
+                <label for="{{ form.website.id_for_label }}">{{ form.website.label }}</label>
+                {{ form.website }}
+            </div>
+        </div>
+        
+        <div class="form-section" style="margin-top: 2rem;">
+            <h3>Additional Details</h3>
+            
+            <div class="form-group" style="margin-bottom: 1rem;">
+                <label for="{{ form.hours_json.id_for_label }}">{{ form.hours_json.label }}</label>
+                {{ form.hours_json }}
+                <small style="color: #666; display: block; margin-top: 0.25rem;">
+                    Format: {"mon": [["09:00", "17:00"]], "tue": [["09:00", "17:00"]]}
+                </small>
+            </div>
+            
+            <div class="form-group" style="margin-bottom: 1rem;">
+                <label for="{{ form.tags.id_for_label }}">{{ form.tags.label }}</label>
+                {{ form.tags }}
+                <small style="color: #666; display: block; margin-top: 0.25rem;">
+                    Format: ["tag1", "tag2", "tag3"]
+                </small>
+            </div>
+            
+            <div class="form-group" style="margin-bottom: 1rem;">
+                <label for="{{ form.expires_at.id_for_label }}">{{ form.expires_at.label }}</label>
+                {{ form.expires_at }}
+                <small style="color: #666; display: block; margin-top: 0.25rem;">
+                    Optional expiration date for time-limited resources
+                </small>
+            </div>
+        </div>
+        
+        <div class="form-actions" style="margin-top: 2rem; display: flex; gap: 1rem;">
+            <button type="submit" class="btn-primary" style="width: auto;">
+                {{ action }} Resource
+            </button>
+            <a href="{% url 'provider_dashboard' %}" class="btn-secondary" style="width: auto; text-decoration: none; display: inline-block;">
+                Cancel
+            </a>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+    // Initialize map for location picker
+    const mapPicker = L.map('map-picker').setView([32.7157, -117.1611], 12);
+    
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors',
+        maxZoom: 19
+    }).addTo(mapPicker);
+    
+    let marker = null;
+    const latInput = document.querySelector('input[name="latitude"]');
+    const lonInput = document.querySelector('input[name="longitude"]');
+    
+    // Set initial marker if editing
+    if (latInput.value && lonInput.value) {
+        const lat = parseFloat(latInput.value);
+        const lon = parseFloat(lonInput.value);
+        marker = L.marker([lat, lon]).addTo(mapPicker);
+        mapPicker.setView([lat, lon], 15);
+    }
+    
+    // Add marker on map click
+    mapPicker.on('click', function(e) {
+        const lat = e.latlng.lat;
+        const lon = e.latlng.lng;
+        
+        // Update hidden inputs
+        latInput.value = lat;
+        lonInput.value = lon;
+        
+        // Update or create marker
+        if (marker) {
+            marker.setLatLng(e.latlng);
+        } else {
+            marker = L.marker(e.latlng).addTo(mapPicker);
+        }
+    });
+    
+    // Style form inputs
+    document.querySelectorAll('input[type="text"], input[type="email"], input[type="url"], input[type="datetime-local"], textarea, select').forEach(el => {
+        el.classList.add('input-text');
+        el.style.width = '100%';
+    });
+</script>
+{% endblock %}
