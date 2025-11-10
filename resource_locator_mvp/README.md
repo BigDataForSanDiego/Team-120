@@ -67,7 +67,7 @@ brew install postgresql postgis gdal
 
 ```bash
 cd resource_locator_mvp
-python3 -m venv venv
+python3 -m venv .venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
