@@ -20,9 +20,23 @@ from .serializers import ResourceSerializer
 from django.db.models import Q
 
 class ResourceViewSet(viewsets.ReadOnlyModelViewSet):
+
+    """
+    Public read-only API for resources.
+    Returns GeoJSON format suitable for map rendering.
+    
+    Query parameters:
+    - rtype: Filter by resource type (comma-separated, e.g., "food,shelter")
+    - lat, lon: User location for distance filtering
+    - radius_m: Radius in meters (default 5000m = ~3 miles)
+    - open_now: Filter to only open resources (true/false)
+    """
+    
     serializer_class = ResourceGeoJSONSerializer
     permission_classes = [permissions.AllowAny]
-
+    # Return GeoJSON FeatureCollection directly for the map frontend (no DRF pagination)
+    pagination_class = None
+    
     def get_queryset(self):
         queryset = Resource.objects.filter(state__in=['visible', 'approved'])
 
