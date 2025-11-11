@@ -4,17 +4,17 @@ function resourceMap() {
         // Map instance
         map: null,
         markers: null,
-        
+
         // State
         resources: [],
         selectedResource: null,
         loading: false,
-        
+
         // User location
         userLat: 32.7157,  // Default to San Diego
         userLon: -117.1611,
         userAddress: '',
-        
+
         // Filters
         resourceTypes: [
             { value: 'food', label: 'Food' },
@@ -28,47 +28,47 @@ function resourceMap() {
         selectedTypes: [],
         openNow: false,
         radiusMiles: 5,
-        
+
         // Initialize
         init() {
             this.initMap();
             this.updateFilters();
         },
-        
+
         // Initialize Leaflet map
         initMap() {
             this.map = L.map('map').setView([this.userLat, this.userLon], 12);
-            
+
             // Add OpenStreetMap tiles
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
                 maxZoom: 19
             }).addTo(this.map);
-            
+
             // Initialize marker cluster group
             this.markers = L.markerClusterGroup();
             this.map.addLayer(this.markers);
-            
+
             // Add user location marker
             this.updateUserMarker();
         },
-        
+
         // Update user location marker
         updateUserMarker() {
             if (this.userMarker) {
                 this.map.removeLayer(this.userMarker);
             }
-            
+
             const userIcon = L.divIcon({
                 className: 'user-location-icon',
                 html: '<div style="background: #3498db; width: 20px; height: 20px; border-radius: 50%; border: 3px solid white; box-shadow: 0 0 10px rgba(0,0,0,0.3);"></div>',
                 iconSize: [20, 20]
             });
-            
+
             this.userMarker = L.marker([this.userLat, this.userLon], { icon: userIcon })
                 .addTo(this.map);
         },
-        
+
         // Get user's current location
         getUserLocation() {
             if (navigator.geolocation) {
@@ -92,7 +92,7 @@ function resourceMap() {
                 alert('Geolocation is not supported by your browser.');
             }
         },
-        
+
         // Toggle resource type filter
         toggleType(type) {
             const index = this.selectedTypes.indexOf(type);
@@ -103,29 +103,45 @@ function resourceMap() {
             }
             this.updateFilters();
         },
-        
+
         // Update filters and fetch resources
         async updateFilters() {
             this.loading = true;
-            
+
             // Build query parameters
             const params = new URLSearchParams();
             params.append('lat', this.userLat);
             params.append('lon', this.userLon);
             params.append('radius_m', this.radiusMiles * 1609.34); // Convert miles to meters
-            
+
             if (this.selectedTypes.length > 0) {
                 params.append('rtype', this.selectedTypes.join(','));
             }
-            
+
             if (this.openNow) {
                 params.append('open_now', 'true');
             }
-            
+
             try {
                 const response = await fetch(`/api/resources/?${params.toString()}`);
                 const data = await response.json();
-                this.resources = data.features || [];
+
+                // Support both GeoJSON FeatureCollection (top-level) and
+                // DRF paginated responses where the FeatureCollection is
+                // inside `results` (e.g., { count, next, previous, results: { type: 'FeatureCollection', features: [...] } })
+                let features = [];
+                if (data && data.features) {
+                    features = data.features;
+                } else if (data && data.results) {
+                    // `results` may be either an array of features or an object containing a FeatureCollection
+                    if (Array.isArray(data.results)) {
+                        features = data.results;
+                    } else if (data.results.features) {
+                        features = data.results.features;
+                    }
+                }
+
+                this.resources = features || [];
                 this.updateMarkers();
             } catch (error) {
                 console.error('Error fetching resources:', error);
@@ -134,18 +150,18 @@ function resourceMap() {
                 this.loading = false;
             }
         },
-        
+
         // Update map markers
         updateMarkers() {
             // Clear existing markers
             this.markers.clearLayers();
-            
+
             // Add new markers
             this.resources.forEach(resource => {
                 const coords = resource.geometry.coordinates;
                 const lat = coords[1];
                 const lon = coords[0];
-                
+
                 // Create custom icon based on type
                 const iconColor = this.getIconColor(resource.properties.rtype);
                 const icon = L.divIcon({
@@ -153,9 +169,9 @@ function resourceMap() {
                     html: `<div style="background: ${iconColor}; width: 30px; height: 30px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 5px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 12px;">${this.getIconText(resource.properties.rtype)}</div>`,
                     iconSize: [30, 30]
                 });
-                
+
                 const marker = L.marker([lat, lon], { icon: icon });
-                
+
                 // Add popup
                 marker.bindPopup(`
                     <div style="min-width: 200px;">
@@ -166,16 +182,33 @@ function resourceMap() {
                         ${resource.properties.is_open_now === false ? '<span style="color: red; font-weight: bold;">Closed</span>' : ''}
                     </div>
                 `);
-                
+
                 // Add click handler
                 marker.on('click', () => {
                     this.selectResource(resource);
                 });
-                
+
                 this.markers.addLayer(marker);
             });
+
+            // If we added markers, fit the map to show them all with padding.
+            try {
+                const layerCount = this.markers.getLayers().length;
+                if (layerCount > 0) {
+                    const bounds = this.markers.getBounds();
+                    // bounds may be invalid if only a single point; fitBounds handles single-point bounds as well
+                    if (bounds && (typeof bounds.isValid === 'function' ? bounds.isValid() : true)) {
+                        this.map.fitBounds(bounds, { padding: [50, 50] });
+                    }
+                } else {
+                    // No markers: reset view to user location at default zoom
+                    this.map.setView([this.userLat, this.userLon], 12);
+                }
+            } catch (err) {
+                console.warn('Error fitting map to markers:', err);
+            }
         },
-        
+
         // Get icon color based on resource type
         getIconColor(type) {
             const colors = {
@@ -189,7 +222,7 @@ function resourceMap() {
             };
             return colors[type] || '#95a5a6';
         },
-        
+
         // Get icon text based on resource type
         getIconText(type) {
             const icons = {
@@ -203,11 +236,11 @@ function resourceMap() {
             };
             return icons[type] || 'O';
         },
-        
+
         // Select a resource to show details
         selectResource(resource) {
             this.selectedResource = resource;
-            
+
             // Center map on selected resource
             const coords = resource.geometry.coordinates;
             this.map.setView([coords[1], coords[0]], 15);

@@ -13,6 +13,7 @@ from .serializers import (
 
 
 class ResourceViewSet(viewsets.ReadOnlyModelViewSet):
+
     """
     Public read-only API for resources.
     Returns GeoJSON format suitable for map rendering.
@@ -26,6 +27,8 @@ class ResourceViewSet(viewsets.ReadOnlyModelViewSet):
     
     serializer_class = ResourceGeoJSONSerializer
     permission_classes = [permissions.AllowAny]
+    # Return GeoJSON FeatureCollection directly for the map frontend (no DRF pagination)
+    pagination_class = None
     
     def get_queryset(self):
         """
