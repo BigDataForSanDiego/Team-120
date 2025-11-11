@@ -21,13 +21,13 @@ from django.views.generic import TemplateView
 urlpatterns = [
     # Admin interface
     path('admin/', admin.site.urls),
-    
-    # API endpoints (from resources app)
-    path('', include('resources.urls')),
-    
+
+    # API and app URLs (namespaced)
+    path('', include('resources.urls', namespace='resources')),
+
     # Authentication URLs (Django built-in)
     path('accounts/', include('django.contrib.auth.urls')),
-    
-    # Home page with map (will be created next)
+
+    # Home page with map
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
 ]

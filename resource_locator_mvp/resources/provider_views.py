@@ -25,7 +25,7 @@ def provider_resource_create(request):
             resource.state = 'visible'
             resource.save()
             messages.success(request, 'Resource created successfully!')
-            return redirect('provider_dashboard')
+            return redirect('resources:provider_dashboard')
     else:
         form = ResourceSubmissionForm()
     
@@ -43,14 +43,14 @@ def provider_resource_edit(request, pk):
     # Check if editable
     if resource.state == 'rejected':
         messages.error(request, 'Cannot edit rejected resources.')
-        return redirect('provider_dashboard')
+        return redirect('resources:provider_dashboard')
     
     if request.method == 'POST':
         form = ResourceSubmissionForm(request.POST, instance=resource)
         if form.is_valid():
             form.save()
             messages.success(request, 'Resource updated successfully!')
-            return redirect('provider_dashboard')
+            return redirect('resources:provider_dashboard')
     else:
         form = ResourceSubmissionForm(instance=resource)
     
@@ -69,7 +69,7 @@ def provider_resource_delete(request, pk):
     if request.method == 'POST':
         resource.delete()
         messages.success(request, 'Resource deleted successfully!')
-        return redirect('provider_dashboard')
+        return redirect('resources:provider_dashboard')
     
     return render(request, 'provider/resource_confirm_delete.html', {
         'resource': resource
