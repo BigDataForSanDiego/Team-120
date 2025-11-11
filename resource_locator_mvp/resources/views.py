@@ -8,11 +8,19 @@ from .models import Resource
 from .serializers import (
     ResourceGeoJSONSerializer,
     ResourceSerializer,
+    
     ResourceSubmissionSerializer
 )
+from rest_framework_gis.serializers import GeoFeatureModelSerializer
+from rest_framework import viewsets
+from .models import Resource
+from .serializers import ResourceSerializer
 
+
+from django.db.models import Q
 
 class ResourceViewSet(viewsets.ReadOnlyModelViewSet):
+
     """
     Public read-only API for resources.
     Returns GeoJSON format suitable for map rendering.
@@ -26,46 +34,45 @@ class ResourceViewSet(viewsets.ReadOnlyModelViewSet):
     
     serializer_class = ResourceGeoJSONSerializer
     permission_classes = [permissions.AllowAny]
+    # Return GeoJSON FeatureCollection directly for the map frontend (no DRF pagination)
+    pagination_class = None
     
     def get_queryset(self):
-        """
-        Filter resources based on query parameters.
-        Only returns visible resources.
-        """
-        queryset = Resource.objects.filter(state='visible')
-        
-        # Filter by resource type
+        queryset = Resource.objects.filter(state__in=['visible', 'approved'])
+
+        # Filter by resource type (case-insensitive)
         rtype_param = self.request.query_params.get('rtype', None)
         if rtype_param:
             types = [t.strip() for t in rtype_param.split(',')]
-            queryset = queryset.filter(rtype__in=types)
-        
+            q_obj = Q()
+            for t in types:
+                q_obj |= Q(rtype__iexact=t)
+            queryset = queryset.filter(q_obj)
+
         # Filter by location and radius
         lat = self.request.query_params.get('lat', None)
         lon = self.request.query_params.get('lon', None)
         radius_m = self.request.query_params.get('radius_m', 5000)
-        
+
         if lat and lon:
             try:
                 user_location = Point(float(lon), float(lat), srid=4326)
                 radius_m = float(radius_m)
-                
-                # Filter by distance
-                queryset = queryset.filter(
-                    geom__dwithin=(user_location, D(m=radius_m))
-                ).annotate(
-                    distance=Distance('geom', user_location)
-                ).order_by('distance')
+                queryset = (
+                    queryset.filter(geom__dwithin=(user_location, D(m=radius_m)))
+                    .annotate(distance=Distance('geom', user_location))
+                    .order_by('distance')
+                )
             except (ValueError, TypeError):
                 pass
-        
-        # Filter by open_now
+
+        # Optional "open now" filter
         open_now = self.request.query_params.get('open_now', '').lower()
         if open_now == 'true':
-            # This is less efficient but works; could be optimized with raw SQL
-            resource_ids = [r.id for r in queryset if r.is_open_now() is True]
+            resource_ids = [r.id for r in queryset if r.is_open_now()]
             queryset = queryset.filter(id__in=resource_ids)
-        
+
+        print(f"[DEBUG] Filters: rtype={rtype_param}, count={queryset.count()}")
         return queryset
 
 

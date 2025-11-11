@@ -4,18 +4,19 @@ function resourceMap() {
         // Map instance
         map: null,
         markers: null,
-        
+
         // State
         resources: [],
         selectedResource: null,
         loading: false,
-        
-        // User location
-        userLat: 32.7157,  // Default to San Diego
+        autoCenter: true, // ✅ Only recenter once on load or when user clicks Recenter
+
+        // User location (default to San Diego)
+        userLat: 32.7157,
         userLon: -117.1611,
         userAddress: '',
-        
-        // Filters
+
+        // ✅ All resource types (used for buttons + filters)
         resourceTypes: [
             { value: 'food', label: 'Food' },
             { value: 'shelter', label: 'Shelter' },
@@ -25,66 +26,77 @@ function resourceMap() {
             { value: 'donation', label: 'Donation' },
             { value: 'other', label: 'Other' }
         ],
+
+        // Filters
         selectedTypes: [],
         openNow: false,
         radiusMiles: 5,
-        
-        // Initialize
+
+        // Initialize component
         init() {
             this.initMap();
-            this.updateFilters();
+            this.getUserLocation(); // load user location first
+            this.updateFilters();   // then load data
         },
-        
+
+
         // Initialize Leaflet map
         initMap() {
             this.map = L.map('map').setView([this.userLat, this.userLon], 12);
-            
+
+
             // Add OpenStreetMap tiles
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                attribution:
+                    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
                 maxZoom: 19
             }).addTo(this.map);
-            
-            // Initialize marker cluster group
+
+            // Marker cluster group
             this.markers = L.markerClusterGroup();
             this.map.addLayer(this.markers);
-            
-            // Add user location marker
+
+            // User marker
             this.updateUserMarker();
         },
-        
-        // Update user location marker
+
+        // ✅ Keep user location marker constant
         updateUserMarker() {
             if (this.userMarker) {
                 this.map.removeLayer(this.userMarker);
             }
-            
+
+
             const userIcon = L.divIcon({
                 className: 'user-location-icon',
                 html: '<div style="background: #3498db; width: 20px; height: 20px; border-radius: 50%; border: 3px solid white; box-shadow: 0 0 10px rgba(0,0,0,0.3);"></div>',
                 iconSize: [20, 20]
             });
-            
-            this.userMarker = L.marker([this.userLat, this.userLon], { icon: userIcon })
-                .addTo(this.map);
+
+            this.userMarker = L.marker([this.userLat, this.userLon], { icon: userIcon }).addTo(this.map);
         },
-        
-        // Get user's current location
+
+        // ✅ Get user's current location — centers only once
         getUserLocation() {
             if (navigator.geolocation) {
                 this.loading = true;
                 navigator.geolocation.getCurrentPosition(
-                    (position) => {
-                        this.userLat = position.coords.latitude;
-                        this.userLon = position.coords.longitude;
-                        this.map.setView([this.userLat, this.userLon], 13);
+                    (pos) => {
+                        this.userLat = pos.coords.latitude;
+                        this.userLon = pos.coords.longitude;
+
+                        // Center map only first time or when autoCenter is re-enabled
+                        if (this.autoCenter) {
+                            this.map.setView([this.userLat, this.userLon], 13);
+                            this.autoCenter = false;
+                        }
+
                         this.updateUserMarker();
-                        this.updateFilters();
                         this.loading = false;
                     },
-                    (error) => {
-                        console.error('Error getting location:', error);
-                        alert('Could not get your location. Using default location.');
+                    (err) => {
+                        console.error('Error getting location:', err);
+                        alert('Could not get your location. Using default San Diego.');
                         this.loading = false;
                     }
                 );
@@ -92,8 +104,8 @@ function resourceMap() {
                 alert('Geolocation is not supported by your browser.');
             }
         },
-        
-        // Toggle resource type filter
+
+        // ✅ Toggle a resource type filter
         toggleType(type) {
             const index = this.selectedTypes.indexOf(type);
             if (index > -1) {
@@ -103,60 +115,76 @@ function resourceMap() {
             }
             this.updateFilters();
         },
-        
-        // Update filters and fetch resources
+
+        // ✅ Fetch resources around current location (no recentering)
         async updateFilters() {
             this.loading = true;
-            
-            // Build query parameters
+
             const params = new URLSearchParams();
             params.append('lat', this.userLat);
             params.append('lon', this.userLon);
-            params.append('radius_m', this.radiusMiles * 1609.34); // Convert miles to meters
-            
+            params.append('radius_m', this.radiusMiles * 1609.34);
+
             if (this.selectedTypes.length > 0) {
                 params.append('rtype', this.selectedTypes.join(','));
             }
-            
+
+
             if (this.openNow) {
                 params.append('open_now', 'true');
             }
-            
+
+            const url = `/api/resources/?${params.toString()}`;
+            console.log('[DEBUG] Fetching:', url);
+
             try {
-                const response = await fetch(`/api/resources/?${params.toString()}`);
-                const data = await response.json();
-                this.resources = data.features || [];
+                const res = await fetch(url);
+                const data = await res.json();
+
+                // Handle both paginated and plain GeoJSON
+                if (data.results && data.results.features) {
+                    this.resources = data.results.features;
+                } else if (data.features) {
+                    this.resources = data.features;
+                } else {
+                    this.resources = [];
+                }
+
                 this.updateMarkers();
+
+                if (this.resources.length === 0) {
+                    console.warn('⚠️ No resources found for:', params.toString());
+                } else {
+                    console.log(`✅ Loaded ${this.resources.length} resources`);
+                }
             } catch (error) {
-                console.error('Error fetching resources:', error);
+                console.error('❌ Error fetching resources:', error);
                 alert('Error loading resources. Please try again.');
             } finally {
                 this.loading = false;
             }
         },
-        
-        // Update map markers
+
+        // ✅ Update map markers (does not move user marker)
         updateMarkers() {
-            // Clear existing markers
             this.markers.clearLayers();
-            
-            // Add new markers
+
             this.resources.forEach(resource => {
                 const coords = resource.geometry.coordinates;
                 const lat = coords[1];
                 const lon = coords[0];
-                
-                // Create custom icon based on type
+
+                // Choose icon color by type
                 const iconColor = this.getIconColor(resource.properties.rtype);
                 const icon = L.divIcon({
                     className: 'resource-marker',
                     html: `<div style="background: ${iconColor}; width: 30px; height: 30px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 5px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 12px;">${this.getIconText(resource.properties.rtype)}</div>`,
                     iconSize: [30, 30]
                 });
-                
-                const marker = L.marker([lat, lon], { icon: icon });
-                
-                // Add popup
+
+                const marker = L.marker([lat, lon], { icon });
+
+                // Popup info
                 marker.bindPopup(`
                     <div style="min-width: 200px;">
                         <h3 style="margin: 0 0 0.5rem 0;">${resource.properties.name}</h3>
@@ -166,17 +194,30 @@ function resourceMap() {
                         ${resource.properties.is_open_now === false ? '<span style="color: red; font-weight: bold;">Closed</span>' : ''}
                     </div>
                 `);
-                
-                // Add click handler
-                marker.on('click', () => {
-                    this.selectResource(resource);
-                });
-                
+
+                marker.on('click', () => this.selectResource(resource));
                 this.markers.addLayer(marker);
             });
+
+            // If we added markers, fit the map to show them all with padding.
+            try {
+                const layerCount = this.markers.getLayers().length;
+                if (layerCount > 0) {
+                    const bounds = this.markers.getBounds();
+                    // bounds may be invalid if only a single point; fitBounds handles single-point bounds as well
+                    if (bounds && (typeof bounds.isValid === 'function' ? bounds.isValid() : true)) {
+                        this.map.fitBounds(bounds, { padding: [50, 50] });
+                    }
+                } else {
+                    // No markers: reset view to user location at default zoom
+                    this.map.setView([this.userLat, this.userLon], 12);
+                }
+            } catch (err) {
+                console.warn('Error fitting map to markers:', err);
+            }
         },
-        
-        // Get icon color based on resource type
+
+        // Icon colors by resource type
         getIconColor(type) {
             const colors = {
                 food: '#27ae60',
@@ -189,8 +230,8 @@ function resourceMap() {
             };
             return colors[type] || '#95a5a6';
         },
-        
-        // Get icon text based on resource type
+
+        // Label text (letter) by resource type
         getIconText(type) {
             const icons = {
                 food: 'F',
@@ -203,13 +244,12 @@ function resourceMap() {
             };
             return icons[type] || 'O';
         },
-        
-        // Select a resource to show details
+
+        // When user clicks a marker
         selectResource(resource) {
             this.selectedResource = resource;
-            
-            // Center map on selected resource
             const coords = resource.geometry.coordinates;
+            // only center on selected marker, not user location
             this.map.setView([coords[1], coords[0]], 15);
         }
     };
