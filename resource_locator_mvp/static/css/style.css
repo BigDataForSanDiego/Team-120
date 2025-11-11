@@ -57,6 +57,32 @@ header h1 a {
     background: rgba(255,255,255,0.1);
 }
 
+/* Nav: make Logout button look exactly like nav links */
+.nav-links form {
+    margin: 0; /* remove default form spacing */
+}
+
+.nav-links button.nav-link {
+    color: white;
+    background: transparent;
+    border: none;
+    padding: 0.5rem 1rem;   /* same as .nav-links a */
+    border-radius: 4px;
+    transition: background 0.3s; /* same hover timing */
+    cursor: pointer;
+    font: inherit;          /* match link font */
+    line-height: 1.2;
+    display: inline-block;
+    text-decoration: none;
+    -webkit-appearance: none; /* remove native button styling */
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.nav-links button.nav-link:hover {
+    background: rgba(255,255,255,0.1);
+}
+
 /* Home Container */
 .home-container {
     display: flex;

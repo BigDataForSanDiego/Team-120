@@ -33,9 +33,13 @@
                 <div class="nav-links">
                     {% if user.is_authenticated %}
                         <a href="/provider/">My Resources</a>
-                        <a href="/accounts/logout/">Logout</a>
+                        <form action="{% url 'logout' %}" method="post">
+                            {% csrf_token %}
+                            <!-- Match anchor styles exactly via shared class -->
+                            <button type="submit" class="nav-link">Logout</button>
+                        </form>
                     {% else %}
-                        <a href="/accounts/login/">Provider Login</a>
+                        <a href="{% url 'login' %}">Provider Login</a>
                     {% endif %}
                     {% if user.is_staff %}
                         <a href="/admin/">Admin</a>

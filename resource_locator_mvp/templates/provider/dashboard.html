@@ -6,7 +6,7 @@
 <div class="container" style="padding: 2rem 1rem;">
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
         <h1>My Resources</h1>
-        <a href="{% url 'provider_resource_create' %}" class="btn-primary" style="width: auto; display: inline-block;">
+        <a href="{% url 'resources:provider_resource_create' %}" class="btn-primary" style="width: auto; display: inline-block;">
             + Add New Resource
         </a>
     </div>
@@ -50,13 +50,13 @@
                     
                     <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
                         {% if resource.state != 'rejected' %}
-                            <a href="{% url 'provider_resource_edit' resource.pk %}" 
+                            <a href="{% url 'resources:provider_resource_edit' pk=resource.pk %}" 
                                class="btn-secondary" 
                                style="width: auto; padding: 0.5rem 1rem; text-decoration: none; display: inline-block;">
                                 Edit
                             </a>
                         {% endif %}
-                        <a href="{% url 'provider_resource_delete' resource.pk %}" 
+                        <a href="{% url 'resources:provider_resource_delete' pk=resource.pk %}" 
                            class="btn-secondary" 
                            style="width: auto; padding: 0.5rem 1rem; background: #e74c3c; text-decoration: none; display: inline-block;">
                             Delete
@@ -74,7 +74,7 @@
         <div class="empty-state" style="text-align: center; padding: 3rem; background: #f8f9fa; border-radius: 8px;">
             <h3>No Resources Yet</h3>
             <p>You haven't added any resources. Get started by adding your first resource!</p>
-            <a href="{% url 'provider_resource_create' %}" class="btn-primary" style="width: auto; display: inline-block; margin-top: 1rem;">
+            <a href="{% url 'resources:provider_resource_create' %}" class="btn-primary" style="width: auto; display: inline-block; margin-top: 1rem;">
                 Add Your First Resource
             </a>
         </div>
