@@ -9,7 +9,9 @@ The import pipeline provides a **safe, two-stage process**:
 1. **Preview & Validate**: Analyze the data without modifying the database
 2. **Import**: Save validated resources to the database
 
-All imported resources start with `state='not_visible'` so they can be reviewed before being made public.
+All imported resources start with `state='not_visible'` (see note below) so they can be reviewed before being made public.
+
+NOTE: During developemnt, all new resources will start as `state='visible'` to enable UI testing.
 
 ## Quick Start
 
@@ -85,7 +87,7 @@ The importer automatically maps common field names to Resource model fields:
 
 | Resource Field | Possible GeoJSON Fields |
 |---------------|-------------------------|
-| `name` | name, NAME, facility_name, FACILITY_NAME, site_name, SITE_NAME |
+| `name` | name, NAME, facility_name, FACILITY_NAME, site_name, SITE_NAME, Organization |
 | `address` | address, ADDRESS, street_address, STREET_ADDRESS, location, DBA_ADDRESS1, ADDR |
 | `city` | city, CITY, DBA_CITY |
 | `zip_code` | zip_code, ZIP_CODE, zipcode, ZIPCODE, DBA_ZIP_CODE, postal_code |
@@ -149,11 +151,13 @@ Resources that don't match any keywords are classified as **other**.
 
 ## Import States
 
-All imported resources have `state='not_visible'` by default. This allows you to:
+All imported resources have `state='not_visible'` by default (see note below). This allows you to:
 
 1. Review them in the Django admin
 2. Edit fields as needed
 3. Change state to `'visible'` when ready
+
+NOTE: During developemnt, all new resources will start as `state='visible'` to enable UI testing.
 
 ## Duplicate Detection
 

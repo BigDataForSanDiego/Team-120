@@ -417,7 +417,8 @@ class GeoJSONImporter:
                     'phone': self._find_field_value(properties, 'phone') or '',
                     'website': self._find_field_value(properties, 'website') or '',
                     'description': self._find_field_value(properties, 'description') or '',
-                    'state': 'not_visible',  # New imports start as not_visible for review
+                    'state': 'visible',  # All new data will be visible during development
+                    # 'state': 'not_visible',  # New imports start as not_visible for review
                     'tags': [],
                     'hours_json': self._extract_hours(properties),
                     'raw_properties': properties,  # Store for reference

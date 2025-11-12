@@ -1,0 +1,5883 @@
+{
+  "import_date": "2025-11-11T21:16:58.403780",
+  "source_file": "raw_data/GeoJSON/Cool_Zones.geojson",
+  "statistics": {
+    "total_features": 85,
+    "parsed": 85,
+    "errors": 0,
+    "resources_with_hours": 85,
+    "resources_without_hours": 0
+  },
+  "resources": [
+    {
+      "name": "Spring Valley Community Center",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "12:00",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "12:00",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "12:00",
+            "20:00"
+          ]
+        ],
+        "thu": [
+          [
+            "12:00",
+            "20:00"
+          ]
+        ],
+        "fri": [
+          [
+            "12:00",
+            "17:00"
+          ]
+        ],
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 32.70667047075475,
+      "longitude": -117.00778282651737,
+      "raw_properties": {
+        "OBJECTID": 1,
+        "Organization": "Spring Valley Community Center",
+        "Address": "8735 Jamacha Blvd",
+        "City": "Spring Valley",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 91977,
+        "Lead": null,
+        "Title": "Parks Recreational Supervisor",
+        "Phone": " ",
+        "OperationalHours": "Mon 12:00pm-8:00pm\nTues 12:00pm-8:00pm\nWed 12:00pm-8:00pm\nThurs 12:00pm-8:00pm\nFri 12:00pm-5:00pm\nSat Closed\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "County of San Diego: Lakeside Community Center",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "12:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "12:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "12:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "12:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "12:00",
+            "17:00"
+          ]
+        ],
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 32.85908988582093,
+      "longitude": -116.92038738028468,
+      "raw_properties": {
+        "OBJECTID": 2,
+        "Organization": "County of San Diego: Lakeside Community Center",
+        "Address": "9841 Vine Street",
+        "City": "Lakeside",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92040,
+        "Lead": null,
+        "Title": "Parks Recreational Supervisor",
+        "Phone": " ",
+        "OperationalHours": "Mon 12:00pm-5:00pm\nTues 12:00pm-5:00pm\nWed 12:00pm-5:00pm\nThurs 12:00pm-5:00pm\nFri 12:00pm-5:00pm\nSat Closed\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "Canyonside Recreation Center",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "09:00",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "20:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "20:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "15:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.94231141476155,
+      "longitude": -117.13050564261192,
+      "raw_properties": {
+        "OBJECTID": 3,
+        "Organization": "Canyonside Recreation Center",
+        "Address": "12350 Black Mountain Rd. ",
+        "City": "San Diego",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92129,
+        "Lead": null,
+        "Title": "Center Director ",
+        "Phone": " ",
+        "OperationalHours": "Mon 9:00am-8:00pm\nTues 9:00am-8:00pm\nWed 9:00am-8:00pm\nThurs 9:00am-8:00pm\nFri 10:00am-8:00pm\nSat 9:00am-3:00pm\nSun Closed \nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "Valley Center Community Hall",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "08:00",
+            "16:30"
+          ]
+        ],
+        "tue": [
+          [
+            "08:00",
+            "16:30"
+          ]
+        ],
+        "wed": [
+          [
+            "08:00",
+            "16:30"
+          ]
+        ],
+        "thu": [
+          [
+            "08:00",
+            "16:30"
+          ]
+        ],
+        "fri": [
+          [
+            "08:00",
+            "16:30"
+          ]
+        ],
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 33.221513282968765,
+      "longitude": -117.039091700995,
+      "raw_properties": {
+        "OBJECTID": 4,
+        "Organization": "Valley Center Community Hall",
+        "Address": "28246 Lilac Road",
+        "City": "Valley Center",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92082,
+        "Lead": null,
+        "Title": "Parks Recreational Supervisor",
+        "Phone": " ",
+        "OperationalHours": "Mon 8:00am-4:30pm\nTues 8:00am-4:30pm\nWed 8:00am-4:30pm\nThurs 8:00am-4:30pm\nFri 8:00am-4:30pm\nSat Closed\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "Norman Park Senior Center",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "08:00",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "08:00",
+            "20:00"
+          ]
+        ],
+        "fri": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "08:00",
+            "13:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.641323105507055,
+      "longitude": -117.07809449541453,
+      "raw_properties": {
+        "OBJECTID": 5,
+        "Organization": "Norman Park Senior Center",
+        "Address": "270 F Street",
+        "City": "Chula Vista",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 91910,
+        "Lead": null,
+        "Title": "Principal Recreation Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 8:00am-5:00pm\nTues 8:00am-8:00pm\nWed 8:00am-5:00pm\nThurs 8:00am-8:00pm\nFri 8:00am-5:00pm\nSat 8:00am-1:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego Public Library: Carmel Valley Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.952208246597834,
+      "longitude": -117.23075892252184,
+      "raw_properties": {
+        "OBJECTID": 6,
+        "Organization": "San Diego Public Library: Carmel Valley Branch",
+        "Address": "3919 Townsgate Drive",
+        "City": "San Diego",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92130,
+        "Lead": null,
+        "Title": "Branch Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 11:30am-8:00pm\nTues 11:30am-8:00pm\nWed 9:30am-6:00pm\nThurs 9:30am-6:00pm\nFri 9:30am-6:00pm\nSat 9:30am-6:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego Public Library: Clairemont Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.79358755228454,
+      "longitude": -117.19394629769863,
+      "raw_properties": {
+        "OBJECTID": 7,
+        "Organization": "San Diego Public Library: Clairemont Branch",
+        "Address": "2920 Burgener Blvd.",
+        "City": "San Diego",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92110,
+        "Lead": null,
+        "Title": "Branch Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 11:30am-8:00pm\nTues 11:30am-8:00pm\nWed 9:30am-6:00pm\nThurs 9:30am-6:00pm\nFri 9:30am-6:00pm\nSat 9:30am-6:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego Public Library: College-Rolando Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.769411885080885,
+      "longitude": -117.05610621388483,
+      "raw_properties": {
+        "OBJECTID": 8,
+        "Organization": "San Diego Public Library: College-Rolando Branch",
+        "Address": "6600 Montezuma Rd",
+        "City": "San Diego",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92115,
+        "Lead": null,
+        "Title": "Branch Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 11:30am-8:00pm\nTues 11:30am-8:00pm\nWed 9:30am-6:00pm\nThurs 9:30am-6:00pm\nFri 9:30am-6:00pm\nSat 9:30am-6:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego Public Library: Kensington-Normal Heights Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.7630113224417,
+      "longitude": -117.10683532766642,
+      "raw_properties": {
+        "OBJECTID": 9,
+        "Organization": "San Diego Public Library: Kensington-Normal Heights Branch ",
+        "Address": "4121 Adams Avenue",
+        "City": "San Diego",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92116,
+        "Lead": null,
+        "Title": "Branch Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 11:30am-8:00pm\nTues 11:30am-8:00pm\nWed 9:30am-6pm\nThurs 9:30am-6pm\nFri 9:30am-6pm\nSat 9:30am-6pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego Public Library: Mira Mesa Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "08:00",
+            "16:30"
+          ]
+        ],
+        "wed": [
+          [
+            "08:30",
+            "17:30"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "20:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "15:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.91519769132883,
+      "longitude": -117.1426886502456,
+      "raw_properties": {
+        "OBJECTID": 10,
+        "Organization": "San Diego Public Library: Mira Mesa Branch",
+        "Address": "8405 New Salem Street",
+        "City": "San Diego",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92126,
+        "Lead": null,
+        "Title": "Branch Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 8:00am-5:00pm\nTues 8:00am-4:30pm\nWed 8:30am-5:30pm\nThurs 9:00am-8:00pm\nFri 10:00am-8:00pm\nSat 9:00am-3:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego Public Library: Mission Hills-Hillcrest/Knox Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.74969022332422,
+      "longitude": -117.16535503501046,
+      "raw_properties": {
+        "OBJECTID": 11,
+        "Organization": "San Diego Public Library: Mission Hills-Hillcrest/Knox Branch",
+        "Address": "215 W Washington St",
+        "City": "San Diego",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92103,
+        "Lead": null,
+        "Title": "Branch Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 11:30am-8:00pm\nTues 11:30am-8:00pm\nWed 9:30am-6:00pm\nThurs 9:30am-6:00pm\nFri 9:30am-6:00pm\nSat 9:30am-6:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego Public Library: Balboa Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.822376851530564,
+      "longitude": -117.17493659706022,
+      "raw_properties": {
+        "OBJECTID": 12,
+        "Organization": "San Diego Public Library: Balboa Branch",
+        "Address": "4255 Mt. Abernathy Ave",
+        "City": "San Diego",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92117,
+        "Lead": null,
+        "Title": "Branch Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 11:30am-8:00pm\nTues 11:30am-8:00pm\nWed 9:30am-6:00pm\nThurs 9:30am-6:00pm\nFri 9:30am-6:00pm\nSat 9:30am-6:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego Public Library: Mountain View/Beckwourth Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.69803585307617,
+      "longitude": -117.10265901564459,
+      "raw_properties": {
+        "OBJECTID": 13,
+        "Organization": "San Diego Public Library: Mountain View/Beckwourth Branch",
+        "Address": "721 San Pasqual St.",
+        "City": "San Diego",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92113,
+        "Lead": null,
+        "Title": "Branch Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 11:30am-8:00pm\nTues 11:30am-8:00pm\nWed 9:30am-6:00pm\nThurs 9:30am-6:00pm\nFri 9:30am-6:00pm\nSat 9:30am-6:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego Public Library: Mission Valley Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.779357029929066,
+      "longitude": -117.12702561212198,
+      "raw_properties": {
+        "OBJECTID": 14,
+        "Organization": "San Diego Public Library: Mission Valley Branch",
+        "Address": "2123 Fenton Pkwy",
+        "City": "San Diego",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92108,
+        "Lead": null,
+        "Title": "Branch Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 11:30am-8:00pm\nTues 11:30am-8:00pm\nWed 9:30am-6:00pm\nThur 9:30am-6:00pm\nFri 9:30am-6:00pm\nSat 9:30am-6:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego Public Library: North Park Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sun": []
+      },
+      "latitude": 32.74726938319224,
+      "longitude": -117.12689062818065,
+      "raw_properties": {
+        "OBJECTID": 15,
+        "Organization": "San Diego Public Library: North Park Branch",
+        "Address": "3795 31st St",
+        "City": "San Diego",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92104,
+        "Lead": null,
+        "Title": "Branch Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 11:30am-8pm\nTues 11:30am-8pm\nWed 9:30am-6pm\nThurs 9:30am-6pm\nFri 9:30am-6pm\nSat 9:30am-6pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego Public Library: North University Community Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "13:00",
+            "17:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.86758943469631,
+      "longitude": -117.19911531549734,
+      "raw_properties": {
+        "OBJECTID": 16,
+        "Organization": "San Diego Public Library: North University Community Branch",
+        "Address": "8820 Judicial Dr.",
+        "City": "San Diego",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92122,
+        "Lead": null,
+        "Title": "Branch Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 11:30am-8:00pm\nTues 11:30am-8:00pm\nWed 9:30am-6:00pm\nThurs 9:30am-6:00pm\nFri 9:30am-6:00pm\nSat 1:00pm-5:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego Public Library: Oak Park Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.73504307087922,
+      "longitude": -117.08006075965419,
+      "raw_properties": {
+        "OBJECTID": 17,
+        "Organization": "San Diego Public Library: Oak Park Branch",
+        "Address": "2802 54th St",
+        "City": "San Diego",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92105,
+        "Lead": null,
+        "Title": "Branch Manager/Librarian",
+        "Phone": " ",
+        "OperationalHours": "Mon 11:30am-8:00pm\nTues 11:30am-8:00pm\nWed 9:30am-6:00pm\nThurs 9:30am-6:00pm\nFri 9:30am-6:00pm\nSat 9:30am-6:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego Public Library: North Clairemont Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.82834340802234,
+      "longitude": -117.2064609515896,
+      "raw_properties": {
+        "OBJECTID": 18,
+        "Organization": "San Diego Public Library: North Clairemont Branch",
+        "Address": "4616 Clairemont Drive",
+        "City": "San Diego",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92117,
+        "Lead": null,
+        "Title": "Branch Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 11:30am-8:00pm\nTues 11:30am-8:00pm\nWed 9:30am-6:00pm\nThurs 9:30am-6:00pm\nFri 9:30am-6:00pm\nSat 9:30am-6:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "National City Public Library",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.6705686480798,
+      "longitude": -117.1042336002314,
+      "raw_properties": {
+        "OBJECTID": 19,
+        "Organization": "National City Public Library",
+        "Address": "1401 National City Blvd.",
+        "City": "National City",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 91950,
+        "Lead": null,
+        "Title": "Senior Librarian",
+        "Phone": " ",
+        "OperationalHours": "Mon 10:00am-8:00pm\nTues 10:00am-8:00pm\nWed 10:00am-8:00pm\nThurs 10:00am-8:00pm\nFri 10:00am-6:00pm\nSat 10:00am-5:00pm\nSun Closed\nObserved Holidays 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego Public Library: Pacific Beach Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.79430709099698,
+      "longitude": -117.25008112155291,
+      "raw_properties": {
+        "OBJECTID": 20,
+        "Organization": "San Diego Public Library: Pacific Beach Branch ",
+        "Address": "4275 Cass St",
+        "City": "San Diego",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92109,
+        "Lead": null,
+        "Title": "Branch Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 11:30am-8:00pm\nTues 11:30am-8:00pm\nWed 9:30am-6:00pm\nThurs 9:30am-6:00pm\nFri 9:30am-6:00pm\nSat 9:30am-6:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego Public Library: Carmel Mountain Ranch Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.98168742522173,
+      "longitude": -117.0737912789251,
+      "raw_properties": {
+        "OBJECTID": 21,
+        "Organization": "San Diego Public Library: Carmel Mountain Ranch Branch",
+        "Address": "12095 World Trade Dr. ",
+        "City": "San Diego ",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92128,
+        "Lead": null,
+        "Title": "Branch Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 11:30am-8:00pm\nTues 11:30am-8:00pm\nWed 9:30am-6:00pm\nThurs 9:30am-6:00pm\nFri 9:30am-6:00pm\nSat 9:30am-6:00pm\nSun Closed \nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego Public Library: Ocean Beach Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sun": []
+      },
+      "latitude": 32.745479217169496,
+      "longitude": -117.24720270563012,
+      "raw_properties": {
+        "OBJECTID": 22,
+        "Organization": "San Diego Public Library: Ocean Beach Branch",
+        "Address": "4801 Santa Monica Ave",
+        "City": "San Diego",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92107,
+        "Lead": null,
+        "Title": "Branch Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 11:30am-8pm\nTues 11:30am-8pm\nWed 9:30am-6pm\nThurs 9:30am-6pm\nFri 9:30am-6pm\nSat 9:30am-6pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "Santa Ysabel Nature Center",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "19:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "19:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "19:00"
+          ]
+        ]
+      },
+      "latitude": 33.11389448719902,
+      "longitude": -116.67149526627001,
+      "raw_properties": {
+        "OBJECTID": 23,
+        "Organization": "Santa Ysabel Nature Center",
+        "Address": "22135 Highway 79",
+        "City": "Santa Ysabel",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92070,
+        "Lead": null,
+        "Title": "Supervising Park Ranger",
+        "Phone": " ",
+        "OperationalHours": "Mon 10:00am-6:00pm\nTues 10:00am-6:00pm\nWed 10:00am-6:00pm\nThurs 10:00am-6:00pm\nFri 9:00am-7:00pm\nSat 9:00am-7:00pm\nSun 9:00am-7:00pm\nObserved Holidays None",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals & Pets Allowed",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "City of San Marcos: Senior Activity Center",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "08:00",
+            "16:00"
+          ]
+        ],
+        "tue": [
+          [
+            "08:00",
+            "16:00"
+          ]
+        ],
+        "wed": [
+          [
+            "08:00",
+            "16:00"
+          ]
+        ],
+        "thu": [
+          [
+            "08:00",
+            "16:00"
+          ]
+        ],
+        "fri": [
+          [
+            "08:00",
+            "16:00"
+          ]
+        ],
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 33.14355400440558,
+      "longitude": -117.16337944789542,
+      "raw_properties": {
+        "OBJECTID": 24,
+        "Organization": "City of San Marcos: Senior Activity Center",
+        "Address": "111 Richmar Avenue",
+        "City": "San Marcos",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92069,
+        "Lead": null,
+        "Title": "Recreation Supervisor II - Senior Services",
+        "Phone": " ",
+        "OperationalHours": "Mon 8:00am-4:00pm\nTues 8:00am-4:00pm\nWed 8:00am-4:00pm\nThurs 8:00am-4:00pm\nFri 8:00am-4:00pm\nSat Closed\nSun Closed\nObserved Holidays 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego Public Library: Rancho Penasquitos Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sun": []
+      },
+      "latitude": 32.9580408438818,
+      "longitude": -117.12208334413417,
+      "raw_properties": {
+        "OBJECTID": 25,
+        "Organization": "San Diego Public Library: Rancho Penasquitos Branch",
+        "Address": "13330 Salmon River Rd",
+        "City": "San Diego",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92129,
+        "Lead": null,
+        "Title": "Branch Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 11:30am-7pm\nTues 11:30am-7pm\nWed 9:30am-6pm\nThurs 9:30am-6pm\nFri 9:30am-6pm\nSat 9:30am-6pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego Public Library: Rancho Bernardo Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 33.024931958209734,
+      "longitude": -117.07526889303229,
+      "raw_properties": {
+        "OBJECTID": 26,
+        "Organization": "San Diego Public Library: Rancho Bernardo Branch",
+        "Address": "17110 Bernardo Center Dr. ",
+        "City": "San Diego",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92128,
+        "Lead": null,
+        "Title": "Librarian",
+        "Phone": " ",
+        "OperationalHours": "Mon 11:30am-8:00pm\nTues 11:30am-8:00pm\nWed 9:30am-6:00pm\nThurs 9:30am-6:00pm\nFri 9:30am-6:00pm\nSat 9:30am-6:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego Public Library: Serra Mesa-Kearny Mesa Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.80916866719767,
+      "longitude": -117.13367530537963,
+      "raw_properties": {
+        "OBJECTID": 27,
+        "Organization": "San Diego Public Library: Serra Mesa-Kearny Mesa Branch",
+        "Address": "9005 Aero Drive",
+        "City": "San Diego",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92123,
+        "Lead": null,
+        "Title": "Branch Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 11:30am-8:00pm\nTues 11:30am-8:00pm\nWed 9:30am-6:00pm\nThurs 9:30am-6:00pm\nFri 9:30am-6:00pm\nSat 9:30am-6:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "Westfield Plaza Bonita",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "21:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "21:00"
+          ]
+        ],
+        "sun": [
+          [
+            "11:00",
+            "19:00"
+          ]
+        ]
+      },
+      "latitude": 32.65633764861431,
+      "longitude": -117.06581384667676,
+      "raw_properties": {
+        "OBJECTID": 28,
+        "Organization": "Westfield Plaza Bonita",
+        "Address": "3030 Plaza Bonita Road",
+        "City": "National City",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 91950,
+        "Lead": null,
+        "Title": "General Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 10:00am-8:00pm\nTues 10:00am-8:00pm\nWed 10:00am-8:00pm\nThurs 10:00am-8:00pm\nFri 10:00 am-9:00pm\nSat 10:00 am-9:00pm\nSun 11:00am-7:00pm\nObserved Holidays None",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego County Library: Bonita-Sunnyside Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "12:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.660851582549014,
+      "longitude": -117.03449405110786,
+      "raw_properties": {
+        "OBJECTID": 29,
+        "Organization": "San Diego County Library: Bonita-Sunnyside Branch ",
+        "Address": "4375 Bonita Rd",
+        "City": "Bonita",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 91902,
+        "Lead": null,
+        "Title": "Safety Coordinator ",
+        "Phone": " ",
+        "OperationalHours": "Mon 10:00am-6:00pm\nTue 12:00pm-7:00pm\nWed 10:00am-6:00pm\nThurs 10:00am-6:00pm\nFri 10:00am-5:00pm\nSat 10:00am-5:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego County Library: Potrero Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [],
+        "tue": [
+          [
+            "12:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.61128628457488,
+      "longitude": -116.61267915123815,
+      "raw_properties": {
+        "OBJECTID": 30,
+        "Organization": "San Diego County Library: Potrero Branch",
+        "Address": "24883 Potrero Valley Road",
+        "City": "Potrero",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 91963,
+        "Lead": null,
+        "Title": "Safety Coordinator ",
+        "Phone": " ",
+        "OperationalHours": "Mon Closed\nTues 12:00pm-7:00pm\nWed 10:00am-6:00pm\nThurs 10:00am-6:00pm\nFri 10:00am-5:00pm\nSat 10:00am-5:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "City of Escondido: East Valley Community Center",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "09:00",
+            "20:30"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "20:30"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "20:30"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "20:30"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "20:30"
+          ]
+        ],
+        "sat": [
+          [
+            "08:30",
+            "16:30"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 33.13846293280605,
+      "longitude": -117.04614275496512,
+      "raw_properties": {
+        "OBJECTID": 31,
+        "Organization": "City of Escondido: East Valley Community Center",
+        "Address": "2245 East Valley Parkway",
+        "City": "Escondido",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92027,
+        "Lead": null,
+        "Title": "Community Services Supervisor",
+        "Phone": " ",
+        "OperationalHours": "Mon 9:00am-8:30pm\nTues 9:00am-8:30pm\nWed 9:00am-8:30pm\nThurs 9:00am-8:30pm\nFri 9:00am-8:30pm\nSat 8:30am-4:30pm\nSun Closed\nObserved Holidays 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "Heritage of the Americas Museum",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [],
+        "tue": [
+          [
+            "10:00",
+            "15:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "17:30"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "sat": [
+          [
+            "12:00",
+            "15:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.742751381596804,
+      "longitude": -116.94135773901544,
+      "raw_properties": {
+        "OBJECTID": 32,
+        "Organization": "Heritage of the Americas Museum",
+        "Address": "12110 Cuyamaca College Drive West",
+        "City": "El Cajon",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92019,
+        "Lead": null,
+        "Title": "Director",
+        "Phone": " ",
+        "OperationalHours": "Mon Closed\nTues 10:00am-3:00pm\nWed 10:00am-5:30pm\nThurs 10:00am-8:00pm\nFri 10:00am-8:00pm\nSat 12:00pm-3:00pm (1st & 3rd Sat of each month)\nSun Closed\nObserved Holidays None",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego County Library: Cardiff-by-the-Sea Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [],
+        "tue": [
+          [
+            "12:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 33.0219296836153,
+      "longitude": -117.28137411421541,
+      "raw_properties": {
+        "OBJECTID": 33,
+        "Organization": "San Diego County Library: Cardiff-by-the-Sea Branch",
+        "Address": "2081 Newcastle Ave",
+        "City": "Cardiff-by-the-Sea",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92007,
+        "Lead": null,
+        "Title": "Safety Coordinator ",
+        "Phone": " ",
+        "OperationalHours": "Mon Closed\nTues 12:00pm-7:00pm\nWed 10:00am-6:00pm\nThur 10:00am-6:00pm\nFri 10:00am-5:00pm\nSat 10:00am-5:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego Public Library: University Community Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.85399683579639,
+      "longitude": -117.20098416379071,
+      "raw_properties": {
+        "OBJECTID": 34,
+        "Organization": "San Diego Public Library: University Community Branch",
+        "Address": "4155 Governor Dr.",
+        "City": "San Diego",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92122,
+        "Lead": null,
+        "Title": "Branch Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 11:30am-8:00pm\nTues 11:30am-8:00pm\nWed 9:30am-6:00pm\nThurs 9:30am-6:00pm\nFri 9:30am-6:00pm\nSat 9:30am-6:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego County Library: Casa de Oro Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "12:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 32.74716593109577,
+      "longitude": -116.98573823658809,
+      "raw_properties": {
+        "OBJECTID": 35,
+        "Organization": "San Diego County Library: Casa de Oro Branch ",
+        "Address": "9805 Campo Rd.",
+        "City": "Spring Valley ",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 91977,
+        "Lead": null,
+        "Title": "Safety Coordinator ",
+        "Phone": " ",
+        "OperationalHours": "Mon 10:00am-6:00pm\nTues 12:00pm-7:00pm\nWed 10:00am-6:00pm\nThurs 10:00am-6:00pm\nFri 10:00am-5:00pm\nSat Closed\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego County Library: Alpine Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [],
+        "tue": [
+          [
+            "12:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.83807203129991,
+      "longitude": -116.77611084528452,
+      "raw_properties": {
+        "OBJECTID": 36,
+        "Organization": "San Diego County Library: Alpine Branch",
+        "Address": "1752 Alpine Blvd",
+        "City": "Alpine",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 91901,
+        "Lead": null,
+        "Title": "Safety Coordinator ",
+        "Phone": " ",
+        "OperationalHours": "Mon Closed\nTues 12:00pm-7:00pm\nWed 10:00am-6:00pm\nThurs 10:00am-6:00pm\nFri 10:00am-5:00pm\nSat 10:00am-5:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego County Library: Crest Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [],
+        "tue": [
+          [
+            "12:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.804001058129444,
+      "longitude": -116.8674927095323,
+      "raw_properties": {
+        "OBJECTID": 37,
+        "Organization": "San Diego County Library: Crest Branch ",
+        "Address": "105 Juanita Lane",
+        "City": "El Cajon",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92021,
+        "Lead": null,
+        "Title": "Safety Coordinator ",
+        "Phone": " ",
+        "OperationalHours": "Mon Closed\nTues 12:00pm-7:00pm\nWed 10:00am-6:00pm\nThurs 10:00am-6:00pm\nFri 10:00am-5:00pm\nSat 10:00am-5:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego County Library: Santee Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "12:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.844839176714224,
+      "longitude": -116.99685020544521,
+      "raw_properties": {
+        "OBJECTID": 38,
+        "Organization": "San Diego County Library: Santee Branch",
+        "Address": "9225 Carlton Hills Blvd #17",
+        "City": "Santee",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92071,
+        "Lead": null,
+        "Title": "Safety Coordinator ",
+        "Phone": " ",
+        "OperationalHours": "Mon 10:00am-6:00pm\nTues 12:00pm-7:00pm\nWed 10:00am-6:00pm\nThurs 10:00am-6:00pm\nFri 10:00am-5:00pm\nSat 10:00am-5:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego County Library: Borrego Springs Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [],
+        "tue": [
+          [
+            "12:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 33.253906781523014,
+      "longitude": -116.38184848947773,
+      "raw_properties": {
+        "OBJECTID": 39,
+        "Organization": "San Diego County Library: Borrego Springs Branch ",
+        "Address": "2580 Country Club Rd",
+        "City": "Borrego Springs",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92004,
+        "Lead": null,
+        "Title": "Safety Coordinator ",
+        "Phone": " ",
+        "OperationalHours": "Mon Closed\r\nTues 12:00pm-7:00pm\r\nWed 10:00am-6:00pm\r\nThurs 10:00am-6:00pm\r\nFri 10:00am-5:00pm\r\nSat 10:00am-5:00pm\r\nSun Closed\r\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego County Library: Solana Beach Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "12:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 32.99439457206026,
+      "longitude": -117.2626534247268,
+      "raw_properties": {
+        "OBJECTID": 40,
+        "Organization": "San Diego County Library: Solana Beach Branch                          ",
+        "Address": "157 Stevens Ave",
+        "City": "Solana Beach",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92075,
+        "Lead": null,
+        "Title": "Safety Coordinator ",
+        "Phone": " ",
+        "OperationalHours": "Mon 10:00am-6:00pm\nTues 12:00pm-7:00pm\nWed 10:00am-6:00pm\nThurs 10:00am-6:00pm\nFri 10:00am-5:00pm\nSat Closed\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego County Library: Descanso Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [],
+        "tue": [
+          [
+            "12:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.85946529974853,
+      "longitude": -116.61343622970385,
+      "raw_properties": {
+        "OBJECTID": 41,
+        "Organization": "San Diego County Library: Descanso Branch",
+        "Address": "9545 River Drive ",
+        "City": "Descanso",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 91916,
+        "Lead": null,
+        "Title": "Safety Coordinator ",
+        "Phone": " ",
+        "OperationalHours": "Mon Closed\nTues 12:00pm-7:00pm\nWed 10:00am-6:00pm\nThurs 10:00am-6:00pm\nFri 10:00am-5:00pm\nSat 10:00am-5:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego County Library: Rancho San Diego Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "12:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.74849965141385,
+      "longitude": -116.92937241339082,
+      "raw_properties": {
+        "OBJECTID": 42,
+        "Organization": "San Diego County Library: Rancho San Diego Branch ",
+        "Address": "11555 Via Rancho San Diego",
+        "City": "El Cajon",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92019,
+        "Lead": null,
+        "Title": "Safety Coordinator ",
+        "Phone": " ",
+        "OperationalHours": "Mon 10:00am-6:00pm\nTues 12:00pm-7:00pm\nWed 10:00am-6:00pm\nThurs 10:00am-6:00pm\nFri 10:00am-5:00pm\nSat 10:00am-5:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego County Library: Del Mar Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [],
+        "tue": [
+          [
+            "00:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.95780863785778,
+      "longitude": -117.2642672709692,
+      "raw_properties": {
+        "OBJECTID": 43,
+        "Organization": "San Diego County Library: Del Mar Branch ",
+        "Address": "1309 Camino Del Mar",
+        "City": "Del Mar",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92014,
+        "Lead": null,
+        "Title": "Safety Coordinator ",
+        "Phone": " ",
+        "OperationalHours": "Mon Closed\nTues 12:00am-7:00pm\nWed 10:00am-6:00pm\nThurs 10:00am-6:00pm\nFri 10:00am-5:00pm\nSat 10:00am-5:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego Public Library: Paradise Hills Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.672681654264544,
+      "longitude": -117.06119544540942,
+      "raw_properties": {
+        "OBJECTID": 44,
+        "Organization": "San Diego Public Library: Paradise Hills Branch ",
+        "Address": "5922 Rancho Hills Drive",
+        "City": "San Diego",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92139,
+        "Lead": null,
+        "Title": "Branch Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 11:30am-8:00pm\nTues 11:30am-8:00pm\nWed 9:30am-6:00pm\nThurs 9:30am-6:00pm\nFri 9:30am-6:00pm\nSat 9:30am-6:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego County Library: Lemon Grove Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "12:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.7386541544552,
+      "longitude": -117.02924256166565,
+      "raw_properties": {
+        "OBJECTID": 45,
+        "Organization": "San Diego County Library: Lemon Grove Branch",
+        "Address": "3001 School Lane ",
+        "City": "Lemon Grove",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 91945,
+        "Lead": null,
+        "Title": "Safety Coordinator ",
+        "Phone": " ",
+        "OperationalHours": "Mon 10:00am-6:00pm\nTues 12:00pm-7:00pm\nWed 10:00am-6:00pm\nThurs 10:00am-6:00pm\nFri 10:00am-5:00pm\nSat 10:00am-5:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego Public Library: Valencia Park/ Malcolm X Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.710931877046484,
+      "longitude": -117.08405368504674,
+      "raw_properties": {
+        "OBJECTID": 46,
+        "Organization": "San Diego Public Library: Valencia Park/ Malcolm X Branch",
+        "Address": "5148 Market St",
+        "City": "San Diego",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92114,
+        "Lead": null,
+        "Title": "Branch Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 11:30am-8:00pm\nTues 11:30am-8:00pm\nWed 9:30am-6:00pm\nThurs 9:30am-6:00pm\nFri 9:30am-6:00pm\nSat 9:30am-6:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego County Library: Pine Valley Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [],
+        "tue": [
+          [
+            "12:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.8236597962809,
+      "longitude": -116.53135473216884,
+      "raw_properties": {
+        "OBJECTID": 47,
+        "Organization": "San Diego County Library: Pine Valley Branch ",
+        "Address": "28804 Old Hwy 80 ",
+        "City": "Pine Valley",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 91962,
+        "Lead": null,
+        "Title": "Safety Coordinator ",
+        "Phone": " ",
+        "OperationalHours": "Mon Closed\nTues 12:00pm-7:00pm\nWed 10:00am-6:00pm\nThurs 10:00am-6:00pm\nFri 10:00am-5:00pm\nSat 10:00am-5:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "Christian Science Reading Room",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [],
+        "tue": [],
+        "wed": [
+          [
+            "12:30",
+            "19:30"
+          ]
+        ],
+        "fri": [
+          [
+            "11:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "11:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "11:00",
+            "14:00"
+          ]
+        ]
+      },
+      "latitude": 32.765767234436495,
+      "longitude": -117.01776009699712,
+      "raw_properties": {
+        "OBJECTID": 48,
+        "Organization": "Christian Science Reading Room",
+        "Address": "8370 La Mesa Blvd.",
+        "City": "La Mesa",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 91942,
+        "Lead": null,
+        "Title": "Clerk",
+        "Phone": " ",
+        "OperationalHours": "Mon Closed\nTue Closed\nWed 12:30pm-7:30pm\nThur 5:00pm-8:00-pm\nFri 11:00am-6:00pm\nSat 11:00am-5:00pm\nSun 11:00am-2:00pm\nObserved Holidays 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "City of Chula Vista: Civic Center Library",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "13:00",
+            "17:00"
+          ]
+        ]
+      },
+      "latitude": 32.64100585056395,
+      "longitude": -117.08317775956216,
+      "raw_properties": {
+        "OBJECTID": 49,
+        "Organization": "City of Chula Vista: Civic Center Library",
+        "Address": "365 F St.",
+        "City": "Chula Vista",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 91910,
+        "Lead": null,
+        "Title": "Director of Library Services",
+        "Phone": " ",
+        "OperationalHours": "Mon 10:00am-8:00pm\nTue 10:00am-8:00pm\nWed 10:00am-8:00pm\nThur 10:00am-8:00pm\nFri 10:00am-5:00pm\nSat 10:00am-5:00pm\nSun 1:00pm-5:00pm\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "City of Chula Vista: Otay Ranch Branch Library",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "11:00",
+            "19:00"
+          ]
+        ],
+        "tue": [
+          [
+            "11:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "11:00",
+            "19:00"
+          ]
+        ],
+        "thu": [
+          [
+            "11:00",
+            "19:00"
+          ]
+        ],
+        "fri": [
+          [
+            "11:00",
+            "19:00"
+          ]
+        ],
+        "sat": [
+          [
+            "11:00",
+            "19:00"
+          ]
+        ],
+        "sun": [
+          [
+            "12:00",
+            "18:00"
+          ]
+        ]
+      },
+      "latitude": 32.622036122166556,
+      "longitude": -116.96741775501398,
+      "raw_properties": {
+        "OBJECTID": 50,
+        "Organization": "City of Chula Vista: Otay Ranch Branch Library",
+        "Address": "2015 Birch Road, Suite 1103",
+        "City": "Chula Vista",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 91915,
+        "Lead": null,
+        "Title": "Library Director",
+        "Phone": " ",
+        "OperationalHours": "Mon 11:00am-7:00pm\nTue 11:00am-7:00pm\nWed 11:00am-7:00pm\nThur 11:00am-7:00pm\nFri 11:00am-7:00pm\nSat 11:00am-7:00pm\nSun 12:00pm-6:00pm\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals & Pets Allowed",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "City of Chula Vista: Loma Verde Community Center",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "09:00",
+            "12:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "12:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "12:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "12:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "12:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "12:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.602283149894625,
+      "longitude": -117.05016641730315,
+      "raw_properties": {
+        "OBJECTID": 51,
+        "Organization": "City of Chula Vista: Loma Verde Community Center",
+        "Address": "1420 Loma Lane",
+        "City": "Chula Vista",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 91911,
+        "Lead": null,
+        "Title": "Recreation Supervisor II",
+        "Phone": " ",
+        "OperationalHours": "Mon 9:00am-12:00pm; 2:00pm-7:00pm\nTue 9:00am-12:00pm; 2:00pm-7:00pm\nWed 9:00am-12:00pm; 2:00pm-7:00pm\nThur 9:00am-12:00pm; 2:00pm-7:00pm\nFri 9:00am-12:00pm; 2:00pm-7:00pm\nSat 9:00am-12:00pm; 2:00pm-7:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego Public Library: University Heights Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.75385782723362,
+      "longitude": -117.14601901007431,
+      "raw_properties": {
+        "OBJECTID": 52,
+        "Organization": "San Diego Public Library: University Heights Branch",
+        "Address": "4193 Park Blvd.",
+        "City": "San Diego",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92103,
+        "Lead": null,
+        "Title": "Branch Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 11:30am-8:00pm\nTues 11:30am-8:00pm\nWed 9:30am-6:00pm\nThurs 9:30am-6:00pm\nFri 9:30am-6:00pm\nSat 9:30am-6:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego County Library: Rancho Santa Fe Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 33.02098254449501,
+      "longitude": -117.2055282790174,
+      "raw_properties": {
+        "OBJECTID": 53,
+        "Organization": "San Diego County Library: Rancho Santa Fe Branch",
+        "Address": "17040 Avenida de Acacias",
+        "City": "Rancho Santa Fe",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92067,
+        "Lead": null,
+        "Title": "Librarian II, Branch Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 9:00am-5:00pm\nTues 9:00am-5:00pm\nWed 9:00am-5:00pm\nThurs 9:00am-5:00pm\nFri 9:00am-5:00pm\nSat 9:00am-5:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego Public Library: Allied Gardens/Benjamin Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.79309076917932,
+      "longitude": -117.08148753408503,
+      "raw_properties": {
+        "OBJECTID": 54,
+        "Organization": "San Diego Public Library: Allied Gardens/Benjamin Branch",
+        "Address": "5188 Zion Avenue",
+        "City": "San Diego",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92120,
+        "Lead": null,
+        "Title": "Branch Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 11:30am-8:00pm\nTues 11:30am-8:00pm\nWed 9:30am-6:00pm\nThurs 9:30am-6:00pm\nFri 9:30am-6:00pm\nSat 9:30am-6:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "City of La Mesa: Adult Enrichment Center",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "08:00",
+            "16:00"
+          ]
+        ],
+        "tue": [
+          [
+            "08:00",
+            "16:00"
+          ]
+        ],
+        "wed": [
+          [
+            "08:00",
+            "16:00"
+          ]
+        ],
+        "thu": [
+          [
+            "08:00",
+            "16:00"
+          ]
+        ],
+        "fri": [
+          [
+            "08:00",
+            "12:30"
+          ]
+        ],
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 32.76785651843764,
+      "longitude": -117.01589763286805,
+      "raw_properties": {
+        "OBJECTID": 55,
+        "Organization": "City of La Mesa: Adult Enrichment Center",
+        "Address": "8450 La Mesa Blvd. ",
+        "City": "La Mesa",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 91942,
+        "Lead": null,
+        "Title": "Recreation Supervisor",
+        "Phone": " ",
+        "OperationalHours": "Mon 8:00am-4:00 pm\nTues 8:00am-4:00pm\nWed 8:00am-4:00pm\nThurs 8:00am-4:00pm\nFri 8:00am-12:30pm\nSat Closed\nSun Closed\nObserved Holidays 6/19, 6/23, 6/25, 7/4, 7/14, 7/15, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego County Library: 4S Ranch Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "12:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 33.02120665475619,
+      "longitude": -117.11423102551625,
+      "raw_properties": {
+        "OBJECTID": 56,
+        "Organization": "San Diego County Library: 4S Ranch Branch",
+        "Address": "10433 Reserve Dr ",
+        "City": "San Diego",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92127,
+        "Lead": null,
+        "Title": "Branch Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 10:00am-6:00pm\nTues 12:00pm-7:00pm\nWed 10:00am-6:00pm\nThurs 10:00am-6:00pm\nFri 10:00am-5:00pm\nSat 10:00am-5:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "City of Escondido: Community Center",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "08:00",
+            "15:00"
+          ]
+        ],
+        "tue": [
+          [
+            "08:00",
+            "15:00"
+          ]
+        ],
+        "wed": [
+          [
+            "08:00",
+            "15:00"
+          ]
+        ],
+        "thu": [
+          [
+            "08:00",
+            "15:00"
+          ]
+        ],
+        "fri": [
+          [
+            "08:00",
+            "15:00"
+          ]
+        ],
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 33.12958550529417,
+      "longitude": -117.08372799285915,
+      "raw_properties": {
+        "OBJECTID": 57,
+        "Organization": "City of Escondido: Community Center",
+        "Address": "210 E Park Ave",
+        "City": "Escondido",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92025,
+        "Lead": null,
+        "Title": "Community Services Supervisor",
+        "Phone": " ",
+        "OperationalHours": "Mon 8:00am-3:00pm\nTues 8:00am-3:00pm\nWed 8:00am-3:00pm\nThurs 8:00am-3:00pm\nFri 8:00am-3:00pm\nSat Closed\nSun Closed\nObserved Holidays 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "County of San Diego: San Elijo Lagoon Nature Center",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ]
+      },
+      "latitude": 33.01288314767239,
+      "longitude": -117.27129939012093,
+      "raw_properties": {
+        "OBJECTID": 58,
+        "Organization": "County of San Diego: San Elijo Lagoon Nature Center",
+        "Address": "2710 Manchester Ave",
+        "City": "Cardiff by the Sea ",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92007,
+        "Lead": null,
+        "Title": "Supervising Park Ranger",
+        "Phone": " ",
+        "OperationalHours": "Mon 9:00am-5:00pm\nTues 9:00am-5:00pm\nWed 9:00am-5:00pm\nThurs 9:00am-5:00pm\nFri 9:00am-5:00pm\nSat 9:00am-5:00pm\nSun 9:00am-5:00pm\nObserved Holidays None",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "Carlsbad City Library",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "09:00",
+            "19:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "19:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "19:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "13:00",
+            "17:00"
+          ]
+        ]
+      },
+      "latitude": 33.10580417256264,
+      "longitude": -117.26927428022277,
+      "raw_properties": {
+        "OBJECTID": 59,
+        "Organization": "Carlsbad City Library",
+        "Address": "1775 Dove Lane",
+        "City": "Carlsbad",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92011,
+        "Lead": null,
+        "Title": "Principal Librarian",
+        "Phone": " ",
+        "OperationalHours": "Mon 9:00am-7:00pm\nTues 9:00am-7:00pm\nWed 9:00am-7:00pm\nThurs 9:00am-7:00pm\nFri 9:00am-5:00pm\nSat 9:00am-5:00pm\nSun 1:00pm-5:00pm\nObserved Holidays 7/4, 9/1, 10/13",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego County Library: El Cajon Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "12:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "12:00",
+            "19:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ]
+      },
+      "latitude": 32.793631867702864,
+      "longitude": -116.96054501675337,
+      "raw_properties": {
+        "OBJECTID": 60,
+        "Organization": "San Diego County Library: El Cajon Branch",
+        "Address": "201 E Douglas Ave",
+        "City": "El Cajon",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92020,
+        "Lead": null,
+        "Title": "Safety Coordinator ",
+        "Phone": " ",
+        "OperationalHours": "Mon 10:00am-6:00pm\nTues 12:00pm-7:00pm\nWed 12:00pm-7:00pm\nThurs 10:00am-6:00pm\nFri 10:00am-5:00pm\nSat 10:00am - 5:00pm\nSun 10:00am - 5:00pm\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego County Library: Poway Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "12:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "12:00",
+            "19:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ]
+      },
+      "latitude": 32.95632878014976,
+      "longitude": -117.0462977046793,
+      "raw_properties": {
+        "OBJECTID": 61,
+        "Organization": "San Diego County Library: Poway Branch  ",
+        "Address": "13137 Poway Rd",
+        "City": "Poway",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92064,
+        "Lead": null,
+        "Title": "Safety Coordinator ",
+        "Phone": " ",
+        "OperationalHours": "Mon 10:00am-6:00pm\nTues 12:00pm-7:00pm\nWed 12:00pm-7:00pm\nThurs 10:00am-6:00pm\nFri 10:00am-5:00pm\nSat 10:00am-5:00pm\nSun 10:00am-5:00pm\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego County Library: Fletcher Hills Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [],
+        "tue": [
+          [
+            "12:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.80198376982525,
+      "longitude": -116.99769639428507,
+      "raw_properties": {
+        "OBJECTID": 62,
+        "Organization": "San Diego County Library: Fletcher Hills Branch",
+        "Address": "576 Garfield Ave",
+        "City": "El Cajon",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92020,
+        "Lead": null,
+        "Title": "Safety Coordinator ",
+        "Phone": " ",
+        "OperationalHours": "Mon Closed\nTues 12:00pm-7:00pm\nWed 10:00am-6:00pm\nThurs 10:00am-6:00pm\nFri 10:00am-5:00pm\nSat 10:00am-5:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego County Library: Lakeside Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "00:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.85718205977762,
+      "longitude": -116.92405876296634,
+      "raw_properties": {
+        "OBJECTID": 63,
+        "Organization": "San Diego County Library: Lakeside Branch",
+        "Address": "12428 Woodside Ave. ",
+        "City": " Lakeside",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92040,
+        "Lead": null,
+        "Title": "Safety Coordinator ",
+        "Phone": " ",
+        "OperationalHours": "Mon 10:00am-6:00pm\nTues 12:00am-7:00pm\nWed 10:00am-6:00pm\nThurs 10:00am-6:00pm\nFri 10:00am-5:00pm\nSat 10:00am-5:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego County Library: Imperial Beach Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "12:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.57674561800205,
+      "longitude": -117.11628629754276,
+      "raw_properties": {
+        "OBJECTID": 64,
+        "Organization": "San Diego County Library: Imperial Beach Branch",
+        "Address": "810 Imperial Beach Blvd",
+        "City": "Imperial Beach",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 91932,
+        "Lead": null,
+        "Title": "Safety Coordinator ",
+        "Phone": " ",
+        "OperationalHours": "Mon 10:00am-6:00pm\nTues 12:00pm-7:00pm\nWed 10:00am-6:00pm\nThurs 10:00am-6:00pm\nFri 10:00am-5:00pm\nSat 10:00am-5:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego County Library: Fallbrook Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "12:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 33.38184499643784,
+      "longitude": -117.25335840879461,
+      "raw_properties": {
+        "OBJECTID": 65,
+        "Organization": "San Diego County Library: Fallbrook Branch",
+        "Address": "124 S Mission Rd",
+        "City": "Fallbrook",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92028,
+        "Lead": null,
+        "Title": "Safety Coordinator ",
+        "Phone": " ",
+        "OperationalHours": "Mon 10:00am-6:00pm\nTues 12:00pm-7:00pm\nWed 10:00am-6:00pm\nThurs 10:00am-6:00pm\nFri 10:00am-5:00pm\nSat 10:00am-5:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "Oceanside Public Library: Mission Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "09:00",
+            "19:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "19:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "19:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "13:00",
+            "17:00"
+          ]
+        ]
+      },
+      "latitude": 33.22693271874204,
+      "longitude": -117.32801621816681,
+      "raw_properties": {
+        "OBJECTID": 66,
+        "Organization": "Oceanside Public Library: Mission Branch",
+        "Address": "3861-B Mission Ave",
+        "City": "Oceanside",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92058,
+        "Lead": null,
+        "Title": "Library Division Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 9:00am-7:00pm\nTues 9:00am-7:00pm\nWed 9:00am-7:00pm\nThurs 9:00am-7:00pm\nFri 9:00am-6:00pm\nSat 9:00am-6:00pm\nSun 1:00pm-5:00pm\nObserved Holidays 7/4, 8/31, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "Gloria McClellan Senior Center",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "08:00",
+            "15:30"
+          ]
+        ],
+        "tue": [
+          [
+            "08:00",
+            "15:30"
+          ]
+        ],
+        "wed": [
+          [
+            "08:00",
+            "15:30"
+          ]
+        ],
+        "thu": [
+          [
+            "08:00",
+            "15:30"
+          ]
+        ],
+        "fri": [
+          [
+            "08:00",
+            "15:30"
+          ]
+        ],
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 33.20618003354159,
+      "longitude": -117.21900962797842,
+      "raw_properties": {
+        "OBJECTID": 67,
+        "Organization": "Gloria McClellan Senior Center",
+        "Address": "1400 Vale Terrace Drive",
+        "City": "Vista",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92084,
+        "Lead": null,
+        "Title": "Community Services Program Manager",
+        "Phone": " ",
+        "OperationalHours": "Weekdays, 8:00am-3:30pm\nMon 8:00am-3:30pm\nTues 8:00am-3:30pm\nWed 8:00am-3:30pm\nThurs 8:00am-3:30pm\nFri 8:00am-3:30pm\nSat Closed\nSun Closed\nObserved Holidays 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "City of Chula Vista: South Chula Vista Library",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "13:00",
+            "17:00"
+          ]
+        ]
+      },
+      "latitude": 32.602082815036106,
+      "longitude": -117.06829269874092,
+      "raw_properties": {
+        "OBJECTID": 68,
+        "Organization": "City of Chula Vista: South Chula Vista Library",
+        "Address": "389 Orange Ave.",
+        "City": "Chula Vista",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 91911,
+        "Lead": null,
+        "Title": "Library Director",
+        "Phone": " ",
+        "OperationalHours": "Mon 10:00am-8:00pm\nTue 10:00am-8:00pm\nWed 10:00am-8:00pm\nThur 10:00am-8:00pm\nFri 10:00am-5:00pm\nSat 10:00am-5:00pm\nSun 1:00pm-5:00pm\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego Public Library: Logan Heights branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.700114132561,
+      "longitude": -117.13361518652842,
+      "raw_properties": {
+        "OBJECTID": 69,
+        "Organization": "San Diego Public Library: Logan Heights branch",
+        "Address": "567 S 28th st",
+        "City": "San Diego",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92113,
+        "Lead": null,
+        "Title": "Branch Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 11:30am-8:00pm\nTues 11:30am-8:00pm\nWed 9:30am-6:00pm\nThurs 9:30am-6:00pm\nFri 9:30am-6:00pm\nSat 9:30am-6:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego County Library: Ramona Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "12:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 33.03975730876977,
+      "longitude": -116.87304169005462,
+      "raw_properties": {
+        "OBJECTID": 70,
+        "Organization": "San Diego County Library: Ramona Branch",
+        "Address": "1275 Main Street",
+        "City": "Ramona",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92065,
+        "Lead": null,
+        "Title": "Safety Coordinator ",
+        "Phone": " ",
+        "OperationalHours": "Mon 10:00am-6:00pm\nTues 12:00pm-7:00pm\nWed 10:00am-6:00pm\nThurs 10:00am-6:00pm\nFri 10am-5pm\nSat 10am-5pm\nSun Closed\n\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego County Library: Lincoln Acres Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [],
+        "tue": [
+          [
+            "12:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.666673664086794,
+      "longitude": -117.07137434044286,
+      "raw_properties": {
+        "OBJECTID": 71,
+        "Organization": "San Diego County Library: Lincoln Acres Branch",
+        "Address": "2725 Granger Ave",
+        "City": "National City ",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 91950,
+        "Lead": null,
+        "Title": "Safety Coordinator ",
+        "Phone": " ",
+        "OperationalHours": "Mon Closed\nTues 12:00pm-7:00pm\nWed 10:00am-6:00pm\nThurs 10:00am-6:00pm\nFri 10:00am-5:00pm\nSat 10:00am-5:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "City of Poway: Community Park",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "08:00",
+            "16:00"
+          ]
+        ],
+        "tue": [
+          [
+            "08:00",
+            "16:00"
+          ]
+        ],
+        "wed": [
+          [
+            "08:00",
+            "16:00"
+          ]
+        ],
+        "thu": [
+          [
+            "08:00",
+            "16:00"
+          ]
+        ],
+        "fri": [
+          [
+            "08:00",
+            "16:00"
+          ]
+        ],
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 32.954899864435454,
+      "longitude": -117.04663589286731,
+      "raw_properties": {
+        "OBJECTID": 72,
+        "Organization": "City of Poway: Community Park",
+        "Address": "13094 Civic Center Drive",
+        "City": "Poway",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92064,
+        "Lead": null,
+        "Title": "Recreation Area Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 8:00am-4:00pm\nTues 8:00am-4:00pm\nWed 8:00am-4:00pm\nThurs 8:00am-4:00pm\nFri 8:00am-4:00pm\nSat Closed\nSun Closed\nObserved Holidays None",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego County Library: La Mesa Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "12:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "12:00",
+            "19:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ]
+      },
+      "latitude": 32.766219864756266,
+      "longitude": -117.02357054364849,
+      "raw_properties": {
+        "OBJECTID": 73,
+        "Organization": "San Diego County Library: La Mesa Branch",
+        "Address": "8074 Allison Ave",
+        "City": "La Mesa, CA",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 91942,
+        "Lead": null,
+        "Title": "Safety Coordinator ",
+        "Phone": " ",
+        "OperationalHours": "Mon 10:00am-6:00pm\nTues 12:00pm-7:00pm\nWed 12:00pm-7:00pm\nThurs 10:00am-6:00pm\nFri 10:00am-5:00pm\nSat 10:00am-5:00pm\nSun 10:00am-5:00pm\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego County Library: Encinitas Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "12:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "12:00",
+            "19:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ]
+      },
+      "latitude": 33.04580014268908,
+      "longitude": -117.29039414569824,
+      "raw_properties": {
+        "OBJECTID": 74,
+        "Organization": "San Diego County Library: Encinitas Branch",
+        "Address": "540 Cornish Dr",
+        "City": "Encinitas",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92024,
+        "Lead": null,
+        "Title": "Safety Coordinator ",
+        "Phone": " ",
+        "OperationalHours": "Mon 10:00am-6:00 pm\nTues 12:00pm-7:00 pm\nWed 12:00pm-7:00 pm\nThurs, 10:00am-6:00pm\nFri 10:00am-5:00 pm\nSat 10:00am-5:00 pm\nSun 10:00am-5:00 pm\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego Public Library: Skyline Hills Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.69718989911818,
+      "longitude": -117.02676148347221,
+      "raw_properties": {
+        "OBJECTID": 75,
+        "Organization": "San Diego Public Library: Skyline Hills Branch",
+        "Address": "7900 Paradise Valley Road",
+        "City": "San Diego",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92139,
+        "Lead": null,
+        "Title": "Branch Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 11:30am-8:00pm\nTues 11:300am-8:00pm\nWed 9:30am-6:00pm\nThurs 9:30am-6:00pm\nFri 9:30am-6:00pm\nSat 9:30am-6:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego County Library: Campo-Morena Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [],
+        "tue": [
+          [
+            "00:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.62381622485303,
+      "longitude": -116.47468311140032,
+      "raw_properties": {
+        "OBJECTID": 76,
+        "Organization": "San Diego County Library: Campo-Morena Branch",
+        "Address": "31356 Highway 94",
+        "City": "Campo ",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 91906,
+        "Lead": null,
+        "Title": "Safety Coordinator ",
+        "Phone": " ",
+        "OperationalHours": "Mon Closed\nTues 12:00am-7:00pm\nWed 10:00am-6:00pm\nThurs 10:00am-6:00pm\nFri 10:00 am-5:00pm\nSat 10:00 am-5:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego Public Library: Tierrasanta Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "11:30",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.820913704680414,
+      "longitude": -117.09808267843225,
+      "raw_properties": {
+        "OBJECTID": 77,
+        "Organization": "San Diego Public Library: Tierrasanta Branch",
+        "Address": "4985 La Cuenta Dr",
+        "City": "San Diego",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92124,
+        "Lead": null,
+        "Title": "Branch Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 11:30am-8:00pm\nTues 11:30am-8:00pm\nWed 9:30am-6:00pm\nThurs 9:30am-6:00pm\nFri 9:30am-6:00pm\nSat 9:30am-6:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "The Highlands Senior Citizens Group Jacumba CA",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "10:00",
+            "15:00"
+          ]
+        ],
+        "tue": [],
+        "wed": [],
+        "thu": [],
+        "fri": [],
+        "sat": [],
+        "sun": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ]
+      },
+      "latitude": 32.6174798751293,
+      "longitude": -116.18503053950873,
+      "raw_properties": {
+        "OBJECTID": 78,
+        "Organization": "The Highlands Senior Citizens Group Jacumba CA",
+        "Address": "44681 Old Highway 80",
+        "City": "Jacumba",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 91934,
+        "Lead": null,
+        "Title": "Food Service Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 10:00am-3:00pm\nTues Closed\nWed Closed\nThurs Closed\nFri Closed\nSat Closed\nSun 8:00am -5:00pm\nObserved Holidays 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego County Library: Jacumba Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [],
+        "tue": [
+          [
+            "12:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.61749182582956,
+      "longitude": -116.1872192215638,
+      "raw_properties": {
+        "OBJECTID": 79,
+        "Organization": "San Diego County Library: Jacumba Branch",
+        "Address": "44605 Old Hwy 80",
+        "City": "Jacumba",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 91934,
+        "Lead": null,
+        "Title": "Safety Coordinator ",
+        "Phone": " ",
+        "OperationalHours": "Mon Closed\nTues 12:00pm-7:00pm\nWed 10:00am-6:00pm\nThurs 10:00am-6:00pm\nFri 10:00am-5:00pm\nSat 10:00am-5:00pm\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego County Library: Spring Valley Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "12:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 32.712341520500495,
+      "longitude": -117.0019150954499,
+      "raw_properties": {
+        "OBJECTID": 80,
+        "Organization": "San Diego County Library: Spring Valley Branch",
+        "Address": "836 Kempton St.",
+        "City": "Spring Valley",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 91977,
+        "Lead": null,
+        "Title": "Safety Coordinator ",
+        "Phone": " ",
+        "OperationalHours": "Mon 10:00am-6:00pm\nTues 12:00pm-7:00pm\nWeds 10:00am-6:00pm\nThurs 10:00am-6:00pm\nFri 10:00am-5:00pm\nSat Closed\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "San Diego County Library: Julian Branch",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "12:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 33.07688186952521,
+      "longitude": -116.59683611008951,
+      "raw_properties": {
+        "OBJECTID": 81,
+        "Organization": "San Diego County Library: Julian Branch",
+        "Address": "1850 CA-78",
+        "City": "Julian",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92036,
+        "Lead": null,
+        "Title": "Safety Coordinator ",
+        "Phone": " ",
+        "OperationalHours": "Mon 10:00am-6:00pm\nTues 12:00pm-7:00pm\nWed 10:00am-6:00pm\nThurs 10:00am-6:00pm \nFri 10:00am-5:00pm\nSat Closed\nSun Closed\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "Ramona Senior Center",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "08:30",
+            "16:00"
+          ]
+        ],
+        "tue": [
+          [
+            "08:30",
+            "16:00"
+          ]
+        ],
+        "wed": [
+          [
+            "08:30",
+            "16:00"
+          ]
+        ],
+        "thu": [
+          [
+            "08:30",
+            "16:00"
+          ]
+        ],
+        "fri": [
+          [
+            "08:30",
+            "16:00"
+          ]
+        ],
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 33.04908828448195,
+      "longitude": -116.8607815380201,
+      "raw_properties": {
+        "OBJECTID": 82,
+        "Organization": "Ramona Senior Center",
+        "Address": "434 Aqua Lane",
+        "City": "Ramona",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92065,
+        "Lead": null,
+        "Title": "Executive Director",
+        "Phone": " ",
+        "OperationalHours": "Mon 8:30am-4:00pm\r\nTues 8:30am-4:00pm\r\nWed 8:30am-4:00pm\r\nThurs 8:30am-4:00pm\r\nFri 8:30am-4:00pm\r\nSat Closed\r\nSun Closed\r\nObserved Holidays 7/4, 9/1, 10/13",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": null,
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "Oceanside Public Library: Civic Center Library",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "09:00",
+            "19:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "19:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "19:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 33.197472896172066,
+      "longitude": -117.38044901505015,
+      "raw_properties": {
+        "OBJECTID": 83,
+        "Organization": "Oceanside Public Library: Civic Center Library",
+        "Address": "330 N Coast Hwy",
+        "City": "Oceanside",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92054,
+        "Lead": null,
+        "Title": "Library Division Manager",
+        "Phone": " ",
+        "OperationalHours": "Mon 9:00am-7:00pm\r\nTues 9:00am-7:00pm\r\nWed 9:00am-7:00pm\r\nThurs 9:00am-7:00pm\r\nFri 9:00am-6:00pm\r\nSat 9:00am-6:00pm\r\nSun Closed\r\nObserved Holidays 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "Grossmont Healthcare District's Health & Wellness Library",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "09:00",
+            "17:30"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "17:30"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "20:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "17:30"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "13:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.781792579219534,
+      "longitude": -117.00397573226766,
+      "raw_properties": {
+        "OBJECTID": 84,
+        "Organization": "Grossmont Healthcare District's Health & Wellness Library",
+        "Address": "9001 Wakarusa Street",
+        "City": "La Mesa",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 91942,
+        "Lead": null,
+        "Title": "Head Librarian",
+        "Phone": " ",
+        "OperationalHours": "Mon 9:00am-5:30pm\r\nTues 9:00am-8:00pm\r\nWed 9:00am-5:30pm\r\nThurs 9:00am-8:00pm\r\nFri 9:00am-5:30pm\r\nSat 9:00am-1:00pm\r\nSun Closed\r\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals Only",
+        "SiteCapacity": " ",
+        "EmergencyHours": "",
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    },
+    {
+      "name": "City of San Diego: Stockton Recreation Center",
+      "rtype": "shelter",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "12:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "12:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "12:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "12:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "12:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "14:00"
+          ]
+        ],
+        "sun": []
+      },
+      "latitude": 32.709168086260355,
+      "longitude": -117.12550243492377,
+      "raw_properties": {
+        "OBJECTID": 85,
+        "Organization": "City of San Diego: Stockton Recreation Center",
+        "Address": "330 32nd St",
+        "City": "San Diego",
+        "HHSARegion": null,
+        "State": "CA",
+        "ZipCode": 92102,
+        "Lead": null,
+        "Title": "Center Director",
+        "Phone": " ",
+        "OperationalHours": "Mon 12:00pm-6:00pm\r\nTues 12:00pm-6:00pm\r\nWed 12:00pm-6:00pm\r\nThurs 12:00pm-6:00pm\r\nFri 12:00pm-6:00pm\r\nSat 9:00am-2:00pm\r\nSun Closed\r\nObserved Holidays 6/19, 7/4, 9/1",
+        "Email": " ",
+        "MailingAddress": " ",
+        "DecalNeed": " ",
+        "BackupGenerator": " ",
+        "PetPolicy": "Service Animals & Pets Allowed",
+        "SiteCapacity": " ",
+        "EmergencyHours": null,
+        "DesignatedShelter": " ",
+        "PreviousShelter": " ",
+        "EmergencyContactInfo": " "
+      }
+    }
+  ],
+  "validation_errors": []
+}
