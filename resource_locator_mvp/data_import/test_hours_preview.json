@@ -1,0 +1,176 @@
+{
+  "import_date": "2025-11-11T19:32:08.225400",
+  "source_file": "raw_data/GeoJSON/test_with_hours.geojson",
+  "statistics": {
+    "total_features": 4,
+    "parsed": 4,
+    "errors": 0,
+    "resources_with_hours": 2,
+    "resources_without_hours": 2
+  },
+  "resources": [
+    {
+      "name": "Community Food Bank",
+      "rtype": "food",
+      "address": "123 Main Street",
+      "phone": "(619) 555-1234",
+      "website": "",
+      "description": "",
+      "hours_json": {},
+      "latitude": 32.7157,
+      "longitude": -117.1611,
+      "raw_properties": {
+        "name": "Community Food Bank",
+        "address": "123 Main Street",
+        "city": "San Diego",
+        "zip_code": "92101",
+        "phone": "(619) 555-1234",
+        "hours": "Mon-Fri: 9:00 AM - 5:00 PM"
+      }
+    },
+    {
+      "name": "Emergency Shelter",
+      "rtype": "medical",
+      "address": "456 Oak Avenue",
+      "phone": "(619) 555-5678",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
+      },
+      "latitude": 32.7257,
+      "longitude": -117.1411,
+      "raw_properties": {
+        "name": "Emergency Shelter",
+        "address": "456 Oak Avenue",
+        "city": "San Diego",
+        "zip_code": "92102",
+        "phone": "(619) 555-5678",
+        "hours": "24/7"
+      }
+    },
+    {
+      "name": "Health Clinic",
+      "rtype": "medical",
+      "address": "789 Pine Street",
+      "phone": "(619) 555-9012",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
+      },
+      "latitude": 32.7357,
+      "longitude": -117.1511,
+      "raw_properties": {
+        "name": "Health Clinic",
+        "address": "789 Pine Street",
+        "city": "San Diego",
+        "zip_code": "92103",
+        "phone": "(619) 555-9012",
+        "hours": "Always Open"
+      }
+    },
+    {
+      "name": "Legal Aid Office",
+      "rtype": "legal",
+      "address": "321 Elm Boulevard",
+      "phone": "(619) 555-3456",
+      "website": "",
+      "description": "",
+      "hours_json": {},
+      "latitude": 32.7457,
+      "longitude": -117.1311,
+      "raw_properties": {
+        "name": "Legal Aid Office",
+        "address": "321 Elm Boulevard",
+        "city": "San Diego",
+        "zip_code": "92104",
+        "phone": "(619) 555-3456",
+        "hours": "Tue-Thu: 10:00 AM - 3:00 PM"
+      }
+    }
+  ],
+  "validation_errors": []
+}

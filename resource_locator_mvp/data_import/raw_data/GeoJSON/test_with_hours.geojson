@@ -1,0 +1,65 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Community Food Bank",
+        "address": "123 Main Street",
+        "city": "San Diego",
+        "zip_code": "92101",
+        "phone": "(619) 555-1234",
+        "hours": "Mon-Fri: 9:00 AM - 5:00 PM"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-117.1611, 32.7157]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Emergency Shelter",
+        "address": "456 Oak Avenue",
+        "city": "San Diego",
+        "zip_code": "92102",
+        "phone": "(619) 555-5678",
+        "hours": "24/7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-117.1411, 32.7257]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Health Clinic",
+        "address": "789 Pine Street",
+        "city": "San Diego",
+        "zip_code": "92103",
+        "phone": "(619) 555-9012",
+        "hours": "Always Open"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-117.1511, 32.7357]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Legal Aid Office",
+        "address": "321 Elm Boulevard",
+        "city": "San Diego",
+        "zip_code": "92104",
+        "phone": "(619) 555-3456",
+        "hours": "Tue-Thu: 10:00 AM - 3:00 PM"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-117.1311, 32.7457]
+      }
+    }
+  ]
+}
