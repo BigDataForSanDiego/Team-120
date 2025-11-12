@@ -17,13 +17,13 @@ function resourceMap() {
         
         // Filters
         resourceTypes: [
-            { value: 'food', label: 'Food' },
-            { value: 'shelter', label: 'Shelter' },
-            { value: 'restroom', label: 'Restroom' },
-            { value: 'medical', label: 'Medical' },
-            { value: 'legal', label: 'Legal' },
-            { value: 'donation', label: 'Donation' },
-            { value: 'other', label: 'Other' }
+            { value: 'food', label: 'type.food' },
+            { value: 'shelter', label: 'type.shelter' },
+            { value: 'restroom', label: 'type.restroom' },
+            { value: 'medical', label: 'type.medical' },
+            { value: 'legal', label: 'type.legal' },
+            { value: 'donation', label: 'type.donation' },
+            { value: 'other', label: 'type.other' }
         ],
         selectedTypes: [],
         openNow: false,
@@ -32,7 +32,31 @@ function resourceMap() {
         // Initialize
         init() {
             this.initMap();
+            // initialize translated labels if translation helper exists
+            if (window && typeof window.t === 'function') {
+                this.resourceTypes.forEach(rt => {
+                    rt.label = window.t(rt.label);
+                });
+            }
+            // Listen for language changes
+            window.addEventListener('siteLanguageChanged', () => {
+                if (window && typeof window.t === 'function') {
+                    this.resourceTypes.forEach(rt => {
+                        rt.label = window.t('type.' + rt.value);
+                    });
+                }
+            });
             this.updateFilters();
+        },
+
+        // Translate a resource type value to the current language (fallback to value)
+        translateType(typeValue) {
+            const key = 'type.' + typeValue;
+            if (window && typeof window.t === 'function') {
+                return window.t(key);
+            }
+            // Capitalize fallback
+            return typeValue.charAt(0).toUpperCase() + typeValue.slice(1);
         },
         
         // Initialize Leaflet map
@@ -160,10 +184,10 @@ function resourceMap() {
                 marker.bindPopup(`
                     <div style="min-width: 200px;">
                         <h3 style="margin: 0 0 0.5rem 0;">${resource.properties.name}</h3>
-                        <p style="margin: 0.25rem 0; text-transform: capitalize;">${resource.properties.rtype}</p>
+                        <p style="margin: 0.25rem 0; text-transform: capitalize;">${this.translateType(resource.properties.rtype)}</p>
                         <p style="margin: 0.25rem 0; font-size: 0.9rem;">${resource.properties.address || 'No address'}</p>
-                        ${resource.properties.is_open_now === true ? '<span style="color: green; font-weight: bold;">Open Now</span>' : ''}
-                        ${resource.properties.is_open_now === false ? '<span style="color: red; font-weight: bold;">Closed</span>' : ''}
+                        ${resource.properties.is_open_now === true ? `<span style="color: green; font-weight: bold;">${(window && window.t) ? window.t('ui.open_now') : 'Open Now'}</span>` : ''}
+                        ${resource.properties.is_open_now === false ? `<span style="color: red; font-weight: bold;">${(window && window.t) ? window.t('ui.closed') : 'Closed'}</span>` : ''}
                     </div>
                 `);
                 

@@ -2,6 +2,8 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from .views import ResourceViewSet, ProviderResourceViewSet, AdminResourceViewSet
 from . import provider_views
+from django.contrib import admin
+from django.urls import path, include
 
 # Create routers for API endpoints
 router = DefaultRouter()
@@ -20,4 +22,5 @@ urlpatterns = [
     path('provider/resource/create/', provider_views.provider_resource_create, name='provider_resource_create'),
     path('provider/resource/<int:pk>/edit/', provider_views.provider_resource_edit, name='provider_resource_edit'),
     path('provider/resource/<int:pk>/delete/', provider_views.provider_resource_delete, name='provider_resource_delete'),
+    path('', include('chatbot.urls')),
 ]

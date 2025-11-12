@@ -10,6 +10,9 @@ from .serializers import (
     ResourceSerializer,
     ResourceSubmissionSerializer
 )
+from django.conf import settings
+import google.generativeai as genai
+import json
 
 
 class ResourceViewSet(viewsets.ReadOnlyModelViewSet):
@@ -67,6 +70,78 @@ class ResourceViewSet(viewsets.ReadOnlyModelViewSet):
             queryset = queryset.filter(id__in=resource_ids)
         
         return queryset
+
+    def list(self, request, *args, **kwargs):
+        """
+        Override list to optionally translate dynamic resource fields when
+        `lang=es` is provided as a query parameter. Uses Google Generative AI
+        to translate `name` and `description` into Spanish. Falls back to
+        original text on any error.
+        """
+        response = super().list(request, *args, **kwargs)
+
+        lang = request.query_params.get('lang', 'en').lower()
+        if not response.data:
+            return response
+
+        if lang.startswith('es'):
+            # Attempt to translate each feature's name and description.
+            try:
+                genai.configure(api_key=settings.GOOGLE_API_KEY)
+                model = genai.GenerativeModel('models/gemini-flash-latest')
+
+                features = response.data.get('features', [])
+                for feat in features:
+                    props = feat.get('properties', {})
+                    name = props.get('name', '') or ''
+                    desc = props.get('description', '') or ''
+
+                    # Build a compact prompt asking for JSON output for easier parsing.
+                    prompt = (
+                        "Translate the following resource name and description into "
+                        "natural, user-friendly Spanish. Return only a JSON object with keys 'name' and 'description'.\n\n"
+                        f"Name: {name}\n\nDescription: {desc}\n"
+                    )
+
+                    try:
+                        result = model.generate_content(prompt)
+                        text = getattr(result, 'text', '') or str(result)
+
+                        # Try to parse JSON from the model output; tolerate trailing text.
+                        translated = None
+                        try:
+                            translated = json.loads(text)
+                        except Exception:
+                            # Attempt to extract JSON substring if model included extra text
+                            start = text.find('{')
+                            end = text.rfind('}')
+                            if start != -1 and end != -1 and end > start:
+                                try:
+                                    translated = json.loads(text[start:end+1])
+                                except Exception:
+                                    translated = None
+
+                        if translated and isinstance(translated, dict):
+                            props['name'] = translated.get('name', name)
+                            props['description'] = translated.get('description', desc)
+                        else:
+                            # Fallback: assign the whole response as description
+                            props['description'] = text.strip() or desc
+
+                    except Exception as e:
+                        # On any per-feature translation error, keep original values.
+                        print('Translation error for resource:', e)
+                        props['name'] = name
+                        props['description'] = desc
+
+                # Put modified features back into response data
+                response.data['features'] = features
+
+            except Exception as e:
+                # Top-level translation/config error; do not fail the request.
+                print('Translation setup error:', e)
+
+        return response
 
 
 class ProviderResourceViewSet(viewsets.ModelViewSet):

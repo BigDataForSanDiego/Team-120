@@ -141,11 +141,46 @@ This will create 15 sample resources across San Diego County.
 
 ### 8. Run Development Server
 
+There are a few convenient ways to run the development server in this repository. The project uses a conda environment named `py310` (Python 3.10) — the application requires packages installed into that environment.
+
+Recommended (team-friendly): Use the Makefile target (runs the server in `py310`):
+
 ```bash
-python manage.py runserver
+cd resource_locator_mvp
+make run
 ```
 
-Visit http://127.0.0.1:8000 to see the application.
+This runs the server on port 8082 (http://127.0.0.1:8082) using the `py310` conda environment.
+
+Alternative: Use the helper script (executable):
+
+```bash
+cd resource_locator_mvp
+./scripts/runserver.sh
+```
+
+One-off (no scripts):
+
+```bash
+source $HOME/miniconda3/etc/profile.d/conda.sh
+conda activate py310
+cd resource_locator_mvp
+python manage.py runserver 0.0.0.0:8082
+```
+
+If you prefer not to use conda activation, you can run with `conda run`:
+
+```bash
+cd resource_locator_mvp
+conda run -n py310 python manage.py runserver 0.0.0.0:8082
+```
+
+Notes:
+- These commands assume your conda installation is in `$(HOME)/miniconda3`. If yours differs, adjust the paths in `Makefile`/`scripts/runserver.sh` accordingly.
+- The Makefile `install` target will install Python dependencies into whichever environment is active; prefer activating `py310` before running `make install`.
+- You can also use `direnv` to automatically activate the conda env when entering the project folder (optional setup).
+
+Visit http://127.0.0.1:8082 to see the application.
 
 ## Usage
 

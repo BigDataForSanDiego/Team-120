@@ -15,7 +15,11 @@ import os
 from dotenv import load_dotenv
 
 # Load environment variables
-load_dotenv()
+from pathlib import Path
+
+# Load environment variables from .env file in project root
+env_path = Path(__file__).resolve().parent.parent / '.env'
+load_dotenv(dotenv_path=env_path)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -46,6 +50,7 @@ INSTALLED_APPS = [
     'rest_framework',  # Django REST Framework
     'rest_framework_gis',  # DRF GIS
     'resources',  # Our resources app
+    'chatbot',
 ]
 
 MIDDLEWARE = [
@@ -86,10 +91,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': os.getenv('DB_NAME', 'resource_locator_db'),
-        'USER': os.getenv('DB_USER', 'postgres'),
-        'PASSWORD': os.getenv('DB_PASSWORD', 'yourpassword'),
+        'USER': os.getenv('DB_USER', 'jsiegel0516'),
+        'PASSWORD': os.getenv('DB_PASSWORD', '1234'),
         'HOST': os.getenv('DB_HOST', 'localhost'),
-        'PORT': os.getenv('DB_PORT', '5432'),
+        'PORT': os.getenv('DB_PORT', '5434'),
     }
 }
 
@@ -150,4 +155,11 @@ REST_FRAMEWORK = {
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/provider/'
 LOGOUT_REDIRECT_URL = "/"
+
+from pathlib import Path
+import os
+from dotenv import load_dotenv
+load_dotenv()
+BASE_DIR = Path(__file__).resolve().parent.parent
+GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
 

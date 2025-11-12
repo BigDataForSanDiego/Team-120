@@ -44,6 +44,9 @@
                     {% if user.is_staff %}
                         <a href="/admin/">Admin</a>
                     {% endif %}
+                    <!-- Language toggle: default English (EN). Click to toggle to Spanish (ES) -->
+                    <button id="language-toggle-btn" style="background: #ffffff; color: #333; border: 1px solid #d1d1d6; padding: 0.25rem 0.6rem; border-radius: 6px; cursor: pointer; font-size: 0.9rem; margin-right: 0.5rem;">EN</button>
+                    <button id="chatbot-toggle-btn" style="background: #007aff; color: white; border: none; padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer; font-size: 0.9rem;">💬 Chat</button>
                 </div>
             </div>
         </nav>
@@ -58,6 +61,239 @@
             <p>&copy; 2025 Resource Locator | BDA Hackathon 2025</p>
         </div>
     </footer>
+    
+    <!-- Global Chatbot Modal (Hidden by default) -->
+    <div id="chatbot-modal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 9999; align-items: center; justify-content: center;">
+        <div id="chat-window-modal" style="background: white; border-radius: 12px; width: 90%; max-width: 400px; height: 500px; display: flex; flex-direction: column; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+            <div style="background-color: #f7f7f7; padding: 15px; border-bottom: 1px solid #e5e5e5; text-align: center; font-weight: 600; font-size: 16px; color: #000; display: flex; justify-content: space-between; align-items: center;">
+                <span>Good Fellow - Community Resource Chat</span>
+                <button id="close-chatbot-btn" style="background: none; border: none; font-size: 20px; cursor: pointer;">✕</button>
+            </div>
+            <div class="chat-messages" id="chatMessages" style="flex: 1; padding: 15px; overflow-y: auto; background: #f9f9f9;">
+                <div class="message bot">Hello! I'm Good Fellow, here to help you find community resources in San Diego County. How can I assist you today?</div>
+            </div>
+            <div style="display: flex; padding: 10px; background-color: #f7f7f7; border-top: 1px solid #e5e5e5;">
+                <input
+                    type="text"
+                    class="chat-input"
+                    placeholder="Type a message..."
+                    id="chatInput"
+                    name="userQuery"
+                    style="flex: 1; padding: 8px 12px; border: 1px solid #d1d1d6; border-radius: 20px; font-size: 14px; outline: none; margin-right: 8px;"
+                >
+                <button type="button" id="chat-send-btn" style="background-color: #007aff; color: #fff; border: none; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 16px;">→</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Chatbot JS Handler -->
+    <script>
+        // Chatbot toggle and modal
+        const chatbotToggle = document.getElementById('chatbot-toggle-btn');
+        const chatbotModal = document.getElementById('chatbot-modal');
+        const closeChatbotBtn = document.getElementById('close-chatbot-btn');
+        const chatInput = document.getElementById('chatInput');
+        const chatSendBtn = document.getElementById('chat-send-btn');
+        const chatMessages = document.getElementById('chatMessages');
+        
+        // Open chat modal
+        chatbotToggle.addEventListener('click', function() {
+            chatbotModal.style.display = 'flex';
+            setTimeout(() => chatInput.focus(), 100);
+        });
+        
+        // Close chat modal
+        closeChatbotBtn.addEventListener('click', function() {
+            chatbotModal.style.display = 'none';
+        });
+        
+        // Close on background click
+        chatbotModal.addEventListener('click', function(e) {
+            if (e.target === chatbotModal) {
+                chatbotModal.style.display = 'none';
+            }
+        });
+        
+        // Send message on button click or Enter key
+        function sendMessage() {
+            const userQuery = chatInput.value.trim();
+            if (!userQuery) return;
+            
+            // Add user message to chat display
+            const userMessage = document.createElement('div');
+            userMessage.className = 'message user';
+            userMessage.textContent = userQuery;
+            chatMessages.appendChild(userMessage);
+            
+            // Clear input
+            chatInput.value = '';
+            
+            // Send POST request to API
+            fetch("{% url 'chatbot' %}", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken')
+                },
+                body: JSON.stringify({
+                    userQuery: userQuery,
+                    language: window.siteLanguage || 'en'
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Add bot response to chat
+                const botMessage = document.createElement('div');
+                botMessage.className = 'message bot';
+                if (data.response) {
+                    botMessage.textContent = data.response;
+                } else if (data.error) {
+                    botMessage.textContent = 'Error: ' + data.error;
+                } else {
+                    botMessage.textContent = 'Sorry, something went wrong.';
+                }
+                chatMessages.appendChild(botMessage);
+                
+                // Auto-scroll to latest message
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                const errorMsg = document.createElement('div');
+                errorMsg.className = 'message bot';
+                errorMsg.textContent = 'Network error. Please try again.';
+                chatMessages.appendChild(errorMsg);
+            });
+        }
+        
+        // Get CSRF token from cookies
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+        
+        // Send on button click
+        chatSendBtn.addEventListener('click', sendMessage);
+        
+        // Send on Enter key
+        chatInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+
+        // Language toggle handling
+        const languageToggle = document.getElementById('language-toggle-btn');
+        // Initialize siteLanguage (default 'en')
+        window.siteLanguage = localStorage.getItem('siteLanguage') || 'en';
+
+        // Simple client-side translations for static UI and resource types
+        window.siteTranslations = {
+            en: {
+                'ui.find_resources': 'Find Resources',
+                'ui.use_my_location': 'Use My Location',
+                'ui.or_enter_address': 'Or enter address',
+                'ui.resource_type': 'Resource Type',
+                'ui.show_only_open': 'Show only open now',
+                'ui.distance': 'Distance',
+                'ui.search': 'Search',
+                'ui.no_resources': 'No resources found. Try adjusting your filters.',
+                'ui.loading': 'Loading resources...',
+                'ui.resources_found': 'resources found',
+                'ui.open_now': 'Open Now',
+                'ui.closed': 'Closed',
+                'type.food': 'Food',
+                'type.shelter': 'Shelter',
+                'type.restroom': 'Restroom',
+                'type.medical': 'Medical',
+                'type.legal': 'Legal',
+                'type.donation': 'Donation',
+                'type.other': 'Other',
+                'distance.1': '1 mile',
+                'distance.3': '3 miles',
+                'distance.5': '5 miles',
+                'distance.10': '10 miles'
+            },
+            es: {
+                'ui.find_resources': 'Buscar recursos',
+                'ui.use_my_location': 'Usar mi ubicación',
+                'ui.or_enter_address': 'O ingrese dirección',
+                'ui.resource_type': 'Tipo de recurso',
+                'ui.show_only_open': 'Mostrar solo abiertos ahora',
+                'ui.distance': 'Distancia',
+                'ui.search': 'Buscar',
+                'ui.no_resources': 'No se encontraron recursos. Intenta ajustar los filtros.',
+                'ui.loading': 'Cargando recursos...',
+                'ui.resources_found': 'recursos encontrados',
+                'ui.open_now': 'Abierto ahora',
+                'ui.closed': 'Cerrado',
+                'type.food': 'Comida',
+                'type.shelter': 'Refugio',
+                'type.restroom': 'Baño',
+                'type.medical': 'Médico',
+                'type.legal': 'Legal',
+                'type.donation': 'Donación',
+                'type.other': 'Otro',
+                'distance.1': '1 milla',
+                'distance.3': '3 millas',
+                'distance.5': '5 millas',
+                'distance.10': '10 millas'
+            }
+        };
+
+        window.t = function(key) {
+            const lang = window.siteLanguage === 'es' ? 'es' : 'en';
+            return (window.siteTranslations[lang] && window.siteTranslations[lang][key]) || key;
+        };
+
+        function translatePage() {
+            // Translate elements with data-i18n attribute
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                el.textContent = window.t(key);
+            });
+            // Translate placeholders
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                el.setAttribute('placeholder', window.t(key));
+            });
+            // Translate select options
+            document.querySelectorAll('select[data-i18n-options]').forEach(select => {
+                const opts = select.querySelectorAll('option[data-i18n-option]');
+                opts.forEach(opt => {
+                    const k = opt.getAttribute('data-i18n-option');
+                    opt.textContent = window.t(k);
+                });
+            });
+        }
+
+        function updateLanguageUI() {
+            languageToggle.textContent = window.siteLanguage === 'es' ? 'ES' : 'EN';
+            // Set document language attribute to help screen readers
+            document.documentElement.lang = window.siteLanguage === 'es' ? 'es' : 'en';
+            translatePage();
+        }
+        updateLanguageUI();
+
+        languageToggle.addEventListener('click', function() {
+            window.siteLanguage = window.siteLanguage === 'es' ? 'en' : 'es';
+            localStorage.setItem('siteLanguage', window.siteLanguage);
+            updateLanguageUI();
+            // Fire a custom event so other scripts can react (e.g., map.js)
+            window.dispatchEvent(new Event('siteLanguageChanged'));
+        });
+    </script>
     
     {% block extra_scripts %}{% endblock %}
 </body>
