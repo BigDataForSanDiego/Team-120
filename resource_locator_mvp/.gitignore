@@ -41,3 +41,4 @@ staticfiles/
 # OS
 .DS_Store
 Thumbs.db
+resource_locator_mvp/venv/
