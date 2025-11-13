@@ -39,6 +39,14 @@ function resourceMap() {
             this.updateFilters();   // then load data
         },
 
+        // Convert to Title Case for display
+        toTitleCase(str) {
+            if (!str || typeof str !== 'string') return '';
+            return str
+                .toLowerCase()
+                .replace(/\b\w/g, c => c.toUpperCase());
+        },
+
 
         // Initialize Leaflet map
         initMap() {
@@ -184,18 +192,34 @@ function resourceMap() {
 
                 const marker = L.marker([lat, lon], { icon });
 
-                // Popup info
-                marker.bindPopup(`
-                    <div style="min-width: 200px;">
-                        <h3 style="margin: 0 0 0.5rem 0;">${resource.properties.name}</h3>
-                        <p style="margin: 0.25rem 0; text-transform: capitalize;">${resource.properties.rtype}</p>
-                        <p style="margin: 0.25rem 0; font-size: 0.9rem;">${resource.properties.address || 'No address'}</p>
+                // Popup info (all details live in callout)
+                const name = this.toTitleCase(resource.properties.name || '');
+                const address = this.toTitleCase(resource.properties.address || '');
+                const phone = resource.properties.phone || '';
+                const email = resource.properties.email || '';
+                const website = resource.properties.website || '';
+
+                const mapsHref = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}`;
+
+                let popupHtml = `
+                    <div style="min-width: 240px; max-width: 320px;">
+                        <h3 style="margin: 0 0 0.5rem 0; text-transform: capitalize;">${name}</h3>
+                        <p style="margin: 0.25rem 0; text-transform: capitalize;">${resource.properties.rtype || ''}</p>
+                        <p style="margin: 0.25rem 0; font-size: 0.95rem;">
+                            ${address ? `<a href="${mapsHref}" target="_blank" rel="noopener">${address}</a>` : 'No address'}
+                        </p>
                         ${resource.properties.is_open_now === true ? '<span style="color: green; font-weight: bold;">Open Now</span>' : ''}
                         ${resource.properties.is_open_now === false ? '<span style="color: red; font-weight: bold;">Closed</span>' : ''}
+                        ${phone ? `<p style="margin: 0.25rem 0;"><a href="tel:${phone}">${phone}</a></p>` : ''}
+                        ${email ? `<p style="margin: 0.25rem 0;"><a href="mailto:${email}">${email}</a></p>` : ''}
+                        ${website ? `<p style="margin: 0.25rem 0;"><a href="${website}" target="_blank" rel="noopener">Visit Website</a></p>` : ''}
                     </div>
-                `);
+                `;
 
-                marker.on('click', () => this.selectResource(resource));
+                marker.bindPopup(popupHtml);
+
+                // Do not change zoom or open modal on marker click
+                // Leaflet will open the bound popup by default
                 this.markers.addLayer(marker);
             });
 
@@ -247,10 +271,23 @@ function resourceMap() {
 
         // When user clicks a marker
         selectResource(resource) {
+            // Used by list clicks: open popup at the marker without changing zoom
             this.selectedResource = resource;
             const coords = resource.geometry.coordinates;
-            // only center on selected marker, not user location
-            this.map.setView([coords[1], coords[0]], 15);
+            const lat = coords[1];
+            const lon = coords[0];
+
+            // Find the marker for this resource and open its popup
+            const target = this.markers.getLayers().find(m => {
+                const p = m.getLatLng && m.getLatLng();
+                return p && p.lat === lat && p.lng === lon;
+            });
+            if (target && target.openPopup) {
+                target.openPopup();
+            } else {
+                // As a fallback, pan to the location but keep current zoom
+                this.map.panTo([lat, lon]);
+            }
         }
     };
 }
