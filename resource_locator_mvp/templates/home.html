@@ -62,9 +62,9 @@
         <div class="results-list">
             <template x-for="resource in resources" :key="resource.id">
                 <div class="resource-card" @click="selectResource(resource)">
-                    <h3 style="text-transform: capitalize;" x-text="resource.properties.name"></h3>
+                    <h3 x-text="toTitleCase(resource.properties.name)"></h3>
                     <p class="resource-type" x-text="resource.properties.rtype"></p>
-                    <p class="resource-address" style="text-transform: capitalize;" x-text="resource.properties.address"></p>
+                    <p class="resource-address" x-text="toTitleCase(resource.properties.address)"></p>
                     <span x-show="resource.properties.is_open_now === true" 
                           class="badge badge-open">Open Now</span>
                     <span x-show="resource.properties.is_open_now === false" 
@@ -93,7 +93,7 @@
             <button class="modal-close" @click="selectedResource = null">&times;</button>
             <template x-if="selectedResource">
                 <div>
-                    <h2 style="text-transform: capitalize;" x-text="selectedResource.properties.name"></h2>
+                    <h2 x-text="toTitleCase(selectedResource.properties.name)"></h2>
                     <p class="resource-type-large" x-text="selectedResource.properties.rtype"></p>
                     
                     <div class="resource-details">
@@ -107,8 +107,7 @@
                                          selectedResource.geometry.coordinates[1] + ',' + 
                                          selectedResource.geometry.coordinates[0]"
                                    target="_blank"
-                                              style="text-transform: capitalize;"
-                                              x-text="selectedResource.properties.address"></a>
+                                            x-text="toTitleCase(selectedResource.properties.address)"></a>
                             </p>
                             
                             <p x-show="selectedResource.properties.phone">

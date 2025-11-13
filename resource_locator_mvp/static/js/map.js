@@ -271,22 +271,26 @@ function resourceMap() {
 
         // When user clicks a marker
         selectResource(resource) {
-            // Used by list clicks: open popup at the marker without changing zoom
+            // Used by list clicks: center on resource and show its popup
             this.selectedResource = resource;
             const coords = resource.geometry.coordinates;
             const lat = coords[1];
             const lon = coords[0];
+
+            // Center map on the selected resource (keep current zoom)
+            this.map.panTo([lat, lon]);
 
             // Find the marker for this resource and open its popup
             const target = this.markers.getLayers().find(m => {
                 const p = m.getLatLng && m.getLatLng();
                 return p && p.lat === lat && p.lng === lon;
             });
-            if (target && target.openPopup) {
-                target.openPopup();
-            } else {
-                // As a fallback, pan to the location but keep current zoom
-                this.map.panTo([lat, lon]);
+            if (target) {
+                if (typeof this.markers.zoomToShowLayer === 'function') {
+                    this.markers.zoomToShowLayer(target, () => target.openPopup());
+                } else if (target.openPopup) {
+                    target.openPopup();
+                }
             }
         }
     };
