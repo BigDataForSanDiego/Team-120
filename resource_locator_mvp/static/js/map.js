@@ -127,6 +127,8 @@ function resourceMap() {
             this.updateFilters();
         },
 
+
+
         // ✅ Fetch resources around current location (no recentering)
         async updateFilters() {
             this.loading = true;
