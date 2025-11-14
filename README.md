@@ -1,4 +1,8 @@
-### 2025 BIG DATA HACKATHON PROPOSAL FORM
+#### 
+![bigdatahackathon4sd](https://github.com/BigDataForSanDiego/bigdataforsandiego.github.io/blob/main/images/big_data_2025_clip.png?raw=true "Big Data Hackathon for San Diego 2025")
+
+<img height="10%" width="10%" alt="HDMA" src="https://github.com/BigDataForSanDiego/bigdataforsandiego.github.io/blob/main/templates/img/hdma2.png?raw=true"> 
+# 2025 BIG DATA HACKATHON PROPOSAL FORM
 
 #### Team Number: `Team 120`  
 
@@ -13,17 +17,13 @@ Good Fellow is a real-time centralized digital platform(Map UI) that connects ho
 
 <img width="50%" src="proposal_drawing.png" alt="Proposal Drawing">
 
-#### A visual
-![bigdatahackathon4sd](https://github.com/BigDataForSanDiego/bigdataforsandiego.github.io/blob/main/images/big_data_2025_clip.png?raw=true "Big Data Hackathon for San Diego 2025")
-
-<img height="10%" width="50%" alt="HDMA" src="https://github.com/BigDataForSanDiego/bigdataforsandiego.github.io/blob/main/templates/img/hdma2.png?raw=true"> 
 
 #### Core Theme Addressed by the Goodfellow Resource Locator
 - Access to Shelter and Resources
 > - Solutions to improve on-demand access and availability of shelters, food banks, medical aid, and social services for homeless individuals.
 > - Question: How can we develop technological solutions that provide real-time, on-demand information updates on available shelters, food banks, hygiene stations, medical clinics, and social services for people experiencing homelessness?
 
-# Resource Locator MVP
+### Goodfellow: Helping hands, Finding Hope! 
 
 A Django + GeoDjango web application for locating resources (food banks, shelters, medical services, etc.) for people experiencing homelessness in San Diego County.
 
