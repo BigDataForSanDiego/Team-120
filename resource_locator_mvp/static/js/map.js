@@ -208,18 +208,34 @@ function resourceMap() {
 
                 const marker = L.marker([lat, lon], { icon });
 
-                // Popup info
-                marker.bindPopup(`
-                    <div style="min-width: 200px;">
-                        <h3 style="margin: 0 0 0.5rem 0;">${resource.properties.name}</h3>
-                        <p style="margin: 0.25rem 0; text-transform: capitalize;">${this.translateType(resource.properties.rtype)}</p>
-                        <p style="margin: 0.25rem 0; font-size: 0.9rem;">${resource.properties.address || 'No address'}</p>
+                // Popup info (all details live in callout)
+                const name = this.toTitleCase(resource.properties.name || '');
+                const address = this.toTitleCase(resource.properties.address || '');
+                const phone = resource.properties.phone || '';
+                const email = resource.properties.email || '';
+                const website = resource.properties.website || '';
+
+                const mapsHref = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}`;
+
+                let popupHtml = `
+                    <div style="min-width: 240px; max-width: 320px;">
+                        <h3 style="margin: 0 0 0.5rem 0; text-transform: capitalize;">${name}</h3>
+                        <p style="margin: 0.25rem 0; text-transform: capitalize;">${this.translateType(resource.properties.rtype || '')}</p>
+                        <p style="margin: 0.25rem 0; font-size: 0.95rem;">
+                            ${address ? `<a href="${mapsHref}" target="_blank" rel="noopener">${address}</a>` : 'No address'}
+                        </p>
                         ${resource.properties.is_open_now === true ? `<span style="color: green; font-weight: bold;">${(window && window.t) ? window.t('ui.open_now') : 'Open Now'}</span>` : ''}
                         ${resource.properties.is_open_now === false ? `<span style="color: red; font-weight: bold;">${(window && window.t) ? window.t('ui.closed') : 'Closed'}</span>` : ''}
+                        ${phone ? `<p style="margin: 0.25rem 0;"><a href="tel:${phone}">${phone}</a></p>` : ''}
+                        ${email ? `<p style="margin: 0.25rem 0;"><a href="mailto:${email}">${email}</a></p>` : ''}
+                        ${website ? `<p style="margin: 0.25rem 0;"><a href="${website}" target="_blank" rel="noopener">Visit Website</a></p>` : ''}
                     </div>
-                `);
+                `;
 
-                marker.on('click', () => this.selectResource(resource));
+                marker.bindPopup(popupHtml);
+
+                // Do not change zoom or open modal on marker click
+                // Leaflet will open the bound popup by default
                 this.markers.addLayer(marker);
             });
 
@@ -271,10 +287,27 @@ function resourceMap() {
 
         // When user clicks a marker
         selectResource(resource) {
+            // Used by list clicks: center on resource and show its popup
             this.selectedResource = resource;
             const coords = resource.geometry.coordinates;
-            // only center on selected marker, not user location
-            this.map.setView([coords[1], coords[0]], 15);
+            const lat = coords[1];
+            const lon = coords[0];
+
+            // Center map on the selected resource (keep current zoom)
+            this.map.panTo([lat, lon]);
+
+            // Find the marker for this resource and open its popup
+            const target = this.markers.getLayers().find(m => {
+                const p = m.getLatLng && m.getLatLng();
+                return p && p.lat === lat && p.lng === lon;
+            });
+            if (target) {
+                if (typeof this.markers.zoomToShowLayer === 'function') {
+                    this.markers.zoomToShowLayer(target, () => target.openPopup());
+                } else if (target.openPopup) {
+                    target.openPopup();
+                }
+            }
         }
     };
 }
