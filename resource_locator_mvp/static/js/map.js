@@ -32,6 +32,18 @@ function resourceMap() {
         openNow: false,
         radiusMiles: 5,
 
+        // Utility: convert text to Title Case
+        toTitleCase(str) {
+            if (!str || typeof str !== 'string') {
+                return '';
+            }
+            return str
+                .toLowerCase()
+                .split(/\s+/)
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                .join(' ');
+        },
+
         // Initialize component
         init() {
             this.initMap();
