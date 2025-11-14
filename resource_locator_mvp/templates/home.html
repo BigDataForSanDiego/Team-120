@@ -16,7 +16,7 @@
 
         <!-- Resource Type Filter -->
         <div class="filter-group">
-            <label>Resource Type</label>
+            <label data-i18n="ui.resource_type">Resource Type</label>
             <div class="filter-chips">
                 <template x-for="type in resourceTypes" :key="type.value">
                     <button @click="toggleType(type.value)" :class="{'active': selectedTypes.includes(type.value)}"
@@ -31,18 +31,18 @@
         <div class="filter-group">
             <label class="checkbox-label">
                 <input type="checkbox" x-model="openNow" @change="updateFilters()">
-                Show only open now
+                <span data-i18n="ui.show_only_open">Show only open now</span>
             </label>
         </div>
 
         <!-- Distance Filter -->
         <div class="filter-group">
-            <label>Distance</label>
-            <select x-model="radiusMiles" @change="updateFilters()" class="input-select">
-                <option value="1">1 mile</option>
-                <option value="3">3 miles</option>
-                <option value="5" selected>5 miles</option>
-                <option value="10">10 miles</option>
+            <label data-i18n="ui.distance">Distance</label>
+            <select x-model="radiusMiles" @change="updateFilters()" class="input-select" data-i18n-options>
+                <option value="1" data-i18n-option="distance.1">1 mile</option>
+                <option value="3" data-i18n-option="distance.3">3 miles</option>
+                <option value="5" data-i18n-option="distance.5" selected>5 miles</option>
+                <option value="10" data-i18n-option="distance.10">10 miles</option>
             </select>
         </div>
 
@@ -50,7 +50,8 @@
 
         <!-- Results Count -->
         <div class="results-info" x-show="resources.length > 0">
-            <p><strong x-text="resources.length"></strong> resources found</p>
+            <p><strong x-text="resources.length"></strong> <span data-i18n="ui.resources_found">resources found</span>
+            </p>
         </div>
 
         <!-- Results List -->
@@ -65,10 +66,10 @@
                 </div>
             </template>
             <div x-show="resources.length === 0 && !loading" class="empty-state">
-                <p>No resources found. Try adjusting your filters.</p>
+                <p data-i18n="ui.no_resources">No resources found. Try adjusting your filters.</p>
             </div>
             <div x-show="loading" class="loading">
-                <p>Loading resources...</p>
+                <p data-i18n="ui.loading">Loading resources...</p>
             </div>
         </div>
     </div>
@@ -83,7 +84,7 @@
             <button class="modal-close" @click="selectedResource = null">&times;</button>
             <template x-if="selectedResource">
                 <div>
-                    <h2 x-text="toTitleCase(selectedResource.properties.name)"></h2>
+                    <h2 x-text="selectedResource.properties.name"></h2>
                     <p class="resource-type-large" x-text="selectedResource.properties.rtype"></p>
 
                     <div class="resource-details">

@@ -14,3 +14,6 @@ python-dotenv==1.0.1
 
 # Production server
 gunicorn==21.2.0
+
+# Google Generative AI client (Gemini)
+google-generativeai==0.8.5

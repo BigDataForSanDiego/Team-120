@@ -17,12 +17,12 @@
         {% endif %}
 
         <div class="form-group" style="margin-bottom: 1rem;">
-            <label for="{{ form.username.id_for_label }}">Username</label>
+            <label for="{{ form.username.id_for_label }}" data-i18n="Username">Username</label>
             {{ form.username }}
         </div>
 
         <div class="form-group" style="margin-bottom: 1rem;">
-            <label for="{{ form.password.id_for_label }}">Password</label>
+            <label for="{{ form.password.id_for_label }}" data-i18n="Password">Password</label>
             {{ form.password }}
         </div>
 
@@ -31,18 +31,9 @@
         <input type="hidden" name="next" value="{{ next }}">
     </form>
 
-    <div style="margin-top: 2rem; text-align: center;">
-        <p style="color: #666; margin-bottom: 0.5rem;">Don't have an account?</p>
-        <div
-            style="display: inline-block; background: #f0f8ff; border: 1px solid #cfeefc; padding: 0.75rem 1rem; border-radius: 6px;">
-            <p style="margin: 0 0 0.5rem 0; font-weight: 600;">Register as a Provider</p>
-            <p style="margin: 0 0 0.75rem 0; color: #445; font-size: 0.95rem;">Please fill out our provider sign-up form
-                to request an account.</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSduWHSIPaXrhWfgn562AUNBsSjkRwsczfOME09wnl1gDo6hdQ/viewform?usp=header"
-                target="_blank" rel="noopener noreferrer" class="btn-primary" style="display:inline-block;">Sign Up
-                (Google Form)</a>
-        </div>
-    </div>
+    <p style="margin-top: 2rem; text-align: center; color: #666;">
+        Don't have an account? Contact an administrator to become a verified service provider.
+    </p>
 </div>
 
 <style>

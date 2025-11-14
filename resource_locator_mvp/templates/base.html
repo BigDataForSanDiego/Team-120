@@ -48,6 +48,9 @@
                     {% if user.is_staff %}
                     <a href="/admin/" class="nav-link">Admin</a>
                     {% endif %}
+                    <!-- Language toggle: default English (EN). Click to toggle to Spanish (ES) -->
+                    <button id="language-toggle-btn"
+                        style="background: #ffffff; color: #333; border: 1px solid #d1d1d6; padding: 0.25rem 0.6rem; border-radius: 6px; cursor: pointer; font-size: 0.9rem; margin-right: 0.5rem;">EN</button>
                 </div>
             </div>
         </nav>
@@ -64,6 +67,8 @@
     </footer>
 
     {% block extra_scripts %}{% endblock %}
+    <!-- Floating Chat FAB (bottom-right) -->
+    <button id="chat-fab" class="chat-icon" aria-label="Open chat" title="Chat with Good Fellow"></button>
 </body>
 
 </html>
