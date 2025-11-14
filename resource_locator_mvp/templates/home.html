@@ -21,7 +21,7 @@
                 <template x-for="type in resourceTypes" :key="type.value">
                     <button @click="toggleType(type.value)" :class="{'active': selectedTypes.includes(type.value)}"
                         :style="selectedTypes.includes(type.value) ? { background: getIconColor(type.value), color: '#fff', borderColor: getIconColor(type.value) } : {}"
-                        class="chip" x-text="type.label">
+                        class="chip" x-text="type.value"> --updated value from type.label
                     </button>
                 </template>
             </div>
