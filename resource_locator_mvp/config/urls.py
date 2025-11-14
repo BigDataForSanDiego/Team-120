@@ -31,5 +31,7 @@ urlpatterns = [
     # Home page with map
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
     path('admin/', admin.site.urls),
-    path('', include('chatbot.urls'))
+    path('chatbot/', include('chatbot.urls')),
+    # About page
+    path('about/', TemplateView.as_view(template_name='about.html'), name='about'),
 ]

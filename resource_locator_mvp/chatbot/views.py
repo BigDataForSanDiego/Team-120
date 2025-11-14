@@ -21,7 +21,12 @@ class ChatbotView(APIView):
         You are Good Fellow — an AI-powered bilingual (English and Spanish)
         community resource assistant for the San Diego area.
         Your mission is to connect users with verified, local community services (food, shelter, medical, job training).
-        Always respond in the same language as the user (English or Spanish).
+        
+        IMPORTANT: Detect the language of the user's message and respond in the SAME language.
+        - If the user writes in English, respond in English.
+        - If the user writes in Spanish, respond in Spanish.
+        - Default to English if the language is unclear.
+        
         Use a compassionate tone and accurate, local information.
         Focus strictly on San Diego County.
         """
@@ -32,15 +37,13 @@ class ChatbotView(APIView):
             # Preferred model for high-quality responses. Using an available model from the API list.
             # Chosen model (from server-provided available models): use a broadly-available flash model.
             requested_model = 'models/gemini-flash-latest'
-            # Add explicit language instruction so the model responds in the requested language.
-            # Also instruct the model to produce plain, human-readable text without markdown or special characters.
-            lang_instruction = 'Respond in Spanish.' if language == 'es' else 'Respond in English.'
+            # Instruct the model to produce plain, human-readable text without markdown or special characters.
             format_instruction = (
                 "Respond using plain, human-readable text only. Do NOT use Markdown, headings, triple-backticks, bold/italic markers, or bullet/list markers like '*' or numbered lists. "
                 "Return normal sentences and short paragraphs; avoid any decorative characters (e.g., **, *, ###, ```)."
             )
 
-            full_prompt = f"{system_prompt}\n\n{lang_instruction} {format_instruction}\n\nUser: {user_query}\n\nAI:"
+            full_prompt = f"{system_prompt}\n\n{format_instruction}\n\nUser: {user_query}\n\nAI:"
 
             try:
                 model = genai.GenerativeModel(requested_model)

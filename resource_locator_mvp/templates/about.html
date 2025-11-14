@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}About Goodfellow{% endblock %}
+
+{% block content %}
+<div class="container" style="padding: 2rem 1rem; max-width: 900px;">
+    <h1 style="margin-bottom: 0.5rem;" data-i18n="about.title">About Goodfellow — Resource Locator</h1>
+
+    <p style="color:#222; font-weight:600; font-size:1.02rem; margin-bottom:0.75rem;" data-i18n="about.tagline">
+        GoodFellow is transforming how we support our most vulnerable community members—bringing dignity, efficiency,
+        and hope through the power of technology and compassion.
+    </p>
+
+    <p style="margin-top:0.5rem;" data-i18n="about.work_together">Let's work together to:</p>
+
+    <ul style="margin-left: 1.25rem; color:#333; line-height:1.7; margin-bottom:1.25rem;">
+        <li data-i18n="about.eliminate_barriers">Eliminate barriers to essential resources</li>
+        <li data-i18n="about.coordinate_care">Coordinate care seamlessly across organizations</li>
+        <li data-i18n="about.create_pathways">Create pathways to employment, stability, and long-term success</li>
+        <li data-i18n="about.build_community">Build a more connected, compassionate community</li>
+    </ul>
+
+    <hr style="border:none; border-top:1px solid #e6e6e6; margin:1.25rem 0;">
+
+    <h3 style="margin-bottom:0.5rem;" data-i18n="about.mission">Our Mission</h3>
+    <p style="color:#333; margin-bottom:0.5rem;" data-i18n="about.mission_text">
+        GoodFellow focuses on connecting people with services <strong>quickly, respectfully, and without
+            friction</strong>—reducing operational burdens for providers while improving the experience for community
+        members.
+    </p>
+    <p style="margin-bottom:0.75rem; color:#333;" data-i18n="about.mission_text2">We believe that when technology meets empathy, everyone is served
+        better.</p>
+
+    <hr style="border:none; border-top:1px solid #e6e6e6; margin:1.25rem 0;">
+
+    <div style="margin-top:0.5rem;">
+        <p style="margin:0 0 0.5rem 0; font-weight:600;" data-i18n="about.cofounded">Cofounded by:</p>
+        <p style="margin:0; color:#333;">Jonathan Siegel &nbsp;·&nbsp; Suyash Chaudhari &nbsp;·&nbsp; Robert Ashe
+            &nbsp;·&nbsp; Uma Takbhate</p>
+    </div>
+
+    <div style="margin-top:2rem;">
+        <a href="#" onclick="window.history.back(); return false;" class="btn-secondary" style="text-decoration:none;" data-i18n="about.back">←
+            Back</a>
+    </div>
+</div>
+{% endblock %}
