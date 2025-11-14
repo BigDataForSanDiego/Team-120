@@ -33,13 +33,39 @@ class ChatbotView(APIView):
             # Chosen model (from server-provided available models): use a broadly-available flash model.
             requested_model = 'models/gemini-flash-latest'
             # Add explicit language instruction so the model responds in the requested language.
+            # Also instruct the model to produce plain, human-readable text without markdown or special characters.
             lang_instruction = 'Respond in Spanish.' if language == 'es' else 'Respond in English.'
-            full_prompt = f"{system_prompt}\n\n{lang_instruction}\n\nUser: {user_query}\n\nAI:"
+            format_instruction = (
+                "Respond using plain, human-readable text only. Do NOT use Markdown, headings, triple-backticks, bold/italic markers, or bullet/list markers like '*' or numbered lists. "
+                "Return normal sentences and short paragraphs; avoid any decorative characters (e.g., **, *, ###, ```)."
+            )
+
+            full_prompt = f"{system_prompt}\n\n{lang_instruction} {format_instruction}\n\nUser: {user_query}\n\nAI:"
 
             try:
                 model = genai.GenerativeModel(requested_model)
                 response = model.generate_content(full_prompt)
                 response_text = response.text
+                # Sanitize common Markdown-like artifacts just in case the model includes them.
+                import re
+                def clean_response(txt: str) -> str:
+                    if not txt:
+                        return txt
+                    # Remove backticks and code fences
+                    txt = re.sub(r'`{1,}', '', txt)
+                    # Remove bold/italic markers (**, __, *, _ , ~~)
+                    txt = re.sub(r"\*\*|__|~~", '', txt)
+                    txt = re.sub(r"(?m)^\s*\*\s+", '', txt)  # lines starting with * bullets
+                    txt = re.sub(r"(?m)^\s*[-+]\s+", '', txt)  # lines starting with - or + bullets
+                    txt = re.sub(r"(?m)^\s*\d+\.\s+", '', txt)  # lines starting with numbered lists
+                    # Remove leading heading markers
+                    txt = re.sub(r"(?m)^\s*#{1,6}\s*", '', txt)
+                    # Collapse excessive whitespace/newlines
+                    txt = re.sub(r"\n{3,}", '\n\n', txt)
+                    # Trim
+                    return txt.strip()
+
+                response_text = clean_response(response_text)
             except Exception as model_ex:
                 # If the requested model isn't available for this API version, try to list available models
                 try:

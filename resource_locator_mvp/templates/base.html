@@ -182,7 +182,14 @@
                 'distance.1': '1 mile',
                 'distance.3': '3 miles',
                 'distance.5': '5 miles',
-                'distance.10': '10 miles'
+                'distance.10': '10 miles',
+                'Login': 'Login',
+                'Logout': 'Logout',
+                'Username': 'Username',
+                'Password': 'Password',
+                'Provider Login': 'Provider Login',
+                'Invalid username or password.': 'Invalid username or password.',
+                "Don't have an account? Contact an administrator to become a verified service provider.": "Don't have an account? Contact an administrator to become a verified service provider."
             },
             es: {
                 'ui.find_resources': 'Buscar recursos',
@@ -207,7 +214,14 @@
                 'distance.1': '1 milla',
                 'distance.3': '3 millas',
                 'distance.5': '5 millas',
-                'distance.10': '10 millas'
+                'distance.10': '10 millas',
+                'Login': 'Iniciar sesión',
+                'Logout': 'Cerrar sesión',
+                'Username': 'Nombre de usuario',
+                'Password': 'Contraseña',
+                'Provider Login': 'Inicio de sesión del proveedor',
+                'Invalid username or password.': 'Nombre de usuario o contraseña no válidos.',
+                "Don't have an account? Contact an administrator to become a verified service provider.": '¿No tienes una cuenta? Contacta a un administrador para convertirte en proveedor de servicios verificado.'
             }
         };
 
@@ -215,6 +229,123 @@
             const lang = window.siteLanguage === 'es' ? 'es' : 'en';
             return (window.siteTranslations[lang] && window.siteTranslations[lang][key]) || key;
         };
+
+        // Build phrase lookup maps (english->spanish and spanish->english) from siteTranslations
+        function buildPhraseMaps() {
+            window.phraseMap = { en2es: {}, es2en: {} };
+            const en = window.siteTranslations && window.siteTranslations.en ? window.siteTranslations.en : {};
+            const es = window.siteTranslations && window.siteTranslations.es ? window.siteTranslations.es : {};
+            // Use keys present in both maps
+            Object.keys(en).forEach(k => {
+                const ev = en[k];
+                const sv = es[k];
+                if (ev && sv) {
+                    // store normalized forms
+                    window.phraseMap.en2es[ev.trim()] = sv.trim();
+                    window.phraseMap.es2en[sv.trim()] = ev.trim();
+                }
+            });
+        }
+
+        // Helper: determine if an element is visible and translatable
+        function isTranslatableNode(node) {
+            if (!node) return false;
+            if (node.nodeType !== Node.TEXT_NODE) return false;
+            const parent = node.parentElement;
+            if (!parent) return false;
+            const style = window.getComputedStyle(parent);
+            if (style && (style.display === 'none' || style.visibility === 'hidden' || parseFloat(style.opacity) === 0)) return false;
+            // skip script/style elements
+            const tag = parent.tagName.toLowerCase();
+            if (['script','style','noscript','code','pre'].includes(tag)) return false;
+            return true;
+        }
+
+        // Translate text nodes using phraseMap; store original in data-orig-text to allow toggling back
+        function translateTextNodes(targetLang) {
+            if (!window.phraseMap) buildPhraseMaps();
+            const en2es = window.phraseMap.en2es || {};
+            const es2en = window.phraseMap.es2en || {};
+            const map = targetLang === 'es' ? en2es : es2en;
+
+            const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+            const nodes = [];
+            while(walker.nextNode()) nodes.push(walker.currentNode);
+
+            nodes.forEach(node => {
+                if (!isTranslatableNode(node)) return;
+                const raw = node.textContent.replace(/\s+/g, ' ').trim();
+                if (!raw) return;
+                // If original not stored, save it
+                const parent = node.parentElement;
+                if (parent && !parent.hasAttribute('data-orig-text')) {
+                    parent.setAttribute('data-orig-text', node.textContent);
+                }
+                // Try direct lookup
+                const translated = map[raw];
+                if (translated) {
+                    node.textContent = node.textContent.replace(raw, translated);
+                }
+            });
+        }
+
+        // Translate common attributes (placeholder, title, alt, value for buttons)
+        function translateAttributes(targetLang) {
+            if (!window.phraseMap) buildPhraseMaps();
+            const en2es = window.phraseMap.en2es || {};
+            const es2en = window.phraseMap.es2en || {};
+            const map = targetLang === 'es' ? en2es : es2en;
+
+            const attrNames = ['placeholder','title','alt','aria-label','value'];
+            attrNames.forEach(attr => {
+                document.querySelectorAll('['+attr+']').forEach(el => {
+                    const val = el.getAttribute(attr);
+                    if (!val) return;
+                    const key = val.replace(/\s+/g,' ').trim();
+                    const translated = map[key];
+                    if (translated) {
+                        // store original
+                        if (!el.hasAttribute('data-orig-'+attr)) el.setAttribute('data-orig-'+attr, val);
+                        el.setAttribute(attr, translated);
+                    }
+                });
+            });
+
+            // Options
+            document.querySelectorAll('select option').forEach(opt => {
+                const raw = opt.textContent.replace(/\s+/g,' ').trim();
+                if (!raw) return;
+                const translated = map[raw];
+                if (translated) {
+                    if (!opt.hasAttribute('data-orig-text')) opt.setAttribute('data-orig-text', opt.textContent);
+                    opt.textContent = translated;
+                }
+            });
+        }
+
+        // Restore originals when switching back to English (for nodes/attributes we stored)
+        function restoreOriginals() {
+            // Text nodes: find elements with data-orig-text
+            document.querySelectorAll('[data-orig-text]').forEach(el => {
+                const orig = el.getAttribute('data-orig-text');
+                if (orig != null) el.textContent = orig;
+                el.removeAttribute('data-orig-text');
+            });
+            const attrNames = ['placeholder','title','alt','aria-label','value'];
+            attrNames.forEach(attr => {
+                document.querySelectorAll('[data-orig-'+attr+']').forEach(el => {
+                    const orig = el.getAttribute('data-orig-'+attr);
+                    if (orig != null) el.setAttribute(attr, orig);
+                    el.removeAttribute('data-orig-'+attr);
+                });
+            });
+            // Options
+            document.querySelectorAll('select option[data-orig-text]').forEach(opt => {
+                const orig = opt.getAttribute('data-orig-text');
+                if (orig != null) opt.textContent = orig;
+                opt.removeAttribute('data-orig-text');
+            });
+        }
 
         // Language toggle handling
         const languageToggle = document.getElementById('language-toggle-btn');
@@ -244,7 +375,17 @@
         function updateLanguageUI() {
             if (languageToggle) languageToggle.textContent = window.siteLanguage === 'es' ? 'ES' : 'EN';
             document.documentElement.lang = window.siteLanguage === 'es' ? 'es' : 'en';
+            // Translate explicit keys first
             translatePage();
+            // Then attempt broader phrase translations for visible text and attributes
+            if (window.siteLanguage === 'es') {
+                translateTextNodes('es');
+                translateAttributes('es');
+            } else {
+                // restore originals when switching to English
+                restoreOriginals();
+                translatePage();
+            }
         }
         updateLanguageUI();
 
