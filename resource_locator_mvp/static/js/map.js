@@ -18,13 +18,13 @@ function resourceMap() {
 
         // ✅ All resource types (used for buttons + filters)
         resourceTypes: [
-            { value: 'food', label: 'Food' },
-            { value: 'shelter', label: 'Shelter' },
-            { value: 'restroom', label: 'Restroom' },
-            { value: 'medical', label: 'Medical' },
-            { value: 'legal', label: 'Legal' },
-            { value: 'donation', label: 'Donation' },
-            { value: 'other', label: 'Other' }
+            { value: 'food', label: 'type.food' },
+            { value: 'shelter', label: 'type.shelter' },
+            { value: 'restroom', label: 'type.restroom' },
+            { value: 'medical', label: 'type.medical' },
+            { value: 'legal', label: 'type.legal' },
+            { value: 'donation', label: 'type.donation' },
+            { value: 'other', label: 'type.other' }
         ],
 
         // Filters
@@ -36,21 +36,34 @@ function resourceMap() {
         init() {
             this.initMap();
             this.getUserLocation(); // load user location first
+
+            // initialize translated labels if translation helper exists
+            if (window && typeof window.t === 'function') {
+                this.resourceTypes.forEach(rt => {
+                    rt.label = window.t(rt.label);
+                });
+            }
+            // Listen for language changes
+            window.addEventListener('siteLanguageChanged', () => {
+                if (window && typeof window.t === 'function') {
+                    this.resourceTypes.forEach(rt => {
+                        rt.label = window.t('type.' + rt.value);
+                    });
+                }
+            });
+
             this.updateFilters();   // then load data
         },
 
-        // Convert to Title Case for display
-        // Be defensive: coerce non-strings (numbers, proxies) and trim whitespace
-        toTitleCase(value) {
-            if (value === null || value === undefined) return '';
-            const str = String(value).trim();
-            if (!str) return '';
-            return str
-                .toLowerCase()
-                .replace(/\b\w/g, c => c.toUpperCase());
+        // Translate a resource type value to the current language (fallback to value)
+        translateType(typeValue) {
+            const key = 'type.' + typeValue;
+            if (window && typeof window.t === 'function') {
+                return window.t(key);
+            }
+            // Capitalize fallback
+            return typeValue.charAt(0).toUpperCase() + typeValue.slice(1);
         },
-
-
         // Initialize Leaflet map
         initMap() {
             this.map = L.map('map').setView([this.userLat, this.userLon], 12);
@@ -207,12 +220,12 @@ function resourceMap() {
                 let popupHtml = `
                     <div style="min-width: 240px; max-width: 320px;">
                         <h3 style="margin: 0 0 0.5rem 0; text-transform: capitalize;">${name}</h3>
-                        <p style="margin: 0.25rem 0; text-transform: capitalize;">${resource.properties.rtype || ''}</p>
+                        <p style="margin: 0.25rem 0; text-transform: capitalize;">${this.translateType(resource.properties.rtype || '')}</p>
                         <p style="margin: 0.25rem 0; font-size: 0.95rem;">
                             ${address ? `<a href="${mapsHref}" target="_blank" rel="noopener">${address}</a>` : 'No address'}
                         </p>
-                        ${resource.properties.is_open_now === true ? '<span style="color: green; font-weight: bold;">Open Now</span>' : ''}
-                        ${resource.properties.is_open_now === false ? '<span style="color: red; font-weight: bold;">Closed</span>' : ''}
+                        ${resource.properties.is_open_now === true ? `<span style="color: green; font-weight: bold;">${(window && window.t) ? window.t('ui.open_now') : 'Open Now'}</span>` : ''}
+                        ${resource.properties.is_open_now === false ? `<span style="color: red; font-weight: bold;">${(window && window.t) ? window.t('ui.closed') : 'Closed'}</span>` : ''}
                         ${phone ? `<p style="margin: 0.25rem 0;"><a href="tel:${phone}">${phone}</a></p>` : ''}
                         ${email ? `<p style="margin: 0.25rem 0;"><a href="mailto:${email}">${email}</a></p>` : ''}
                         ${website ? `<p style="margin: 0.25rem 0;"><a href="${website}" target="_blank" rel="noopener">Visit Website</a></p>` : ''}
