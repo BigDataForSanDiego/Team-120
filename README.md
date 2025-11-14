@@ -1,8 +1,9 @@
 #### 
 ![bigdatahackathon4sd](https://github.com/BigDataForSanDiego/bigdataforsandiego.github.io/blob/main/images/big_data_2025_clip.png?raw=true "Big Data Hackathon for San Diego 2025")
 
-<img height="10%" width="10%" alt="HDMA" src="https://github.com/BigDataForSanDiego/bigdataforsandiego.github.io/blob/main/templates/img/hdma2.png?raw=true"> 
-# 2025 BIG DATA HACKATHON PROPOSAL FORM
+<img height="5%" width="10%" alt="HDMA" src="https://github.com/BigDataForSanDiego/bigdataforsandiego.github.io/blob/main/templates/img/hdma2.png?raw=true"> 
+
+                                                    2025 BIG DATA HACKATHON PROPOSAL
 
 #### Team Number: `Team 120`  
 
@@ -15,11 +16,15 @@
 #### Your team's hackathon idea in One sentence:
 Good Fellow is a real-time centralized digital platform(Map UI) that connects homeless individuals with available community resources—like food, shelter, medical care, and activities—while enabling resource centers and individual donors to update inventories, manage profiles, and support training and employment opportunities in addition to providing the resources that individuals experiencing homelessness need.
 
-<img width="50%" src="proposal_drawing.png" alt="Proposal Drawing">
+<video controls src="assets/GoodFellow_HelpingHandsFindingHope.mp4" style="max-width:50%;">
+  Your browser does not support the <code>video</code> element. Download the video: <a href="assets/GoodFellow_HelpingHandsFindingHope.mp4">GoodFellow_HelpingHandsFindingHope.mp4</a>
+</video>
+
+<!-- <img width="50%" src="proposal_drawing.png" alt="Proposal Drawing"> -->
 
 
 #### Core Theme Addressed by the Goodfellow Resource Locator
-- Access to Shelter and Resources
+> - Access to Shelter and Resources
 > - Solutions to improve on-demand access and availability of shelters, food banks, medical aid, and social services for homeless individuals.
 > - Question: How can we develop technological solutions that provide real-time, on-demand information updates on available shelters, food banks, hygiene stations, medical clinics, and social services for people experiencing homelessness?
 
