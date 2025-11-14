@@ -4,14 +4,31 @@
 
 {% block content %}
 <div class="home-container" x-data="resourceMap()">
-    <div class="filters-panel">
+    <!-- ✅ Mobile Filter Toggle -->
+    <button class="btn-secondary mobile-toggle" @click="showFilters = !showFilters">
+        <span x-text="showFilters ? 'Hide Filters' : 'Show Filters'"></span>
+    </button>
+
+    <!-- Filters Sidebar -->
+    <div class="filters-panel" x-show="showFilters" x-transition>
         <h2 data-i18n="home.find_resources">Find Resources</h2>
 
-        <!-- Location Input -->
+        <!-- ✅ Location Input with Show/Hide toggle -->
         <div class="filter-group">
-            <label data-i18n="home.your_location">Your Location</label>
-            <button @click="getUserLocation()" class="btn-secondary" data-i18n="home.use_my_location">Use My Location</button>
-            <input type="text" x-model="userAddress" data-i18n-placeholder="home.or_enter_address" placeholder="Or enter address" class="input-text">
+            <label class="checkbox-label">
+                <input type="checkbox" x-model="showLocation" class="checkbox-toggle" checked>
+                <span data-i18n="home.your_location">Your Location</span>
+            </label>
+
+            <div x-show="showLocation" x-transition>
+                <button @click="getUserLocation()" class="btn-secondary" data-i18n="home.use_my_location">
+                    Use My Location
+                </button>
+                <input type="text" x-model="userAddress"
+                       data-i18n-placeholder="home.or_enter_address"
+                       placeholder="Or enter address"
+                       class="input-text">
+            </div>
         </div>
 
         <!-- Resource Type Filter -->
@@ -19,9 +36,13 @@
             <label data-i18n="ui.resource_type">Resource Type</label>
             <div class="filter-chips">
                 <template x-for="type in resourceTypes" :key="type.value">
-                    <button @click="toggleType(type.value)" :class="{'active': selectedTypes.includes(type.value)}"
-                        :style="selectedTypes.includes(type.value) ? { background: getIconColor(type.value), color: '#fff', borderColor: getIconColor(type.value) } : {}"
-                        class="chip" x-text="translateType(type.value)">
+                    <button @click="toggleType(type.value)"
+                            :class="{'active': selectedTypes.includes(type.value)}"
+                            :style="selectedTypes.includes(type.value)
+                                ? { background: getIconColor(type.value), color: '#fff', borderColor: getIconColor(type.value) }
+                                : {}"
+                            class="chip"
+                            x-text="translateType(type.value)">
                     </button>
                 </template>
             </div>
@@ -30,7 +51,7 @@
         <!-- Open Now Filter -->
         <div class="filter-group">
             <label class="checkbox-label">
-                <input type="checkbox" x-model="openNow" @change="updateFilters()">
+                <input type="checkbox" x-model="openNow" @change="updateFilters()" class="checkbox-toggle">
                 <span data-i18n="ui.show_only_open">Show only open now</span>
             </label>
         </div>
@@ -50,7 +71,9 @@
 
         <!-- Results Count -->
         <div class="results-info" x-show="resources.length > 0">
-            <p><strong x-text="resources.length"></strong> <span data-i18n="ui.resources_found">resources found</span>
+            <p>
+                <strong x-text="resources.length"></strong>
+                <span data-i18n="ui.resources_found">resources found</span>
             </p>
         </div>
 
@@ -60,11 +83,27 @@
                 <div class="resource-card" @click="selectResource(resource)">
                     <h3 x-text="toTitleCase(resource.properties.name)"></h3>
                     <p class="resource-type" x-text="resource.properties.rtype"></p>
-                    <p class="resource-address" x-text="toTitleCase(resource.properties.address)"></p>
-                    <span x-show="resource.properties.is_open_now === true" class="badge badge-open" data-i18n="ui.open_now">Open Now</span>
-                    <span x-show="resource.properties.is_open_now === false" class="badge badge-closed" data-i18n="ui.closed">Closed</span>
+
+                    <!-- ✅ Address with Google Maps redirection -->
+                    <p class="resource-address">
+                        <a :href="'https://www.google.com/maps/dir/?api=1&destination=' +
+                                   resource.geometry.coordinates[1] + ',' +
+                                   resource.geometry.coordinates[0]"
+                           target="_blank"
+                           x-text="toTitleCase(resource.properties.address)"
+                           class="map-link">
+                        </a>
+                    </p>
+
+                    <span x-show="resource.properties.is_open_now === true"
+                          class="badge badge-open"
+                          data-i18n="ui.open_now">Open Now</span>
+                    <span x-show="resource.properties.is_open_now === false"
+                          class="badge badge-closed"
+                          data-i18n="ui.closed">Closed</span>
                 </div>
             </template>
+
             <div x-show="resources.length === 0 && !loading" class="empty-state">
                 <p data-i18n="ui.no_resources">No resources found. Try adjusting your filters.</p>
             </div>
@@ -74,6 +113,7 @@
         </div>
     </div>
 
+    <!-- Map Panel -->
     <div class="map-panel">
         <div id="map"></div>
     </div>
@@ -89,27 +129,30 @@
 
                     <div class="resource-details">
                         <p x-show="selectedResource.properties.description"
-                            x-text="selectedResource.properties.description"></p>
+                           x-text="selectedResource.properties.description"></p>
 
                         <div class="contact-info">
+                            <!-- ✅ Address with Google Maps redirection -->
                             <p x-show="selectedResource.properties.address">
                                 <strong>Address:</strong>
-                                <a :href="'https://www.google.com/maps/dir/?api=1&destination=' + 
-                                         selectedResource.geometry.coordinates[1] + ',' + 
-                                         selectedResource.geometry.coordinates[0]" target="_blank"
-                                    x-text="toTitleCase(selectedResource.properties.address)"></a>
+                                <a :href="'https://www.google.com/maps/dir/?api=1&destination=' +
+                                          selectedResource.geometry.coordinates[1] + ',' +
+                                          selectedResource.geometry.coordinates[0]"
+                                   target="_blank"
+                                   x-text="toTitleCase(selectedResource.properties.address)"
+                                   class="map-link"></a>
                             </p>
 
                             <p x-show="selectedResource.properties.phone">
                                 <strong>Phone:</strong>
                                 <a :href="'tel:' + selectedResource.properties.phone"
-                                    x-text="selectedResource.properties.phone"></a>
+                                   x-text="selectedResource.properties.phone"></a>
                             </p>
 
                             <p x-show="selectedResource.properties.email">
                                 <strong>Email:</strong>
                                 <a :href="'mailto:' + selectedResource.properties.email"
-                                    x-text="selectedResource.properties.email"></a>
+                                   x-text="selectedResource.properties.email"></a>
                             </p>
 
                             <p x-show="selectedResource.properties.website">
@@ -119,10 +162,10 @@
                         </div>
 
                         <div x-show="selectedResource.properties.is_open_now !== null" class="open-status">
-                            <span x-show="selectedResource.properties.is_open_now" class="badge badge-open-large">Open
-                                Now</span>
+                            <span x-show="selectedResource.properties.is_open_now"
+                                  class="badge badge-open-large">Open Now</span>
                             <span x-show="!selectedResource.properties.is_open_now"
-                                class="badge badge-closed-large">Closed</span>
+                                  class="badge badge-closed-large">Closed</span>
                         </div>
                     </div>
                 </div>
@@ -140,7 +183,15 @@
 <!-- Leaflet MarkerCluster JS -->
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 
-
 <script src="/static/js/map.js"></script>
 
+<script>
+    // ✅ Ensure Alpine variable for filters exists
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('resourceMap', () => ({
+            ...resourceMap(),
+            showFilters: true
+        }));
+    });
+</script>
 {% endblock %}

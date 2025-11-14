@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
+
 
 <head>
     <meta charset="UTF-8">
@@ -27,34 +29,46 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="container">
-                <h1><a href="/">GoodFellow: Resource Locator</a></h1>
-                <div class="nav-links">
-                    <!-- Always-visible About tab -->
-                    <a href="{% url 'about' %}" class="nav-link" data-i18n="nav.about">About</a>
+   <header class="gf-header">
+  <nav class="gf-nav">
+    <!-- Left Section: Logo + Title -->
+    <div class="gf-left">
+      <a href="/" class="gf-logo">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="logo-img">
+    <circle cx="32" cy="32" r="32" fill="#fff"/>
+    <path d="M20 38c2 2 6 2 8 0l8-8c2-2 6-2 8 0 2 2 2 6 0 8l-8 8c-4 4-10 4-14 0-2-2-2-6 0-8z" fill="#f87171"/>
+    <path d="M28 28c2 2 6 2 8 0l8-8c2-2 6-2 8 0 2 2 2 6 0 8l-8 8c-4 4-10 4-14 0-2-2-2-6 0-8z" fill="#fca5a5" opacity="0.8"/>
+  </svg>
+  <div class="gf-title">
+    <h1>GoodFellow</h1>
+    <p class="tagline">Helping Hands, Finding Hope</p>
+  </div>
+</a>
 
-                    {% if user.is_authenticated %}
-                    <a href="/provider/" class="nav-link" data-i18n="nav.my_resources">My Resources</a>
-                    <form action="{% url 'logout' %}" method="post" style="display:inline;">
-                        {% csrf_token %}
-                        <!-- Match anchor styles exactly via shared class -->
-                        <button type="submit" class="nav-link" data-i18n="nav.logout">Logout</button>
-                    </form>
-                    {% else %}
-                    <a href="{% url 'login' %}" class="nav-link" data-i18n="nav.provider_login">Provider Login</a>
-                    {% endif %}
-                    {% if user.is_staff %}
-                    <a href="/admin/" class="nav-link" data-i18n="nav.admin">Admin</a>
-                    {% endif %}
-                    <!-- Language toggle: default English (EN). Click to toggle to Spanish (ES) -->
-                    <button id="language-toggle-btn"
-                        style="background: #ffffff; color: #333; border: 1px solid #d1d1d6; padding: 0.25rem 0.6rem; border-radius: 6px; cursor: pointer; font-size: 0.9rem; margin-right: 0.5rem;">EN</button>
-                </div>
-            </div>
-        </nav>
-    </header>
+    </div>
+
+    <!-- Right Section: Nav Links + Language -->
+    <div class="gf-right">
+      <a href="{% url 'about' %}" class="nav-link" data-i18n="nav.about">About</a>
+
+      {% if user.is_authenticated %}
+      <a href="/provider/" class="nav-link" data-i18n="nav.my_resources">My Resources</a>
+      <form action="{% url 'logout' %}" method="post" class="logout-form">
+        {% csrf_token %}
+        <button type="submit" class="nav-link" data-i18n="nav.logout">Logout</button>
+      </form>
+      {% else %}
+      <a href="{% url 'login' %}" class="nav-link" data-i18n="nav.provider_login">Provider Login</a>
+      {% endif %}
+
+      {% if user.is_staff %}
+      <a href="/admin/" class="nav-link" data-i18n="nav.admin">Admin</a>
+      {% endif %}
+
+      <button id="language-toggle-btn" class="lang-btn">EN</button>
+    </div>
+  </nav>
+</header>
 
     <main>
         {% block content %}{% endblock %}
