@@ -5,13 +5,13 @@
 {% block content %}
 <div class="home-container" x-data="resourceMap()">
     <div class="filters-panel">
-        <h2>Find Resources</h2>
+        <h2 data-i18n="home.find_resources">Find Resources</h2>
 
         <!-- Location Input -->
         <div class="filter-group">
-            <label>Your Location</label>
-            <button @click="getUserLocation()" class="btn-secondary">Use My Location</button>
-            <input type="text" x-model="userAddress" placeholder="Or enter address" class="input-text">
+            <label data-i18n="home.your_location">Your Location</label>
+            <button @click="getUserLocation()" class="btn-secondary" data-i18n="home.use_my_location">Use My Location</button>
+            <input type="text" x-model="userAddress" data-i18n-placeholder="home.or_enter_address" placeholder="Or enter address" class="input-text">
         </div>
 
         <!-- Resource Type Filter -->
@@ -21,7 +21,7 @@
                 <template x-for="type in resourceTypes" :key="type.value">
                     <button @click="toggleType(type.value)" :class="{'active': selectedTypes.includes(type.value)}"
                         :style="selectedTypes.includes(type.value) ? { background: getIconColor(type.value), color: '#fff', borderColor: getIconColor(type.value) } : {}"
-                        class="chip" x-text="type.value"> --updated value from type.label
+                        class="chip" x-text="translateType(type.value)">
                     </button>
                 </template>
             </div>
@@ -46,7 +46,7 @@
             </select>
         </div>
 
-        <button @click="updateFilters()" class="btn-primary">Search</button>
+        <button @click="updateFilters()" class="btn-primary" data-i18n="home.search">Search</button>
 
         <!-- Results Count -->
         <div class="results-info" x-show="resources.length > 0">
@@ -61,8 +61,8 @@
                     <h3 x-text="toTitleCase(resource.properties.name)"></h3>
                     <p class="resource-type" x-text="resource.properties.rtype"></p>
                     <p class="resource-address" x-text="toTitleCase(resource.properties.address)"></p>
-                    <span x-show="resource.properties.is_open_now === true" class="badge badge-open">Open Now</span>
-                    <span x-show="resource.properties.is_open_now === false" class="badge badge-closed">Closed</span>
+                    <span x-show="resource.properties.is_open_now === true" class="badge badge-open" data-i18n="ui.open_now">Open Now</span>
+                    <span x-show="resource.properties.is_open_now === false" class="badge badge-closed" data-i18n="ui.closed">Closed</span>
                 </div>
             </template>
             <div x-show="resources.length === 0 && !loading" class="empty-state">

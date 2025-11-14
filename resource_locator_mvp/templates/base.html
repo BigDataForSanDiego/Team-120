@@ -33,20 +33,20 @@
                 <h1><a href="/">GoodFellow: Resource Locator</a></h1>
                 <div class="nav-links">
                     <!-- Always-visible About tab -->
-                    <a href="{% url 'about' %}" class="nav-link">About</a>
+                    <a href="{% url 'about' %}" class="nav-link" data-i18n="nav.about">About</a>
 
                     {% if user.is_authenticated %}
-                    <a href="/provider/" class="nav-link">My Resources</a>
+                    <a href="/provider/" class="nav-link" data-i18n="nav.my_resources">My Resources</a>
                     <form action="{% url 'logout' %}" method="post" style="display:inline;">
                         {% csrf_token %}
                         <!-- Match anchor styles exactly via shared class -->
-                        <button type="submit" class="nav-link">Logout</button>
+                        <button type="submit" class="nav-link" data-i18n="nav.logout">Logout</button>
                     </form>
                     {% else %}
-                    <a href="{% url 'login' %}" class="nav-link">Provider Login</a>
+                    <a href="{% url 'login' %}" class="nav-link" data-i18n="nav.provider_login">Provider Login</a>
                     {% endif %}
                     {% if user.is_staff %}
-                    <a href="/admin/" class="nav-link">Admin</a>
+                    <a href="/admin/" class="nav-link" data-i18n="nav.admin">Admin</a>
                     {% endif %}
                     <!-- Language toggle: default English (EN). Click to toggle to Spanish (ES) -->
                     <button id="language-toggle-btn"
@@ -67,8 +67,364 @@
     </footer>
 
     {% block extra_scripts %}{% endblock %}
+    
     <!-- Floating Chat FAB (bottom-right) -->
     <button id="chat-fab" class="chat-icon" aria-label="Open chat" title="Chat with Good Fellow"></button>
+
+    <!-- Chat Window -->
+    <div id="chat-window" class="chat-window">
+        <div class="chat-header">
+            <span data-i18n="chat.title">Chat with Good Fellow</span>
+            <button id="chat-close" style="float: right; background: none; border: none; font-size: 20px; cursor: pointer;">&times;</button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <!-- Messages will appear here -->
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="chat-input" class="chat-input" data-i18n-placeholder="chat.placeholder" placeholder="Type your message..." />
+            <button id="chat-send" class="chat-send">➤</button>
+        </div>
+    </div>
+
+    <script>
+        // Chat functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatFab = document.getElementById('chat-fab');
+            const chatWindow = document.getElementById('chat-window');
+            const chatClose = document.getElementById('chat-close');
+            const chatSend = document.getElementById('chat-send');
+            const chatInput = document.getElementById('chat-input');
+            const chatMessages = document.getElementById('chat-messages');
+
+            // Toggle chat window
+            chatFab.addEventListener('click', function() {
+                chatWindow.classList.toggle('open');
+                if (chatWindow.classList.contains('open')) {
+                    chatInput.focus();
+                }
+            });
+
+            // Close chat window
+            chatClose.addEventListener('click', function() {
+                chatWindow.classList.remove('open');
+            });
+
+            // Send message function
+            async function sendMessage() {
+                const message = chatInput.value.trim();
+                if (!message) return;
+
+                // Disable input while processing
+                chatInput.disabled = true;
+                chatSend.disabled = true;
+
+                // Add user message to chat
+                addMessage(message, 'user');
+                chatInput.value = '';
+
+                // Show typing indicator
+                const typingIndicator = addMessage('...', 'bot');
+                typingIndicator.classList.add('typing');
+
+                try {
+                    // Default to English - let the API detect language from user input
+                    // The backend will automatically respond in Spanish if user writes in Spanish
+                    const language = 'en';
+
+                    // Call chatbot API
+                    const response = await fetch('/chatbot/api/chat/', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRFToken': getCookie('csrftoken')
+                        },
+                        body: JSON.stringify({
+                            userQuery: message,
+                            language: language
+                        })
+                    });
+
+                    const data = await response.json();
+                    
+                    // Remove typing indicator
+                    typingIndicator.remove();
+
+                    if (response.ok && data.response) {
+                        addMessage(data.response, 'bot');
+                    } else {
+                        addMessage(window.t('chat.error'), 'bot');
+                        console.error('Chatbot error:', data.error || 'Unknown error');
+                    }
+                } catch (error) {
+                    // Remove typing indicator
+                    typingIndicator.remove();
+                    addMessage(window.t('chat.network_error'), 'bot');
+                    console.error('Network error:', error);
+                } finally {
+                    // Re-enable input
+                    chatInput.disabled = false;
+                    chatSend.disabled = false;
+                    chatInput.focus();
+                }
+            }
+
+            // Add message to chat
+            function addMessage(text, sender) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${sender}`;
+                messageDiv.textContent = text;
+                chatMessages.appendChild(messageDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+                return messageDiv;
+            }
+
+            // Get CSRF token from cookies
+            function getCookie(name) {
+                let cookieValue = null;
+                if (document.cookie && document.cookie !== '') {
+                    const cookies = document.cookie.split(';');
+                    for (let i = 0; i < cookies.length; i++) {
+                        const cookie = cookies[i].trim();
+                        if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                            break;
+                        }
+                    }
+                }
+                return cookieValue;
+            }
+
+            // Send on button click
+            chatSend.addEventListener('click', sendMessage);
+
+            // Send on Enter key
+            chatInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+        });
+
+        // Translation system
+        const translations = {
+            en: {
+                // Navigation
+                'nav.about': 'About',
+                'nav.my_resources': 'My Resources',
+                'nav.logout': 'Logout',
+                'nav.provider_login': 'Provider Login',
+                'nav.admin': 'Admin',
+                
+                // Home page
+                'home.find_resources': 'Find Resources',
+                'home.your_location': 'Your Location',
+                'home.use_my_location': 'Use My Location',
+                'home.or_enter_address': 'Or enter address',
+                'home.search': 'Search',
+                
+                // Filters
+                'ui.resource_type': 'Resource Type',
+                'ui.show_only_open': 'Show only open now',
+                'ui.distance': 'Distance',
+                'ui.resources_found': 'resources found',
+                'ui.no_resources': 'No resources found. Try adjusting your filters.',
+                'ui.loading': 'Loading resources...',
+                'ui.open_now': 'Open Now',
+                'ui.closed': 'Closed',
+                
+                // Resource types
+                'type.food': 'Food',
+                'type.shelter': 'Shelter',
+                'type.restroom': 'Restroom',
+                'type.medical': 'Medical',
+                'type.legal': 'Legal',
+                'type.donation': 'Donation',
+                'type.other': 'Other',
+                
+                // Distance options
+                'distance.1': '1 mile',
+                'distance.3': '3 miles',
+                'distance.5': '5 miles',
+                'distance.10': '10 miles',
+                
+                // Resource details
+                'detail.address': 'Address',
+                'detail.phone': 'Phone',
+                'detail.email': 'Email',
+                'detail.website': 'Website',
+                'detail.hours': 'Hours',
+                'detail.get_directions': 'Get Directions',
+                
+                // About page
+                'about.title': 'About Goodfellow — Resource Locator',
+                'about.tagline': 'GoodFellow is transforming how we support our most vulnerable community members—bringing dignity, efficiency, and hope through the power of technology and compassion.',
+                'about.work_together': "Let's work together to:",
+                'about.eliminate_barriers': 'Eliminate barriers to essential resources',
+                'about.coordinate_care': 'Coordinate care seamlessly across organizations',
+                'about.create_pathways': 'Create pathways to employment, stability, and long-term success',
+                'about.build_community': 'Build a more connected, compassionate community',
+                'about.mission': 'Our Mission',
+                'about.mission_text': 'GoodFellow focuses on connecting people with services quickly, respectfully, and without friction—reducing operational burdens for providers while improving the experience for community members.',
+                'about.mission_text2': 'We believe that when technology meets empathy, everyone is served better.',
+                'about.cofounded': 'Cofounded by:',
+                'about.back': '← Back',
+                
+                // Chat
+                'chat.title': 'Chat with Good Fellow',
+                'chat.placeholder': 'Type your message...',
+                'chat.error': 'Sorry, I encountered an error. Please try again.',
+                'chat.network_error': 'Sorry, I could not connect to the server. Please try again.',
+                
+                // Login page
+                'login.title': 'Provider Login',
+                'login.username': 'Username',
+                'login.password': 'Password',
+                'login.button': 'Login',
+                'login.error': 'Invalid username or password.',
+                'login.no_account': "Don't have an account? Contact an administrator to become a verified service provider."
+            },
+            es: {
+                // Navigation
+                'nav.about': 'Acerca de',
+                'nav.my_resources': 'Mis Recursos',
+                'nav.logout': 'Cerrar Sesión',
+                'nav.provider_login': 'Inicio de Proveedor',
+                'nav.admin': 'Admin',
+                
+                // Home page
+                'home.find_resources': 'Buscar Recursos',
+                'home.your_location': 'Tu Ubicación',
+                'home.use_my_location': 'Usar Mi Ubicación',
+                'home.or_enter_address': 'O ingresa dirección',
+                'home.search': 'Buscar',
+                
+                // Filters
+                'ui.resource_type': 'Tipo de Recurso',
+                'ui.show_only_open': 'Mostrar solo abiertos ahora',
+                'ui.distance': 'Distancia',
+                'ui.resources_found': 'recursos encontrados',
+                'ui.no_resources': 'No se encontraron recursos. Intenta ajustar tus filtros.',
+                'ui.loading': 'Cargando recursos...',
+                'ui.open_now': 'Abierto Ahora',
+                'ui.closed': 'Cerrado',
+                
+                // Resource types
+                'type.food': 'Comida',
+                'type.shelter': 'Refugio',
+                'type.restroom': 'Baño',
+                'type.medical': 'Médico',
+                'type.legal': 'Legal',
+                'type.donation': 'Donación',
+                'type.other': 'Otro',
+                
+                // Distance options
+                'distance.1': '1 milla',
+                'distance.3': '3 millas',
+                'distance.5': '5 millas',
+                'distance.10': '10 millas',
+                
+                // Resource details
+                'detail.address': 'Dirección',
+                'detail.phone': 'Teléfono',
+                'detail.email': 'Correo',
+                'detail.website': 'Sitio Web',
+                'detail.hours': 'Horario',
+                'detail.get_directions': 'Obtener Direcciones',
+                
+                // About page
+                'about.title': 'Acerca de Goodfellow — Localizador de Recursos',
+                'about.tagline': 'GoodFellow está transformando cómo apoyamos a los miembros más vulnerables de nuestra comunidad—trayendo dignidad, eficiencia y esperanza a través del poder de la tecnología y la compasión.',
+                'about.work_together': 'Trabajemos juntos para:',
+                'about.eliminate_barriers': 'Eliminar barreras a recursos esenciales',
+                'about.coordinate_care': 'Coordinar el cuidado sin problemas entre organizaciones',
+                'about.create_pathways': 'Crear caminos hacia el empleo, estabilidad y éxito a largo plazo',
+                'about.build_community': 'Construir una comunidad más conectada y compasiva',
+                'about.mission': 'Nuestra Misión',
+                'about.mission_text': 'GoodFellow se enfoca en conectar a las personas con servicios rápidamente, respetuosamente y sin fricciones—reduciendo las cargas operativas para los proveedores mientras mejora la experiencia para los miembros de la comunidad.',
+                'about.mission_text2': 'Creemos que cuando la tecnología se encuentra con la empatía, todos son servidos mejor.',
+                'about.cofounded': 'Cofundado por:',
+                'about.back': '← Atrás'
+,
+                
+                // Chat
+                'chat.title': 'Hablar con Good Fellow',
+                'chat.placeholder': 'Escribe tu mensaje...',
+                'chat.error': 'Lo siento, encontré un error. Por favor, inténtalo de nuevo.',
+                'chat.network_error': 'Lo siento, no pude conectar con el servidor. Por favor, inténtalo de nuevo.',
+                
+                // Login page
+                'login.title': 'Inicio de Sesión del Proveedor',
+                'login.username': 'Nombre de Usuario',
+                'login.password': 'Contraseña',
+                'login.button': 'Iniciar Sesión',
+                'login.error': 'Nombre de usuario o contraseña inválidos.',
+                'login.no_account': '¿No tienes una cuenta? Contacta a un administrador para convertirte en un proveedor de servicios verificado.'
+            }
+        };
+
+        // Translation helper function
+        window.t = function(key) {
+            const lang = localStorage.getItem('siteLanguage') || 'en';
+            return translations[lang][key] || translations['en'][key] || key;
+        };
+
+        // Apply translations to the page
+        function applyTranslations() {
+            const lang = localStorage.getItem('siteLanguage') || 'en';
+            
+            // Update all elements with data-i18n attribute
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                el.textContent = translations[lang][key] || translations['en'][key] || key;
+            });
+            
+            // Update placeholders
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                el.placeholder = translations[lang][key] || translations['en'][key] || key;
+            });
+            
+            // Update HTML content (for elements that need innerHTML)
+            document.querySelectorAll('[data-i18n-html]').forEach(el => {
+                const key = el.getAttribute('data-i18n-html');
+                el.innerHTML = translations[lang][key] || translations['en'][key] || key;
+            });
+            
+            // Update option elements
+            document.querySelectorAll('[data-i18n-option]').forEach(el => {
+                const key = el.getAttribute('data-i18n-option');
+                el.textContent = translations[lang][key] || translations['en'][key] || key;
+            });
+
+            // Update language button
+            const langBtn = document.getElementById('language-toggle-btn');
+            if (langBtn) {
+                langBtn.textContent = lang === 'en' ? 'EN' : 'ES';
+            }
+
+            // Update HTML lang attribute
+            document.documentElement.lang = lang;
+
+            // Dispatch event for Alpine.js components
+            window.dispatchEvent(new CustomEvent('siteLanguageChanged', { detail: { lang } }));
+        }
+
+        // Language toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const langBtn = document.getElementById('language-toggle-btn');
+            
+            // Apply saved language on load
+            applyTranslations();
+            
+            // Toggle language on click
+            langBtn.addEventListener('click', function() {
+                const currentLang = localStorage.getItem('siteLanguage') || 'en';
+                const newLang = currentLang === 'en' ? 'es' : 'en';
+                localStorage.setItem('siteLanguage', newLang);
+                applyTranslations();
+            });
+        });
+    </script>
 </body>
 
 </html>

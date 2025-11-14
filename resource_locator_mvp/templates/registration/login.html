@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="container" style="padding: 2rem 1rem; max-width: 500px;">
-    <h1>Provider Login</h1>
+    <h1 data-i18n="login.title">Provider Login</h1>
 
     <form method="post" style="margin-top: 2rem;">
         {% csrf_token %}
@@ -12,26 +12,26 @@
         {% if form.errors %}
         <div class="alert alert-error"
             style="padding: 1rem; margin-bottom: 1rem; background: #f8d7da; border-radius: 4px; color: #721c24;">
-            Invalid username or password.
+            <span data-i18n="login.error">Invalid username or password.</span>
         </div>
         {% endif %}
 
         <div class="form-group" style="margin-bottom: 1rem;">
-            <label for="{{ form.username.id_for_label }}" data-i18n="Username">Username</label>
+            <label for="{{ form.username.id_for_label }}" data-i18n="login.username">Username</label>
             {{ form.username }}
         </div>
 
         <div class="form-group" style="margin-bottom: 1rem;">
-            <label for="{{ form.password.id_for_label }}" data-i18n="Password">Password</label>
+            <label for="{{ form.password.id_for_label }}" data-i18n="login.password">Password</label>
             {{ form.password }}
         </div>
 
-        <button type="submit" class="btn-primary">Login</button>
+        <button type="submit" class="btn-primary" data-i18n="login.button">Login</button>
 
         <input type="hidden" name="next" value="{{ next }}">
     </form>
 
-    <p style="margin-top: 2rem; text-align: center; color: #666;">
+    <p style="margin-top: 2rem; text-align: center; color: #666;" data-i18n="login.no_account">
         Don't have an account? Contact an administrator to become a verified service provider.
     </p>
 </div>

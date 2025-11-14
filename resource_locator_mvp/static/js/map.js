@@ -10,6 +10,7 @@ function resourceMap() {
         selectedResource: null,
         loading: false,
         autoCenter: true, // ✅ Only recenter once on load or when user clicks Recenter
+        currentLanguage: 'en', // Track language for reactivity
 
         // User location (default to San Diego)
         userLat: 32.7157,
@@ -49,19 +50,12 @@ function resourceMap() {
             this.initMap();
             this.getUserLocation(); // load user location first
 
-            // initialize translated labels if translation helper exists
-            if (window && typeof window.t === 'function') {
-                this.resourceTypes.forEach(rt => {
-                    rt.label = window.t(rt.label);
-                });
-            }
+            // Set initial language
+            this.currentLanguage = localStorage.getItem('siteLanguage') || 'en';
+
             // Listen for language changes
             window.addEventListener('siteLanguageChanged', () => {
-                if (window && typeof window.t === 'function') {
-                    this.resourceTypes.forEach(rt => {
-                        rt.label = window.t('type.' + rt.value);
-                    });
-                }
+                this.currentLanguage = localStorage.getItem('siteLanguage') || 'en';
             });
 
             this.updateFilters();   // then load data
@@ -69,6 +63,8 @@ function resourceMap() {
 
         // Translate a resource type value to the current language (fallback to value)
         translateType(typeValue) {
+            // Reference currentLanguage to make this reactive
+            const lang = this.currentLanguage;
             const key = 'type.' + typeValue;
             if (window && typeof window.t === 'function') {
                 return window.t(key);
