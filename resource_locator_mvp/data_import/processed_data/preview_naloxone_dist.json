@@ -1,0 +1,782 @@
+{
+  "import_date": "2025-11-11T21:25:47.023416",
+  "source_file": "raw_data/GeoJSON/Naloxone_Distribution_Locations.geojson",
+  "statistics": {
+    "total_features": 35,
+    "parsed": 35,
+    "errors": 0,
+    "resources_with_hours": 34,
+    "resources_without_hours": 1
+  },
+  "resources": [
+    {
+      "name": "North Inland Region Public Health Center",
+      "rtype": "medical",
+      "address": "649 W Mission Ave, Suite 2, Escondido, CA 92025",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 1990769.0610967278,
+      "longitude": 6302953.523890391,
+      "raw_properties": {
+        "objectid": 1,
+        "name": "North Inland Region Public Health Center",
+        "address": "649 W Mission Ave, Suite 2, Escondido, CA 92025",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(760) 740-3000",
+        "directions": "https://www.google.com/maps/dir//649+W+Mission+Ave+%232,+Escondido,+CA+92025/"
+      }
+    },
+    {
+      "name": "South Region Public Health Center",
+      "rtype": "medical",
+      "address": "690 Oxford St, Chula Vista, CA 91911",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 1801548.3171636462,
+      "longitude": 6304265.952695966,
+      "raw_properties": {
+        "objectid": 2,
+        "name": "South Region Public Health Center",
+        "address": "690 Oxford St, Chula Vista, CA 91911",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(619) 409-3110",
+        "directions": "https://www.google.com/maps/dir//690+Oxford+St,+Chula+Vista,+CA+91911/"
+      }
+    },
+    {
+      "name": "East Public Health Center",
+      "rtype": "medical",
+      "address": "367 North Magnolia Avenue, El Cajon, CA 92020",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 1871169.2527246475,
+      "longitude": 6342870.043794721,
+      "raw_properties": {
+        "objectid": 3,
+        "name": "East Public Health Center",
+        "address": "367 North Magnolia Avenue, El Cajon, CA 92020",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(619) 441-6500",
+        "directions": "https://www.google.com/maps/dir//367+Magnolia+Ave,+El+Cajon,+CA+92020/"
+      }
+    },
+    {
+      "name": "North Central Public Health Center",
+      "rtype": "medical",
+      "address": "5055 Ruffin Rd, San Diego, CA 92123",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 1881922.379840389,
+      "longitude": 6292511.631388381,
+      "raw_properties": {
+        "objectid": 4,
+        "name": "North Central Public Health Center",
+        "address": "5055 Ruffin Rd, San Diego, CA 92123",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(858) 573-7300",
+        "directions": "https://www.google.com/maps/dir//5055+Ruffin+Rd,+San+Diego,+CA+92123/"
+      }
+    },
+    {
+      "name": "North Coastal Public Health Center",
+      "rtype": "medical",
+      "address": "3609 Ocean Ranch Blvd, Suite 104, Oceanside, CA 92056",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 2021962.6840768158,
+      "longitude": 6237337.498954713,
+      "raw_properties": {
+        "objectid": 5,
+        "name": "North Coastal Public Health Center",
+        "address": "3609 Ocean Ranch Blvd, Suite 104, Oceanside, CA 92056",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(760) 967-4401",
+        "directions": "https://www.google.com/maps/dir//3609+Ocean+Ranch+Blvd+%23+104,+Oceanside,+CA+92056/"
+      }
+    },
+    {
+      "name": "North County LGBTQ Resource Center",
+      "rtype": "other",
+      "address": "3220 Mission Ave, Suite 2, Oceanside, CA 92058",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 2023628.3608635664,
+      "longitude": 6226085.39613089,
+      "raw_properties": {
+        "objectid": 6,
+        "name": "North County LGBTQ Resource Center",
+        "address": "3220 Mission Ave, Suite 2, Oceanside, CA 92058",
+        "hours": "Mon - 10:00am to 6:00pm\nTues - 10:00am to 6:00pm\nWeds - 10:00am to 6:00pm\nThurs - 10:00am to 6:00pm\nFri - 10:00am to 6:00pm\nSat - Closed\nSun - Closed",
+        "phone_number": "(760) 994-1690",
+        "directions": "https://www.google.com/maps/dir//3220+Mission+Ave,+Oceanside,+CA+92058/"
+      }
+    },
+    {
+      "name": "Family Health Centers of SD SafePoint Program",
+      "rtype": "medical",
+      "address": "Imperial Ave & 16th St, San Diego, CA 92101",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "mon": [],
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 1837946.9999435544,
+      "longitude": 6284987.000112221,
+      "raw_properties": {
+        "objectid": 7,
+        "name": "Family Health Centers of SD SafePoint Program",
+        "address": "Imperial Ave & 16th St, San Diego, CA 92101",
+        "hours": "Tuesdays and Thursdays, 6 to 9 p.m.\nMon - Closed\nTues - 6:00pm to 9:00pm\nWeds - 6:00pm to 9:00pm\nThurs - 6:00pm to 9:00pm\nFri - 6:00pm to 9:00pm\nSat - Closed\nSun - Closed",
+        "phone_number": "(619) 993-0216",
+        "directions": "https://www.google.com/maps/dir//Imperial+Ave+%26+16th+St,+San+Diego,+CA+92101/"
+      }
+    },
+    {
+      "name": "Family Health Centers of SD Safe Point Program",
+      "rtype": "medical",
+      "address": "31st St & North Park Way, San Diego, CA 92104",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {},
+      "latitude": 1852858.9999751449,
+      "longitude": 6291963.000267804,
+      "raw_properties": {
+        "objectid": 8,
+        "name": "Family Health Centers of SD Safe Point Program",
+        "address": "31st St & North Park Way, San Diego, CA 92104",
+        "hours": "Fri - 10:00am to 1:00pm",
+        "phone_number": "(619) 993-0216",
+        "directions": "https://www.google.com/maps/dir//31st+St+%26+N+Park+Way,+San+Diego,+CA+92104/"
+      }
+    },
+    {
+      "name": "Central Region Public Health Center",
+      "rtype": "medical",
+      "address": "5101 Market St, San Diego, CA 92114",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 1839231.3713905662,
+      "longitude": 6304973.531661391,
+      "raw_properties": {
+        "objectid": 9,
+        "name": "Central Region Public Health Center",
+        "address": "5101 Market St, San Diego, CA 92114",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(619) 229-5400",
+        "directions": "https://www.google.com/maps/dir//5101+Market+St,+San+Diego,+CA+92114/"
+      }
+    },
+    {
+      "name": "Sheriff's Headquarters",
+      "rtype": "legal",
+      "address": "9621 Ridgehaven Court, San Diego, CA 92123",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 1878859.0053897202,
+      "longitude": 6293980.903384224,
+      "raw_properties": {
+        "objectid": 10,
+        "name": "Sheriff's Headquarters",
+        "address": "9621 Ridgehaven Court, San Diego, CA 92123",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(858) 974-2222",
+        "directions": "https://www.google.com/maps/dir//9621%20Ridgehaven%20Court,%20San%20Diego,%20CA%2092123"
+      }
+    },
+    {
+      "name": "San Diego County Administration Center",
+      "rtype": "other",
+      "address": "1600 Pacific Hwy, San Diego, CA 92101",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 1843906.1228678077,
+      "longitude": 6278077.967014298,
+      "raw_properties": {
+        "objectid": 11,
+        "name": "San Diego County Administration Center",
+        "address": "1600 Pacific Hwy, San Diego, CA 92101",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(858) 694-3900",
+        "directions": "https://www.google.com/maps/dir//1600%20Pacific%20Hwy,%20San%20Diego,%20CA%2092101"
+      }
+    },
+    {
+      "name": "4S Ranch Substation",
+      "rtype": "other",
+      "address": "10282 Rancho Bernardo Rd., San Diego, CA 92127",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 1952580.074482724,
+      "longitude": 6295332.78486681,
+      "raw_properties": {
+        "objectid": 12,
+        "name": "4S Ranch Substation",
+        "address": "10282 Rancho Bernardo Rd., San Diego, CA 92127",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(858) 521-5200",
+        "directions": "https://www.google.com/maps/dir//10282%20Rancho%20Bernardo%20Rd.,%20San%20Diego,%20CA%2092127"
+      }
+    },
+    {
+      "name": "Alpine Station",
+      "rtype": "other",
+      "address": "2751 Alpine Blvd, Alpine, CA 91901",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 1883693.2732802331,
+      "longitude": 6406810.778117716,
+      "raw_properties": {
+        "objectid": 13,
+        "name": "Alpine Station",
+        "address": "2751 Alpine Blvd, Alpine, CA 91901",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(619) 659-2600",
+        "directions": "https://www.google.com/maps/dir//2751+Alpine+Blvd,+Alpine,+CA+91901/"
+      }
+    },
+    {
+      "name": "Fallbrook Substation",
+      "rtype": "other",
+      "address": "388 East Alvarado St., Fallbrook, CA 92028",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 2084173.9855069816,
+      "longitude": 6257008.336909547,
+      "raw_properties": {
+        "objectid": 14,
+        "name": "Fallbrook Substation",
+        "address": "388 East Alvarado St., Fallbrook, CA 92028",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(760) 451-3100",
+        "directions": "https://www.google.com/maps/dir//388+E+Alvarado+St,+Fallbrook,+CA+92028/"
+      }
+    },
+    {
+      "name": "George Bailey Detention Facility",
+      "rtype": "other",
+      "address": "446 Alta Rd #5300, San Diego, CA 92158",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 1795306.5543847233,
+      "longitude": 6354826.563516811,
+      "raw_properties": {
+        "objectid": 15,
+        "name": "George Bailey Detention Facility",
+        "address": "446 Alta Rd #5300, San Diego, CA 92158",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(619) 210-0385",
+        "directions": "https://www.google.com/maps/dir//446+Alta+Rd,+Jamul,+CA+91935/"
+      }
+    },
+    {
+      "name": "Julian Substation",
+      "rtype": "other",
+      "address": "2907 Washington St., Julian, CA 92036",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 1971829.2689238936,
+      "longitude": 6453425.49788022,
+      "raw_properties": {
+        "objectid": 16,
+        "name": "Julian Substation",
+        "address": "2907 Washington St., Julian, CA 92036",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(760) 765-4780",
+        "directions": "https://www.google.com/maps/dir//2907+Washington+St,+Julian,+CA+92036/"
+      }
+    },
+    {
+      "name": "Lakeside Substation",
+      "rtype": "other",
+      "address": "12365 Parkside St., Lakeside, CA 92040",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 1892588.36507006,
+      "longitude": 6354860.728474721,
+      "raw_properties": {
+        "objectid": 17,
+        "name": "Lakeside Substation",
+        "address": "12365 Parkside St., Lakeside, CA 92040",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(619) 938-1360",
+        "directions": "https://www.google.com/maps/dir//12365+Parkside+St,+Lakeside,+CA+92040/"
+      }
+    },
+    {
+      "name": "Las Colinas Detention and Reentry Facility",
+      "rtype": "other",
+      "address": "451 Riverview Pkwy, Santee, CA 92071",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 1887517.476261735,
+      "longitude": 6339741.950641468,
+      "raw_properties": {
+        "objectid": 18,
+        "name": "Las Colinas Detention and Reentry Facility",
+        "address": "451 Riverview Pkwy, Santee, CA 92071",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(619) 409-5000",
+        "directions": "https://www.google.com/maps/dir//451+Riverview+Pkwy,+Santee,+CA+92071/"
+      }
+    },
+    {
+      "name": "Lemon Grove Substation",
+      "rtype": "other",
+      "address": "3240 Main Street, Lemon Grove, CA 91945",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 1850151.2301282287,
+      "longitude": 6321305.68370831,
+      "raw_properties": {
+        "objectid": 19,
+        "name": "Lemon Grove Substation",
+        "address": "3240 Main Street, Lemon Grove, CA 91945",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(619) 337-2000",
+        "directions": "https://www.google.com/maps/dir//3240+Main+St,+Lemon+Grove,+CA+91945/"
+      }
+    },
+    {
+      "name": "Rancho San Diego Station",
+      "rtype": "other",
+      "address": "11486 Campo Rd., Spring Valley, CA 91978",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 1849739.7109381407,
+      "longitude": 6347166.178247049,
+      "raw_properties": {
+        "objectid": 20,
+        "name": "Rancho San Diego Station",
+        "address": "11486 Campo Rd., Spring Valley, CA 91978",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(619) 660-7090",
+        "directions": "https://www.google.com/maps/dir//11486+Campo+Rd,+Spring+Valley,+CA+91978/"
+      }
+    },
+    {
+      "name": "South Bay Detention Facility",
+      "rtype": "other",
+      "address": "500 Third Ave., Chula Vista, CA 91910",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 1810982.0620756447,
+      "longitude": 6306824.77500613,
+      "raw_properties": {
+        "objectid": 21,
+        "name": "South Bay Detention Facility",
+        "address": "500 Third Ave., Chula Vista, CA 91910",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(619) 409-5000",
+        "directions": "https://www.google.com/maps/dir//500+Third+Ave,+Chula+Vista,+CA+91910/"
+      }
+    },
+    {
+      "name": "Pine Valley Substation",
+      "rtype": "other",
+      "address": "28696 Old Highway 80, Pine Valley, CA 91962",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 1880296.3371607214,
+      "longitude": 6474940.1284072995,
+      "raw_properties": {
+        "objectid": 22,
+        "name": "Pine Valley Substation",
+        "address": "28696 Old Highway 80, Pine Valley, CA 91962",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(619) 938-8400",
+        "directions": "https://www.google.com/maps/dir//28696+Old+Hwy+80,+Pine+Valley,+CA+91962/"
+      }
+    },
+    {
+      "name": "San Diego Central Jail",
+      "rtype": "other",
+      "address": "1173 Front Street, San Diego, CA 92101",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 1842016.415361151,
+      "longitude": 6280449.677165881,
+      "raw_properties": {
+        "objectid": 23,
+        "name": "San Diego Central Jail",
+        "address": "1173 Front Street, San Diego, CA 92101",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(619) 409-5000",
+        "directions": "https://www.google.com/maps/dir//1173+Front+St,+San+Diego,+CA+92101/"
+      }
+    },
+    {
+      "name": "Campo Substation",
+      "rtype": "other",
+      "address": "378 Sheridan Rd., Campo, CA 91906",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 1800072.5934090614,
+      "longitude": 6494007.755298227,
+      "raw_properties": {
+        "objectid": 24,
+        "name": "Campo Substation",
+        "address": "378 Sheridan Rd., Campo, CA 91906",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(619) 478-5378",
+        "directions": "https://www.google.com/maps/dir//378+Sheridan+Rd,+Campo,+CA+91906/"
+      }
+    },
+    {
+      "name": "Valley Center Substation",
+      "rtype": "other",
+      "address": "28201 N. Lake Wohlford Rd., Valley Center, CA 92082",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 2026527.245485723,
+      "longitude": 6339910.02412422,
+      "raw_properties": {
+        "objectid": 25,
+        "name": "Valley Center Substation",
+        "address": "28201 N. Lake Wohlford Rd., Valley Center, CA 92082",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(760) 751-4400",
+        "directions": "https://www.google.com/maps/dir//28201+N+Lake+Wohlford+Rd,+Valley+Center,+CA+92082/"
+      }
+    },
+    {
+      "name": "Ranchita Substation",
+      "rtype": "other",
+      "address": "25704 San Felipe Rd., Warner Springs, CA 92086",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 2008728.1229475588,
+      "longitude": 6461214.637157559,
+      "raw_properties": {
+        "objectid": 26,
+        "name": "Ranchita Substation",
+        "address": "25704 San Felipe Rd., Warner Springs, CA 92086",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(760) 906-6140",
+        "directions": "https://www.google.com/maps/dir//25704+San+Felipe+Rd,+Warner+Springs,+CA+92086/"
+      }
+    },
+    {
+      "name": "Poway Station",
+      "rtype": "other",
+      "address": "13100 Bowron Rd., Poway, CA 92064",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 1928091.8212939799,
+      "longitude": 6317675.246415392,
+      "raw_properties": {
+        "objectid": 27,
+        "name": "Poway Station",
+        "address": "13100 Bowron Rd., Poway, CA 92064",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(858) 513-2800",
+        "directions": "https://www.google.com/maps/dir//13100+Bowron+Rd,+Poway,+CA+92064/"
+      }
+    },
+    {
+      "name": "Vista Detention Center",
+      "rtype": "other",
+      "address": "325 S. Melrose Dr., Ste. 200, Vista, CA 92081",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 2014712.0578300655,
+      "longitude": 6254503.626367807,
+      "raw_properties": {
+        "objectid": 28,
+        "name": "Vista Detention Center",
+        "address": "325 S. Melrose Dr., Ste. 200, Vista, CA 92081",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(619) 409-5000",
+        "directions": "https://www.google.com/maps/dir//325+S+Melrose+Dr+Suite+200,+Vista,+CA+92081/"
+      }
+    },
+    {
+      "name": "North Coastal Station",
+      "rtype": "other",
+      "address": "175 North El Camino Real, Encinitas, CA 92024",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 1962882.7563051432,
+      "longitude": 6252336.64480938,
+      "raw_properties": {
+        "objectid": 29,
+        "name": "North Coastal Station",
+        "address": "175 North El Camino Real, Encinitas, CA 92024",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(760) 966-3500",
+        "directions": "https://www.google.com/maps/dir//175+N+El+Camino+Real,+Encinitas,+CA+92024/"
+      }
+    },
+    {
+      "name": "Borrego Springs Office",
+      "rtype": "other",
+      "address": "2620 Country Club Rd, San Diego, CA 92004",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 2035775.5015954822,
+      "longitude": 6522556.722150296,
+      "raw_properties": {
+        "objectid": 30,
+        "name": "Borrego Springs Office",
+        "address": "2620 Country Club Rd, San Diego, CA 92004",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(760) 767-5656",
+        "directions": "https://www.google.com/maps/dir//2620+Country+Club+Rd,+Borrego+Springs,+CA+92004/"
+      }
+    },
+    {
+      "name": "Imperial Beach Substation",
+      "rtype": "other",
+      "address": "845 Imperial Beach Blvd., Imperial Beach, CA 91932",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 1790602.4053284824,
+      "longitude": 6295021.237261549,
+      "raw_properties": {
+        "objectid": 31,
+        "name": "Imperial Beach Substation",
+        "address": "845 Imperial Beach Blvd., Imperial Beach, CA 91932",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(619) 498-2400",
+        "directions": "https://www.google.com/maps/dir//845+Imperial+Beach+Blvd,+Imperial+Beach,+CA+91932/"
+      }
+    },
+    {
+      "name": "San Marcos Station",
+      "rtype": "other",
+      "address": "182 Santar Place, San Marcos, CA 92069",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 1996261.4874478132,
+      "longitude": 6287448.892498136,
+      "raw_properties": {
+        "objectid": 32,
+        "name": "San Marcos Station",
+        "address": "182 Santar Place, San Marcos, CA 92069",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(760) 510-5200",
+        "directions": "https://www.google.com/maps/dir//182+Santar+Pl,+San+Marcos,+CA+92069/"
+      }
+    },
+    {
+      "name": "Ramona Substation",
+      "rtype": "other",
+      "address": "1424 Montecito Rd., Ramona, CA 92065",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 1958015.4809347242,
+      "longitude": 6369517.022980973,
+      "raw_properties": {
+        "objectid": 33,
+        "name": "Ramona Substation",
+        "address": "1424 Montecito Rd., Ramona, CA 92065",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(760) 789-9157",
+        "directions": "https://www.google.com/maps/dir//1424+Montecito+Rd,+Ramona,+CA+92065/"
+      }
+    },
+    {
+      "name": "Santee Station",
+      "rtype": "other",
+      "address": "8811 Cuyamaca St., Santee, CA 92071",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 1884811.3996528983,
+      "longitude": 6336335.123137549,
+      "raw_properties": {
+        "objectid": 34,
+        "name": "Santee Station",
+        "address": "8811 Cuyamaca St., Santee, CA 92071",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(619) 956-4000",
+        "directions": "https://www.google.com/maps/dir//8811+Cuyamaca+St,+Santee,+CA+92071/"
+      }
+    },
+    {
+      "name": "Vista Station",
+      "rtype": "other",
+      "address": "325 South Melrose Dr., Ste. 210, Vista, CA 92081",
+      "phone": "",
+      "website": "",
+      "description": "",
+      "hours_json": {
+        "sat": [],
+        "sun": []
+      },
+      "latitude": 2015297.0464894772,
+      "longitude": 6254584.792872131,
+      "raw_properties": {
+        "objectid": 35,
+        "name": "Vista Station",
+        "address": "325 South Melrose Dr., Ste. 210, Vista, CA 92081",
+        "hours": "Mon - 8:00am to 5:00pm\nTues - 8:00am to 5:00pm\nWeds - 8:00am to 5:00pm\nThurs - 8:00am to 5:00pm\nFri - 8:00am to 5:00pm\nSat - Closed\nSun - Closed\nHolidays - Closed",
+        "phone_number": "(760) 940-4551",
+        "directions": "https://www.google.com/maps/dir//325+S+Melrose+Dr+%23+210,+Vista,+CA+92081/"
+      }
+    }
+  ],
+  "validation_errors": []
+}

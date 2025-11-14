@@ -1,0 +1,1396 @@
+{
+  "import_date": "2025-11-11T22:23:14.152444",
+  "source_file": "raw_data/CSV/resource_data_food.csv",
+  "statistics": {
+    "total_rows": 187,
+    "parsed": 18,
+    "errors": 169,
+    "resources_with_hours": 0,
+    "resources_without_hours": 18
+  },
+  "detected_columns": [
+    "id",
+    "name",
+    "rtype",
+    "description",
+    "hours_json",
+    "phone",
+    "email",
+    "address",
+    "geom",
+    "Tags",
+    "Lat",
+    "Long"
+  ],
+  "resources": [
+    {
+      "name": "Castle Park Middle School Pantry",
+      "rtype": "food",
+      "address": "160 Quintard St Chula Vista, CA 91911, US",
+      "phone": "619-361-5684",
+      "email": "",
+      "website": "",
+      "description": "",
+      "hours_json": {},
+      "tags": [
+        "Walk-up"
+      ],
+      "latitude": 32.6048459,
+      "longitude": -117.0593393,
+      "raw_row": {
+        "id": "16",
+        "name": "Castle Park Middle School Pantry",
+        "rtype": "Food",
+        "description": "",
+        "hours_json": "",
+        "phone": "619-361-5684",
+        "email": "",
+        "address": " 160 Quintard St Chula Vista, CA 91911, US",
+        "geom": "",
+        "Tags": "Walk-up",
+        "Lat": "32.6048459",
+        "Long": "-117.0593393"
+      }
+    },
+    {
+      "name": "Campo Pantry",
+      "rtype": "food",
+      "address": "976 Sheridan Road Campo, CA 91906, US",
+      "phone": "",
+      "email": "",
+      "website": "",
+      "description": "",
+      "hours_json": {},
+      "tags": [
+        "Drive-through"
+      ],
+      "latitude": 32.6090022,
+      "longitude": -116.4694605,
+      "raw_row": {
+        "id": "14",
+        "name": "Campo Pantry",
+        "rtype": "Food",
+        "description": "",
+        "hours_json": "",
+        "phone": "",
+        "email": "",
+        "address": " 976 Sheridan Road Campo, CA 91906, US",
+        "geom": "",
+        "Tags": "Drive-through",
+        "Lat": "32.6090022",
+        "Long": "-116.4694605"
+      }
+    },
+    {
+      "name": "Clover Flat Elementary School Pantry",
+      "rtype": "food",
+      "address": "39639 Old Highway 80 Boulevard, CA 91905, US",
+      "phone": "",
+      "email": "",
+      "website": "",
+      "description": "",
+      "hours_json": {},
+      "tags": [
+        "Walk-up"
+      ],
+      "latitude": 32.6619312,
+      "longitude": -116.257812,
+      "raw_row": {
+        "id": "24",
+        "name": "Clover Flat Elementary School Pantry",
+        "rtype": "Food",
+        "description": "",
+        "hours_json": "",
+        "phone": "",
+        "email": "",
+        "address": " 39639 Old Highway 80 Boulevard, CA 91905, US",
+        "geom": "",
+        "Tags": "Walk-up",
+        "Lat": "32.6619312",
+        "Long": "-116.257812"
+      }
+    },
+    {
+      "name": "City of Hope",
+      "rtype": "food",
+      "address": "Jackie Robinson YMCA 151 YMCA Way San Diego, CA 92102, US",
+      "phone": "619-633-7977",
+      "email": "",
+      "website": "",
+      "description": "",
+      "hours_json": {},
+      "tags": [
+        "Walk-up"
+      ],
+      "latitude": 32.7051829,
+      "longitude": -117.0974966,
+      "raw_row": {
+        "id": "23",
+        "name": "City of Hope",
+        "rtype": "Food",
+        "description": "",
+        "hours_json": "",
+        "phone": "619-633-7977",
+        "email": "",
+        "address": "Jackie Robinson YMCA 151 YMCA Way San Diego, CA 92102, US",
+        "geom": "",
+        "Tags": "Walk-up",
+        "Lat": "32.7051829",
+        "Long": "-117.0974966"
+      }
+    },
+    {
+      "name": "Christian Church of Lemon Grove",
+      "rtype": "food",
+      "address": "6970 San Miguel Ave. Lemon Grove, CA 91945, US",
+      "phone": "619-465-1888",
+      "email": "",
+      "website": "",
+      "description": "",
+      "hours_json": {},
+      "tags": [
+        "Walk-up"
+      ],
+      "latitude": 32.7356382,
+      "longitude": -117.0476534,
+      "raw_row": {
+        "id": "19",
+        "name": "Christian Church of Lemon Grove",
+        "rtype": "Food",
+        "description": "",
+        "hours_json": "",
+        "phone": "619-465-1888",
+        "email": "",
+        "address": "6970 San Miguel Ave. Lemon Grove, CA 91945, US",
+        "geom": "",
+        "Tags": "Walk-up",
+        "Lat": "32.7356382",
+        "Long": "-117.0476534"
+      }
+    },
+    {
+      "name": "Bridge of Hope",
+      "rtype": "food",
+      "address": "3406 Fairmount Avenue San Diego, CA 92105, US",
+      "phone": "",
+      "email": "",
+      "website": "",
+      "description": "",
+      "hours_json": {},
+      "tags": [
+        "Walk-up"
+      ],
+      "latitude": 32.741439,
+      "longitude": -117.101292,
+      "raw_row": {
+        "id": "11",
+        "name": "Bridge of Hope",
+        "rtype": "Food",
+        "description": "",
+        "hours_json": "Mon; Fri; Sat",
+        "phone": "",
+        "email": "",
+        "address": "3406 Fairmount Avenue San Diego, CA 92105, US",
+        "geom": "",
+        "Tags": "Walk-up",
+        "Lat": "32.741439",
+        "Long": "-117.101292"
+      }
+    },
+    {
+      "name": "City Heights Assembly of God",
+      "rtype": "food",
+      "address": "3737 Wightman Street San Diego, CA 92015, US",
+      "phone": "619-471-4809",
+      "email": "",
+      "website": "",
+      "description": "",
+      "hours_json": {},
+      "tags": [
+        "Walk-up"
+      ],
+      "latitude": 32.747452,
+      "longitude": -117.112259,
+      "raw_row": {
+        "id": "21",
+        "name": "City Heights Assembly of God",
+        "rtype": "Food",
+        "description": "",
+        "hours_json": "Mon; Wed; Thu; Sat; Sun",
+        "phone": "619-471-4809",
+        "email": "",
+        "address": "3737 Wightman Street San Diego, CA 92015, US",
+        "geom": "",
+        "Tags": "Walk-up",
+        "Lat": "32.747452",
+        "Long": "-117.112259"
+      }
+    },
+    {
+      "name": "City Heights Mobile Pantry",
+      "rtype": "food",
+      "address": "4300 El Cajon Blvd San Diego, CA 92105, US",
+      "phone": "619-280-9622",
+      "email": "",
+      "website": "",
+      "description": "",
+      "hours_json": {},
+      "tags": [
+        "Walk-up"
+      ],
+      "latitude": 32.7555317,
+      "longitude": -117.1013528,
+      "raw_row": {
+        "id": "22",
+        "name": "City Heights Mobile Pantry",
+        "rtype": "Food",
+        "description": "",
+        "hours_json": "",
+        "phone": "619-280-9622",
+        "email": "",
+        "address": "4300 El Cajon Blvd San Diego, CA 92105, US",
+        "geom": "",
+        "Tags": "Walk-up",
+        "Lat": "32.7555317",
+        "Long": "-117.1013528"
+      }
+    },
+    {
+      "name": "Crosspointe - Our Church",
+      "rtype": "food",
+      "address": "8809 La Mesa Boulevard La Mesa, CA 91942, US",
+      "phone": "619-464-3077",
+      "email": "",
+      "website": "",
+      "description": "",
+      "hours_json": {},
+      "tags": [
+        "Walk-up"
+      ],
+      "latitude": 32.770761,
+      "longitude": -117.007443,
+      "raw_row": {
+        "id": "28",
+        "name": "Crosspointe - Our Church",
+        "rtype": "Food",
+        "description": "",
+        "hours_json": "Mon; Tue; Wed; Thu; Fri",
+        "phone": "619-464-3077",
+        "email": "",
+        "address": " 8809 La Mesa Boulevard La Mesa, CA 91942, US",
+        "geom": "",
+        "Tags": "Walk-up",
+        "Lat": "32.770761",
+        "Long": "-117.007443"
+      }
+    },
+    {
+      "name": "El Cajon Valley High School Pantry",
+      "rtype": "food",
+      "address": "1035 E Madison Ave El Cajon, CA 92021, US",
+      "phone": "619-401-4729",
+      "email": "",
+      "website": "",
+      "description": "",
+      "hours_json": {},
+      "tags": [
+        "Drive-through"
+      ],
+      "latitude": 32.8001048,
+      "longitude": -116.947573,
+      "raw_row": {
+        "id": "33",
+        "name": "El Cajon Valley High School Pantry",
+        "rtype": "Food",
+        "description": "",
+        "hours_json": "Mon; Wed; Thu",
+        "phone": "619-401-4729",
+        "email": "",
+        "address": "1035 E Madison Ave El Cajon, CA 92021, US",
+        "geom": "",
+        "Tags": "Drive-through",
+        "Lat": "32.8001048",
+        "Long": "-116.947573"
+      }
+    },
+    {
+      "name": "Community Christian Service Agency",
+      "rtype": "food",
+      "address": "4167 Rappahannock Ave San Diego, CA 92117, US",
+      "phone": "",
+      "email": "",
+      "website": "",
+      "description": "",
+      "hours_json": {},
+      "tags": [
+        "Walk-up"
+      ],
+      "latitude": 32.8054656,
+      "longitude": -117.2011484,
+      "raw_row": {
+        "id": "25",
+        "name": "Community Christian Service Agency",
+        "rtype": "Food",
+        "description": "",
+        "hours_json": "Mon; Sat",
+        "phone": "",
+        "email": "",
+        "address": "4167 Rappahannock Ave San Diego, CA 92117, US",
+        "geom": "",
+        "Tags": "Walk-up",
+        "Lat": "32.8054656",
+        "Long": "-117.2011484"
+      }
+    },
+    {
+      "name": "Call First",
+      "rtype": "food",
+      "address": "9465 Farnham Street San Diego, CA 92123, US",
+      "phone": "877-698-7838",
+      "email": "",
+      "website": "",
+      "description": "",
+      "hours_json": {},
+      "tags": [
+        "Drive-through"
+      ],
+      "latitude": 32.832241,
+      "longitude": -117.124865,
+      "raw_row": {
+        "id": "27",
+        "name": "Call First",
+        "rtype": "Food",
+        "description": "",
+        "hours_json": "",
+        "phone": "877-698-7838",
+        "email": "",
+        "address": " 9465 Farnham Street San Diego, CA 92123, US",
+        "geom": "",
+        "Tags": "Drive-through",
+        "Lat": "32.832241",
+        "Long": "-117.124865"
+      }
+    },
+    {
+      "name": "Alpine Pantry",
+      "rtype": "food",
+      "address": "1912 Arnold Way Alpine, CA 91901, US",
+      "phone": "",
+      "email": "",
+      "website": "",
+      "description": "1st and 3rd Wednesdays: Mobile Pantry (includes fresh produce and dry goods) 2nd and 4th Wednesdays: Produce Pantry (includes fresh produce)  Closed Nov 26, 2025. Closed Dec 24, 2025. Rescheduled to Dec 31, 2025.",
+      "hours_json": {},
+      "tags": [
+        "Walk-up"
+      ],
+      "latitude": 32.835816,
+      "longitude": -116.773774,
+      "raw_row": {
+        "id": "4",
+        "name": "Alpine Pantry",
+        "rtype": "Food",
+        "description": "1st and 3rd Wednesdays: Mobile Pantry (includes fresh produce and dry goods) 2nd and 4th Wednesdays: Produce Pantry (includes fresh produce)  Closed Nov 26, 2025. Closed Dec 24, 2025. Rescheduled to Dec 31, 2025.",
+        "hours_json": "",
+        "phone": "",
+        "email": "",
+        "address": " 1912 Arnold Way Alpine, CA 91901, US",
+        "geom": "",
+        "Tags": "Walk-up",
+        "Lat": "32.835816",
+        "Long": "-116.773774"
+      }
+    },
+    {
+      "name": "Descanso Mobile Pantry",
+      "rtype": "food",
+      "address": "9545 River Dr. Descanso, CA 91916, US",
+      "phone": "",
+      "email": "",
+      "website": "",
+      "description": "",
+      "hours_json": {},
+      "tags": [
+        "Walk-up"
+      ],
+      "latitude": 32.859707,
+      "longitude": -116.613827,
+      "raw_row": {
+        "id": "30",
+        "name": "Descanso Mobile Pantry",
+        "rtype": "Food",
+        "description": "",
+        "hours_json": "",
+        "phone": "",
+        "email": "",
+        "address": "9545 River Dr. Descanso, CA 91916, US",
+        "geom": "",
+        "Tags": "Walk-up",
+        "Lat": "32.859707",
+        "Long": "-116.613827"
+      }
+    },
+    {
+      "name": "Butterfield Mobile Pantry",
+      "rtype": "food",
+      "address": "14925 Great Southern Overland Stage Route Julian, CA 92036, US",
+      "phone": "",
+      "email": "",
+      "website": "",
+      "description": "",
+      "hours_json": {},
+      "tags": [
+        "Walk-up"
+      ],
+      "latitude": 32.983428,
+      "longitude": -116.43462,
+      "raw_row": {
+        "id": "13",
+        "name": "Butterfield Mobile Pantry",
+        "rtype": "Food",
+        "description": "",
+        "hours_json": "",
+        "phone": "",
+        "email": "",
+        "address": "14925 Great Southern Overland Stage Route Julian, CA 92036, US",
+        "geom": "",
+        "Tags": "Walk-up",
+        "Lat": "32.983428",
+        "Long": "-116.43462"
+      }
+    },
+    {
+      "name": "Brother Benno Foundation",
+      "rtype": "food",
+      "address": "3260 Production Avenue Oceanside, CA 92058, US",
+      "phone": "760-439-1244",
+      "email": "",
+      "website": "",
+      "description": "",
+      "hours_json": {},
+      "tags": [
+        "Walk-up"
+      ],
+      "latitude": 33.216473,
+      "longitude": -117.347524,
+      "raw_row": {
+        "id": "12",
+        "name": "Brother Benno Foundation",
+        "rtype": "Food",
+        "description": "",
+        "hours_json": "Mon; Sat; Sun",
+        "phone": "760-439-1244",
+        "email": "",
+        "address": " 3260 Production Avenue Oceanside, CA 92058, US",
+        "geom": "",
+        "Tags": "Walk-up",
+        "Lat": "33.216473",
+        "Long": "-117.347524"
+      }
+    },
+    {
+      "name": "Faith Lutheran",
+      "rtype": "food",
+      "address": "700 East Bobier Drive Vista, CA 92084, US",
+      "phone": "760-724-7700",
+      "email": "",
+      "website": "",
+      "description": "",
+      "hours_json": {},
+      "tags": [
+        "Drive-through"
+      ],
+      "latitude": 33.220385,
+      "longitude": -117.234041,
+      "raw_row": {
+        "id": "36",
+        "name": "Faith Lutheran",
+        "rtype": "Food",
+        "description": "",
+        "hours_json": "Mon",
+        "phone": "760-724-7700",
+        "email": "",
+        "address": " 700 East Bobier Drive Vista, CA 92084, US",
+        "geom": "",
+        "Tags": "Drive-through",
+        "Lat": "33.220385",
+        "Long": "-117.234041"
+      }
+    },
+    {
+      "name": "Bonsall Mobile Pantry",
+      "rtype": "food",
+      "address": "4980 Sweetgrass Lane Bonsall, CA 92003, US",
+      "phone": "",
+      "email": "",
+      "website": "",
+      "description": "",
+      "hours_json": {},
+      "tags": [
+        "Drive-through"
+      ],
+      "latitude": 33.3010676,
+      "longitude": -117.2181502,
+      "raw_row": {
+        "id": "8",
+        "name": "Bonsall Mobile Pantry",
+        "rtype": "Food",
+        "description": "",
+        "hours_json": "",
+        "phone": "",
+        "email": "",
+        "address": "4980 Sweetgrass Lane Bonsall, CA 92003, US",
+        "geom": "",
+        "Tags": "Drive-through",
+        "Lat": "33.3010676",
+        "Long": "-117.2181502"
+      }
+    }
+  ],
+  "validation_errors": [
+    {
+      "index": 18,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Feeding San Diego Marketplace"
+    },
+    {
+      "index": 19,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "31st. St. SDA Church"
+    },
+    {
+      "index": 20,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Abundant Grace Christian Center"
+    },
+    {
+      "index": 21,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Backcounty Communities Thriving"
+    },
+    {
+      "index": 22,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Bayside STEAM Elementary School Pantry"
+    },
+    {
+      "index": 23,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Berry Elementary School Pantry"
+    },
+    {
+      "index": 24,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Borrego Springs Pantry"
+    },
+    {
+      "index": 25,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Boulevard Mobile Pantry"
+    },
+    {
+      "index": 26,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Carlsbad Produce Pantry"
+    },
+    {
+      "index": 27,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Christ Community Church (LoveActs)"
+    },
+    {
+      "index": 28,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Christ Community Church (LoveActs)"
+    },
+    {
+      "index": 29,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Church of the Nazarene"
+    },
+    {
+      "index": 30,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Community Resource Center"
+    },
+    {
+      "index": 31,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Crown Heights Produce Pantry"
+    },
+    {
+      "index": 32,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Downtown Fallbrook Mobile Pantry"
+    },
+    {
+      "index": 33,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "El Cajon Produce Pantry"
+    },
+    {
+      "index": 34,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Escondido High School Pantry"
+    },
+    {
+      "index": 35,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Escondido Produce Pantry"
+    },
+    {
+      "index": 36,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Faith Tabernacle"
+    },
+    {
+      "index": 37,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Call First"
+    },
+    {
+      "index": 38,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Fallbrook Mobile Pantry"
+    },
+    {
+      "index": 39,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Fallbrook SDA Church"
+    },
+    {
+      "index": 40,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Feaster Charter School Pantry"
+    },
+    {
+      "index": 41,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Feeding San Diego Produce Pantry"
+    },
+    {
+      "index": 42,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Call First"
+    },
+    {
+      "index": 43,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Food for Life"
+    },
+    {
+      "index": 44,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Foundry Food Pantry"
+    },
+    {
+      "index": 45,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Call First"
+    },
+    {
+      "index": 46,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Friendships for Hope"
+    },
+    {
+      "index": 47,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Good Shepherd Community Projects, Inc"
+    },
+    {
+      "index": 48,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Grace Presbyterian"
+    },
+    {
+      "index": 49,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Guatay Mobile Pantry"
+    },
+    {
+      "index": 50,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Hamilton Elementary School Pantry"
+    },
+    {
+      "index": 51,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Heaven's Windows"
+    },
+    {
+      "index": 52,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Hoover High School Pantry"
+    },
+    {
+      "index": 53,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "I Am My Brother's Keeper"
+    },
+    {
+      "index": 54,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Iglesia Casa de Alabanza"
+    },
+    {
+      "index": 55,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Imperial Beach Neighborhood Center"
+    },
+    {
+      "index": 56,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Interfaith Community Services - Carlsbad"
+    },
+    {
+      "index": 57,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Interfaith Community Services - Escondido"
+    },
+    {
+      "index": 58,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Jacumba Pantry"
+    },
+    {
+      "index": 59,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Jamul Community Church"
+    },
+    {
+      "index": 60,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Jewish Family Service"
+    },
+    {
+      "index": 61,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Journey Community Church"
+    },
+    {
+      "index": 62,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Julian Mobile Pantry"
+    },
+    {
+      "index": 63,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "La Jolla Reservation Produce Pantry"
+    },
+    {
+      "index": 64,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "La Maestra"
+    },
+    {
+      "index": 65,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Lakeside Christian Helps Center"
+    },
+    {
+      "index": 66,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Lakeside Mobile Pantry"
+    },
+    {
+      "index": 67,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Lemon Crest Elementary School Pantry"
+    },
+    {
+      "index": 68,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Lexington Elementary School Pantry"
+    },
+    {
+      "index": 69,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Libby Elementary School Pantry"
+    },
+    {
+      "index": 70,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Life Acts/ Life Christian Center"
+    },
+    {
+      "index": 71,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Lincoln High School Pantry"
+    },
+    {
+      "index": 72,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Lincoln Middle School Pantry"
+    },
+    {
+      "index": 73,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Lindo Park Elementary School Pantry"
+    },
+    {
+      "index": 74,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "LJC Ministries"
+    },
+    {
+      "index": 75,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Logan Heights Community Development Corporation"
+    },
+    {
+      "index": 76,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Mann Middle School Pantry"
+    },
+    {
+      "index": 77,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Masjidul Taqwa"
+    },
+    {
+      "index": 78,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Meridian Baptist Church"
+    },
+    {
+      "index": 79,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Mesa College"
+    },
+    {
+      "index": 80,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Mesa Grande Mobile Pantry"
+    },
+    {
+      "index": 81,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Millennial Tech Middle School Pantry"
+    },
+    {
+      "index": 82,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Mission San Luis Food Pantry"
+    },
+    {
+      "index": 83,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Mission Village Christian"
+    },
+    {
+      "index": 84,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Monte Vista High School Pantry"
+    },
+    {
+      "index": 85,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Most Precious Blood Church"
+    },
+    {
+      "index": 86,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Mt. Manna (UMC of Julian)"
+    },
+    {
+      "index": 87,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Neighborhood Healthcare"
+    },
+    {
+      "index": 88,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "New Hope SDA"
+    },
+    {
+      "index": 89,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "NHA Head Start School Pantry"
+    },
+    {
+      "index": 90,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "North County LGBTQ Resource Center"
+    },
+    {
+      "index": 91,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "North Park Apostolic Church"
+    },
+    {
+      "index": 92,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "North Terrace Elementary School Pantry"
+    },
+    {
+      "index": 93,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Ocean Beach Emergency Food Inc."
+    },
+    {
+      "index": 94,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Ocean Beach Produce Pantry"
+    },
+    {
+      "index": 95,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Ocean View Church"
+    },
+    {
+      "index": 96,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Oceanside Mobile Pantry"
+    },
+    {
+      "index": 97,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Call First"
+    },
+    {
+      "index": 98,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Orange Glen High School Pantry"
+    },
+    {
+      "index": 99,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Our Lady of Mt. Carmel Church"
+    },
+    {
+      "index": 100,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Pablo Tac School of the Arts Elementary School Pantry"
+    },
+    {
+      "index": 101,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Pacific Beach United Methodist Church"
+    },
+    {
+      "index": 102,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Paradise Hills Elementary School Pantry"
+    },
+    {
+      "index": 103,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Pardise Valley SDA"
+    },
+    {
+      "index": 104,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Partnership for a Better San Diego"
+    },
+    {
+      "index": 105,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Pauma Pantry"
+    },
+    {
+      "index": 106,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Pauma School Pantry"
+    },
+    {
+      "index": 107,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Porter Elementary School Pantry"
+    },
+    {
+      "index": 108,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Potrero Mobile Pantry"
+    },
+    {
+      "index": 109,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Call First"
+    },
+    {
+      "index": 110,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Call First"
+    },
+    {
+      "index": 111,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Ramona Mobile Pantry"
+    },
+    {
+      "index": 112,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Ranchita Mobile Pantry"
+    },
+    {
+      "index": 113,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Rancho Penasquitos Produce Pantry"
+    },
+    {
+      "index": 114,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Rincon Pantry"
+    },
+    {
+      "index": 115,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Rock Church - Chula Vista"
+    },
+    {
+      "index": 116,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Rock Church - City Heights"
+    },
+    {
+      "index": 117,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Rock Church - El Cajon"
+    },
+    {
+      "index": 118,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Rock Church - San Marcos"
+    },
+    {
+      "index": 119,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Rock Church Point Loma"
+    },
+    {
+      "index": 120,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Ruth Anointed World Ministries"
+    },
+    {
+      "index": 121,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Call First"
+    },
+    {
+      "index": 122,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Salvation Army Chula Vista"
+    },
+    {
+      "index": 123,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Salvation Army El Cajon"
+    },
+    {
+      "index": 124,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Salvation Army Escondido"
+    },
+    {
+      "index": 125,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Salvation Army Oceanside (SAO)"
+    },
+    {
+      "index": 126,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "San Diego Christian Center (The Center)"
+    },
+    {
+      "index": 127,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "San Diego Fil-Am SDA Church"
+    },
+    {
+      "index": 128,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "San Diego Maranatha SDA Church"
+    },
+    {
+      "index": 129,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "San Diego South Bay SDA Church"
+    },
+    {
+      "index": 130,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "San Marcos Elementary School Pantry"
+    },
+    {
+      "index": 131,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "San Marcos Mobile Pantry"
+    },
+    {
+      "index": 132,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "San Marcos Seventh-Day Adventist Church"
+    },
+    {
+      "index": 133,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "San Pasqual High School Pantry"
+    },
+    {
+      "index": 134,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "San Pasqual Pantry"
+    },
+    {
+      "index": 135,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Call First"
+    },
+    {
+      "index": 136,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Santa Sophia Conference"
+    },
+    {
+      "index": 137,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Santa Ysabel Mobile Pantry"
+    },
+    {
+      "index": 138,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Call First"
+    },
+    {
+      "index": 139,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Serving Good"
+    },
+    {
+      "index": 140,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Set Free Church"
+    },
+    {
+      "index": 141,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Shadow Mountain Cares"
+    },
+    {
+      "index": 142,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Shelter Valley Mobile Pantry"
+    },
+    {
+      "index": 143,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Shepherd's Pantry"
+    },
+    {
+      "index": 144,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Sherman Heights Community Center"
+    },
+    {
+      "index": 145,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "South Bay Food Pantry"
+    },
+    {
+      "index": 146,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Southport Christian Center"
+    },
+    {
+      "index": 147,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Spring Valley Produce Pantry"
+    },
+    {
+      "index": 148,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Spring Valley Summer Pantry"
+    },
+    {
+      "index": 149,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "St Vincent de Paul at St Stephen's"
+    },
+    {
+      "index": 150,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "St. Andrew's"
+    },
+    {
+      "index": 151,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "St. Marks Episcopal Church"
+    },
+    {
+      "index": 152,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "St. Rose of Lima"
+    },
+    {
+      "index": 153,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "STAR/PAL Colina del Sol Park"
+    },
+    {
+      "index": 154,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "STAR/PAL Memorial Park"
+    },
+    {
+      "index": 155,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Stepping Higher"
+    },
+    {
+      "index": 156,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Summer Food Service Program - Campo-Morena Village Library"
+    },
+    {
+      "index": 157,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Call First"
+    },
+    {
+      "index": 158,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "The Community Food Connection"
+    },
+    {
+      "index": 159,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "The Preuss School UCSD"
+    },
+    {
+      "index": 160,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Trinity Lutheran Church"
+    },
+    {
+      "index": 161,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Call First"
+    },
+    {
+      "index": 162,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Valley Center Mobile Pantry"
+    },
+    {
+      "index": 163,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Valley High School Pantry"
+    },
+    {
+      "index": 164,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Venture Church"
+    },
+    {
+      "index": 165,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Call First"
+    },
+    {
+      "index": 166,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Vista Mobile Pantry"
+    },
+    {
+      "index": 167,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Vista Produce Pantry"
+    },
+    {
+      "index": 168,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Warner Springs Pantry"
+    },
+    {
+      "index": 169,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Wesley House"
+    },
+    {
+      "index": 170,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Father Joe's Villages"
+    },
+    {
+      "index": 171,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Father Joes Villages  Joan Kroc Campus"
+    },
+    {
+      "index": 172,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Feeding San Diego"
+    },
+    {
+      "index": 173,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Porchlight Community Services"
+    },
+    {
+      "index": 174,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Interfaith Community Services"
+    },
+    {
+      "index": 175,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "You Saved Me Foundation"
+    },
+    {
+      "index": 176,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "San Diego Rescue Mission"
+    },
+    {
+      "index": 177,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "St. Vincent de Paul Village"
+    },
+    {
+      "index": 178,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Think Dignity (Fresh Start Showers)"
+    },
+    {
+      "index": 179,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "San Diego Rescue Mission"
+    },
+    {
+      "index": 180,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "The Salvation Army San Diego"
+    },
+    {
+      "index": 181,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Catholic Charities Diocese of San Diego"
+    },
+    {
+      "index": 182,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "PATH (People Assisting the Homeless)"
+    },
+    {
+      "index": 183,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Homeless Outreach Program (Downtown Fellowship)"
+    },
+    {
+      "index": 184,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Catholic Charities  Rachels Womens Center"
+    },
+    {
+      "index": 185,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Catholic Charities Rachel's Women's Center"
+    },
+    {
+      "index": 186,
+      "error": "Invalid or missing geometry (need lat/lon or geom)",
+      "name": "Salvation Army Door of Hope"
+    }
+  ]
+}
