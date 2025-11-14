@@ -375,7 +375,8 @@ footer {
 .chat-icon {
     position: fixed;
     bottom: 20px;
-    left: 20px;
+    right: 20px !important; /* ensure bottom-right */
+    left: auto !important;
     width: 60px;
     height: 60px;
     background-color: #007aff;
@@ -386,12 +387,27 @@ footer {
     cursor: pointer;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s, background-color 0.2s;
-    z-index: 1000;
+    z-index: 2000; /* ensure on top of map */
 }
 
 .chat-icon:hover {
     transform: scale(1.1);
     background-color: #005ecb;
+}
+
+.chat-icon:focus {
+    outline: 3px solid rgba(0,122,255,0.25);
+    transform: scale(1.05);
+}
+
+@keyframes chatPulse {
+    0% { box-shadow: 0 6px 14px rgba(0,122,255,0.12); transform: scale(1); }
+    50% { box-shadow: 0 12px 28px rgba(0,122,255,0.08); transform: scale(1.03); }
+    100% { box-shadow: 0 6px 14px rgba(0,122,255,0.12); transform: scale(1); }
+}
+
+.chat-icon.pulse {
+    animation: chatPulse 3s infinite ease-in-out;
 }
 
 .chat-icon::before {
@@ -402,27 +418,29 @@ footer {
     background-size: contain;
 }
 
+
 .chat-window {
     position: fixed;
-    bottom: 100px;
-    left: 20px;
-    width: 320px;
-    height: 400px;
+    bottom: 90px;
+    right: 20px; /* align chat window to the right */
+    width: 340px;
+    max-height: 60vh;
     background-color: #fff;
-    border-radius: 18px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    display: none;
+    border-radius: 14px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+    display: flex;
     flex-direction: column;
     overflow: hidden;
-    z-index: 999;
-    transform: translateY(100px) scale(0.8);
+    z-index: 2000;
+    transform: translateY(10px) scale(0.6);
     opacity: 0;
-    transform-origin: bottom left;
+    transform-origin: bottom right; /* animate from FAB */
+    transition: transform 320ms cubic-bezier(.2,.9,.3,1), opacity 220ms ease-out;
 }
 
 .chat-window.open {
-    display: flex !important;
-    animation: bounceIn 0.5s ease-out forwards;
+    transform: translateY(0) scale(1);
+    opacity: 1;
 }
 
 .chat-window.closing {
