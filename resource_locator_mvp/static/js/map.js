@@ -40,8 +40,11 @@ function resourceMap() {
         },
 
         // Convert to Title Case for display
-        toTitleCase(str) {
-            if (!str || typeof str !== 'string') return '';
+        // Be defensive: coerce non-strings (numbers, proxies) and trim whitespace
+        toTitleCase(value) {
+            if (value === null || value === undefined) return '';
+            const str = String(value).trim();
+            if (!str) return '';
             return str
                 .toLowerCase()
                 .replace(/\b\w/g, c => c.toUpperCase());
