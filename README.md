@@ -3,7 +3,7 @@
 
 <img height="5%" width="10%" alt="HDMA" src="https://github.com/BigDataForSanDiego/bigdataforsandiego.github.io/blob/main/templates/img/hdma2.png?raw=true"> 
 
-                                                    2025 BIG DATA HACKATHON PROPOSAL
+## [Click here to open the GoodFellow web application!](https://goodfellow-render-web-service.onrender.com/)
 
 #### Team Number: `Team 120`  
 
