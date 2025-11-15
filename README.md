@@ -16,9 +16,12 @@
 #### Your team's hackathon idea in One sentence:
 Good Fellow is a real-time centralized digital platform(Map UI) that connects homeless individuals with available community resources—like food, shelter, medical care, and activities—while enabling resource centers and individual donors to update inventories, manage profiles, and support training and employment opportunities in addition to providing the resources that individuals experiencing homelessness need.
 
-<a href="https://www.youtube.com/watch?v=4sc4koGBhLI"><img src="https://img.youtube.com/vi/4sc4koGBhLI/0.jpg" alt="Watch the demo"></a>
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=VPCcXbiCHMc">
+    <img src="https://img.youtube.com/vi/VPCcXbiCHMc/maxresdefault.jpg" width="600">
+  </a>
+</p>
 
-<!-- <img width="50%" src="proposal_drawing.png" alt="Proposal Drawing"> -->
 
 
 #### Core Theme Addressed by the Goodfellow Resource Locator
