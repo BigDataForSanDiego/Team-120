@@ -42,3 +42,5 @@ staticfiles/
 .DS_Store
 Thumbs.db
 resource_locator_mvp/venv/
+resource_locator_mvp/chatbot/ai_chatbot.py
+resource_locator_mvp/resources/migrations/views_proxy.py
