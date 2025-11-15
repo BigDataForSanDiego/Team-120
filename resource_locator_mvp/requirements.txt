@@ -27,3 +27,5 @@ certifi
 charset-normalizer
 idna
 
+uvicorn
+
