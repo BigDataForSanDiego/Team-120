@@ -34,7 +34,7 @@ class GeoJSONImporter:
     # Mapping of common field names to Resource model fields
     FIELD_MAPPINGS = {
         'name': ['name', 'NAME', 'facility_name', 'FACILITY_NAME', 'site_name', 'SITE_NAME', 'Organization'],
-        'address': ['address', 'ADDRESS', 'street_address', 'STREET_ADDRESS', 'location', 'DBA_ADDRESS1', 'ADDR'],
+        'address': ['address', 'ADDRESS', 'street_address', 'STREET_ADDRESS', 'location', 'DBA_ADDRESS1', 'ADDR', 'Address'],
         'city': ['city', 'CITY', 'DBA_CITY'],
         'zip_code': ['zip_code', 'ZIP_CODE', 'zipcode', 'ZIPCODE', 'DBA_ZIP_CODE', 'postal_code'],
         'phone': ['phone', 'PHONE', 'telephone', 'TELEPHONE', 'contact_phone', 'CONTACT_PHONE'],
