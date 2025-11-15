@@ -8,7 +8,11 @@ function resourceMap() {
         // State
         resources: [],
         selectedResource: null,
+        userAddress: '',
+        showFilters: true, 
         loading: false,
+        showLocation: true, // ✅ controls visibility of "Your Location" section
+        showFilters: true, // ✅ controls mobile filter panel visibility
         autoCenter: true, // ✅ Only recenter once on load or when user clicks Recenter
         currentLanguage: 'en', // Track language for reactivity
 
@@ -35,9 +39,7 @@ function resourceMap() {
 
         // Utility: convert text to Title Case
         toTitleCase(str) {
-            if (!str || typeof str !== 'string') {
-                return '';
-            }
+            if (!str || typeof str !== 'string') return '';
             return str
                 .toLowerCase()
                 .split(/\s+/)
@@ -58,24 +60,22 @@ function resourceMap() {
                 this.currentLanguage = localStorage.getItem('siteLanguage') || 'en';
             });
 
-            this.updateFilters();   // then load data
+            this.updateFilters(); // then load data
         },
 
         // Translate a resource type value to the current language (fallback to value)
         translateType(typeValue) {
-            // Reference currentLanguage to make this reactive
             const lang = this.currentLanguage;
             const key = 'type.' + typeValue;
             if (window && typeof window.t === 'function') {
                 return window.t(key);
             }
-            // Capitalize fallback
             return typeValue.charAt(0).toUpperCase() + typeValue.slice(1);
         },
+
         // Initialize Leaflet map
         initMap() {
             this.map = L.map('map').setView([this.userLat, this.userLon], 12);
-
 
             // Add OpenStreetMap tiles
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -98,7 +98,6 @@ function resourceMap() {
                 this.map.removeLayer(this.userMarker);
             }
 
-
             const userIcon = L.divIcon({
                 className: 'user-location-icon',
                 html: '<div style="background: #3498db; width: 20px; height: 20px; border-radius: 50%; border: 3px solid white; box-shadow: 0 0 10px rgba(0,0,0,0.3);"></div>',
@@ -117,7 +116,6 @@ function resourceMap() {
                         this.userLat = pos.coords.latitude;
                         this.userLon = pos.coords.longitude;
 
-                        // Center map only first time or when autoCenter is re-enabled
                         if (this.autoCenter) {
                             this.map.setView([this.userLat, this.userLon], 13);
                             this.autoCenter = false;
@@ -148,8 +146,6 @@ function resourceMap() {
             this.updateFilters();
         },
 
-
-
         // ✅ Fetch resources around current location (no recentering)
         async updateFilters() {
             this.loading = true;
@@ -162,7 +158,6 @@ function resourceMap() {
             if (this.selectedTypes.length > 0) {
                 params.append('rtype', this.selectedTypes.join(','));
             }
-
 
             if (this.openNow) {
                 params.append('open_now', 'true');
@@ -183,6 +178,12 @@ function resourceMap() {
                 } else {
                     this.resources = [];
                 }
+
+                // 🚫 Remove specific centers by name
+                this.resources = this.resources.filter(r => {
+                    const name = (r.properties.name || '').trim().toLowerCase();
+                    return !['downtown food center', 'safe haven shelter'].includes(name);
+                });
 
                 this.updateMarkers();
 
@@ -218,7 +219,6 @@ function resourceMap() {
 
                 const marker = L.marker([lat, lon], { icon });
 
-                // Popup info (all details live in callout)
                 const name = this.toTitleCase(resource.properties.name || '');
                 const address = this.toTitleCase(resource.properties.address || '');
                 const phone = resource.properties.phone || '';
@@ -243,23 +243,17 @@ function resourceMap() {
                 `;
 
                 marker.bindPopup(popupHtml);
-
-                // Do not change zoom or open modal on marker click
-                // Leaflet will open the bound popup by default
                 this.markers.addLayer(marker);
             });
 
-            // If we added markers, fit the map to show them all with padding.
             try {
                 const layerCount = this.markers.getLayers().length;
                 if (layerCount > 0) {
                     const bounds = this.markers.getBounds();
-                    // bounds may be invalid if only a single point; fitBounds handles single-point bounds as well
                     if (bounds && (typeof bounds.isValid === 'function' ? bounds.isValid() : true)) {
                         this.map.fitBounds(bounds, { padding: [50, 50] });
                     }
                 } else {
-                    // No markers: reset view to user location at default zoom
                     this.map.setView([this.userLat, this.userLon], 12);
                 }
             } catch (err) {
@@ -297,16 +291,13 @@ function resourceMap() {
 
         // When user clicks a marker
         selectResource(resource) {
-            // Used by list clicks: center on resource and show its popup
             this.selectedResource = resource;
             const coords = resource.geometry.coordinates;
             const lat = coords[1];
             const lon = coords[0];
 
-            // Center map on the selected resource (keep current zoom)
             this.map.panTo([lat, lon]);
 
-            // Find the marker for this resource and open its popup
             const target = this.markers.getLayers().find(m => {
                 const p = m.getLatLng && m.getLatLng();
                 return p && p.lat === lat && p.lng === lon;
